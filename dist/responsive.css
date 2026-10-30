@@ -1,5 +1,8 @@
 /* Prevent horizontally scrolling lists from setting the page's minimum width. */
 .workspace > *, #people, .events { min-width: 0; }
+.events { position: relative; max-height: 170px; overflow-y: auto; scrollbar-width: thin; }
+.evidence { font-size: 11px; }
+@media (max-width: 900px) { .events { max-height: none; overflow-y: hidden; } }
 
 @media (max-width: 900px) {
   header { height: auto; min-height: 72px; flex-wrap: wrap; gap: 12px; padding: 16px 4%; }
