@@ -1,0 +1,81 @@
+/* Prevent horizontally scrolling lists from setting the page's minimum width. */
+.workspace > *, #people, .events { min-width: 0; }
+
+@media (max-width: 900px) {
+  header { height: auto; min-height: 72px; flex-wrap: wrap; gap: 12px; padding: 16px 4%; }
+  nav { height: 38px; gap: 20px; }
+  nav button { min-height: 38px; }
+  .edition { display: none; }
+  main { display: grid; grid-template-columns: minmax(0, 1fr); padding: 0 4%; }
+  .intro { grid-row: 1; padding: 24px 0; }
+  .intro p { display: none; }
+  h1 { font-size: clamp(20px, 5.5vw, 28px); letter-spacing: 1px; }
+  .workspace { display: contents; }
+  .people-panel { grid-row: 2; border: 1px solid var(--line); padding: 12px; background: #f9f8f2; }
+  .section-head { display: flex; padding: 0 2px 10px; }
+  .aside-note { display: none; }
+  #people { display: flex; overflow-x: auto; gap: 8px; scrollbar-width: thin; padding-bottom: 5px; }
+  .person { flex: 0 0 126px; width: 126px; margin: 0; padding: 11px 8px; gap: 9px; }
+  .person strong { font-size: 15px; }
+  .person small { font-size: 10px; }
+  .monogram { width: 32px; height: 32px; font-size: 19px; }
+  .map-panel { grid-row: 3; border: 1px solid var(--line); border-top: 0; height: 410px; min-height: 0; }
+  #map { min-height: 0; height: 100%; }
+  .map-top { top: 16px; left: 16px; right: 16px; gap: 12px; }
+  .map-top > div:first-child { min-width: 0; }
+  .map-top .eyebrow { display: none; }
+  .map-top h2 { font-size: 23px; letter-spacing: 4px; }
+  .map-top p { max-width: 190px; font-size: 11px; line-height: 1.6; }
+  .layers { flex-shrink: 0; padding: 7px 9px; gap: 0; }
+  .layers label { min-height: 30px; font-size: 11px; }
+  .layers input { width: 14px; height: 14px; }
+  #map text { font-size: 23px; }
+  #map .region-label { font-size: 34px; }
+  #map .ocean-label { font-size: 24px; }
+  .map-legend { bottom: 61px; left: 12px; right: 12px; flex-wrap: wrap; gap: 6px 14px; font-size: 10px; }
+  .map-footer { min-height: 49px; gap: 10px; padding: 6px 12px; }
+  .map-footer > span { max-width: 70%; line-height: 1.6; }
+  .map-footer button { white-space: nowrap; min-height: 36px; }
+  .compass { right: 15px; bottom: 99px; }
+  .timeline { grid-row: 4; padding: 16px 12px 12px; }
+  .timeline-title { flex-wrap: wrap; gap: 8px 12px; }
+  .timeline-title > span:nth-child(2) { font-size: 12px; }
+  .timeline-title button { min-height: 36px; font-size: 11px; }
+  .timeline-controls { display: grid; grid-template-columns: 40px minmax(0, 1fr) 40px 40px 44px; gap: 6px; margin-top: 9px; }
+  #play { grid-column: 1; grid-row: 1; width: 40px; height: 40px; }
+  #prev { grid-column: 3; grid-row: 1; min-height: 40px; }
+  #next { grid-column: 4; grid-row: 1; min-height: 40px; }
+  #speed { grid-column: 5; grid-row: 1; min-height: 40px; font-size: 13px; }
+  .slider-wrap { grid-row: 2; grid-column: 1 / -1; padding-top: 0; }
+  input[type=range] { height: 32px; }
+  #ticks { top: 30px; }
+  .range-labels { font-size: 12px; margin-top: 8px; }
+  .range-labels strong { font-size: 14px; }
+  .timeline-note { font-size: 10px; line-height: 1.7; margin-top: 12px; }
+  .story-panel { grid-row: 5; display: block; max-height: none; overflow: visible; border: 1px solid var(--line); border-top: 0; padding: 22px 18px; background: #f9f8f2; }
+  .story-year { margin-top: 16px; }
+  .story-panel h2 { margin: 12px 0; font-size: 23px; }
+  .event-desc { font-size: 14px; line-height: 1.9; }
+  .evidence { font-size: 11px; }
+  .context-box p { font-size: 13px; }
+  .events { display: flex; overflow-x: auto; border-left: 0; border-top: 1px solid var(--line); margin-left: 0; padding: 8px 0; scrollbar-width: thin; }
+  .event { flex: 0 0 110px; width: 110px; padding: 12px 6px; font-size: 12px; }
+  .event:before { display: none; }
+  .event b { font-size: 12px; }
+  .source-button { min-height: 44px; font-size: 12px; }
+  footer { grid-row: 6; flex-wrap: wrap; gap: 8px; line-height: 1.7; font-size: 10px; }
+  dialog { max-width: calc(100vw - 24px); width: calc(100vw - 24px); padding: 20px 16px; }
+  dialog table { table-layout: fixed; font-size: 11px; }
+  dialog td, dialog th { overflow-wrap: anywhere; padding: 8px 4px; }
+  dialog a { overflow-wrap: anywhere; }
+}
+
+@media (max-width: 480px) {
+  header { gap: 10px; }
+  .brand { font-size: 21px; }
+  nav { width: 100%; justify-content: space-between; gap: 8px; font-size: 12px; }
+  nav button { font-size: 12px; }
+  .intro { padding: 20px 0; }
+  .map-panel { height: 380px; }
+  .timeline-title > .eyebrow { display: none; }
+}
