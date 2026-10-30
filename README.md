@@ -4,7 +4,11 @@
 
 ## 源码与托管
 
-源码迁移至私有 GitHub 仓库 `jessiewang-hongyan/history-atlas`。本项目采用本地预览，已移除 Sites 部署配置；不自动发布到 Sites 或 GitHub Pages。
+源码托管于公开 GitHub 仓库 `jessiewang-hongyan/history-atlas`。按用户选择，仓库于2026-10-30改为公开并启用 GitHub Pages；不再发布到 Sites。
+
+演示地址：https://jessiewang-hongyan.github.io/history-atlas/
+
+推送 `main` 分支的 `dist/` 或 Pages 工作流变更会触发自动部署，也可以在 Actions 中手动运行。工作流检查 JavaScript 语法后仅发布 `dist/` 目录。
 
 ## 本地运行
 
