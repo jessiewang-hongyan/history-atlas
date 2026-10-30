@@ -2,6 +2,10 @@
 
 中国历史人物地图交互原型。完整候选名单与已确认产品原则见 [PLAN.md](PLAN.md)。
 
+## 源码与托管
+
+源码迁移至私有 GitHub 仓库 `jessiewang-hongyan/history-atlas`。本项目采用本地预览，已移除 Sites 部署配置；不自动发布到 Sites 或 GitHub Pages。
+
 ## 本地运行
 
 无需安装依赖。运行 `python3 -m http.server 4173 --directory dist`，访问 http://localhost:4173 。
