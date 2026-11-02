@@ -101,4 +101,4 @@
 .history-lane>div{position:relative;flex:1;height:8px;background:#e6e9de;margin-right:4px}
 .history-lane i{position:absolute;height:8px;max-width:100%;background:#647a51;transform:translateX(-1px)}.history-lane i.military{background:#9c7b54}
 #history-ticks{margin:14px 0 0}
-@media(max-width:900px){.history-panel{grid-row:5;margin-top:0;padding:20px 16px}.story-panel{grid-row:6}footer{grid-row:7}#history-events{grid-template-columns:minmax(0,1fr)}.history-head h2{font-size:21px}.history-head label{font-size:12px}.history-note{overflow-wrap:anywhere}}
+@media(max-width:900px){.history-panel{grid-row:6;margin-top:0;padding:20px 16px}.story-panel{grid-row:5}footer{grid-row:7}#history-events{grid-template-columns:minmax(0,1fr)}.history-head h2{font-size:21px}.history-head label{font-size:12px}.history-note{overflow-wrap:anywhere}}
