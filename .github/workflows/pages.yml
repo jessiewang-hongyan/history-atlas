@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'dist/**'
+      - 'tests/**'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
 
@@ -25,6 +26,8 @@ jobs:
           node --check dist/app.js
           node --check dist/data.js
           node --check dist/sushi.js
+          node --check dist/history.js
+          node tests/history.test.cjs
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

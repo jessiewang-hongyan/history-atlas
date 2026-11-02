@@ -82,3 +82,23 @@
   .map-panel { height: 380px; }
   .timeline-title > .eyebrow { display: none; }
 }
+
+/* Parallel political and military chronology, independent of personal whereabouts. */
+.history-panel{margin-top:20px;padding:24px;border:1px solid var(--line);background:#f9f8f2;min-width:0}
+.history-head{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.history-head h2{margin:8px 0;font-size:23px}
+.history-head p,.history-note{font-size:12px;line-height:1.8;color:#59685d}
+.history-head select,#history-jump{font:inherit;border:1px solid #bbc6b5;background:#fffdf6;padding:10px;border-radius:5px;color:#263c34;max-width:100%}
+#history-events{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:18px 0}
+.history-card{padding:18px;border:1px solid #d9dece;border-left:3px solid #647a51;min-width:0}
+.history-card.military{border-left-color:#9c7b54}
+.history-card small,.history-date{color:#637361;font-size:12px}
+.history-card h3{font-size:18px;margin:10px 0}.history-card p{line-height:1.8;font-size:14px}
+.history-card button{border:0;background:none;color:#536c50;padding:8px 0;min-height:40px;cursor:pointer;font:inherit;font-size:12px;text-align:left}
+.history-empty{grid-column:1/-1;font-size:14px;line-height:1.8;color:#687565}
+.history-jump-label{display:block;font-size:12px;margin-bottom:8px}#history-jump{width:100%;min-width:0;font-size:14px}
+.history-note a{color:#536c50}.history-lane{display:flex;gap:12px;align-items:center;height:18px;font-size:10px;color:#697664}
+.history-lane>div{position:relative;flex:1;height:8px;background:#e6e9de;margin-right:4px}
+.history-lane i{position:absolute;height:8px;max-width:100%;background:#647a51;transform:translateX(-1px)}.history-lane i.military{background:#9c7b54}
+#history-ticks{margin:14px 0 0}
+@media(max-width:900px){.history-panel{grid-row:5;margin-top:0;padding:20px 16px}.story-panel{grid-row:6}footer{grid-row:7}#history-events{grid-template-columns:minmax(0,1fr)}.history-head h2{font-size:21px}.history-head label{font-size:12px}.history-note{overflow-wrap:anywhere}}
