@@ -1,0 +1,1391 @@
+{
+  "schemaVersion": 1,
+  "preparedAt": "2026-11-03",
+  "scope": "五人主要行迹的首轮研究底稿，非完整路线，未发布为地图节点",
+  "coordinatePolicy": "所有 coordinates 为 null。文献证实到访不等于已完成历史地理定位；禁止自动取现代城市中心或插值。",
+  "statusPolicy": {
+    "可采用": "证据直接支持本条核心事实；仍需地理定位及上图检查。",
+    "附条件采用": "日期、主体、转引或载体有限制，须连同说明展示；不可当确定点自动导入。",
+    "暂不上图": "活动有据，但尚不足以证明本人该时刻身在此地。"
+  },
+  "sources": {
+    "XZ-1": {
+      "title": "慧立、彦悰《大唐大慈恩寺三藏法师传》",
+      "url": "https://buddhism.lib.ntu.edu.tw/FULLTEXT/sutra/chi_pdf/sutra20/T50n2053.pdf",
+      "kind": "古代传记；台湾大学佛学数字图书馆所载《大正藏》文本",
+      "limits": "已查西行自述及贞观十九年返国段落；没有逐卷完成全程校勘。篇内叙事与其他系年仍需互校。",
+      "checkedAt": "2026-11-03"
+    },
+    "XZ-2": {
+      "title": "香港教育局《玄奘》教学资料",
+      "url": "https://www.edb.gov.hk/attachment/tc/curriculum-development/kla/pshe/references-and-resources/chinese-history_ncs/xuanzang_202201.pdf",
+      "kind": "现代教学资料",
+      "limits": "支持主要经历和路线概览；路线图不能用来给每一站赋年。",
+      "checkedAt": "2026-11-03"
+    },
+    "XZ-3": {
+      "title": "中国国家博物馆：唐玄奘法师译经图碑",
+      "url": "https://www.chnmuseum.cn/zp/zpml/kgfjp/202111/t20211116_252250.shtml",
+      "kind": "博物馆藏品说明",
+      "limits": "支持659年赴玉华寺、664年卒于寺；不支持现代坐标精度。",
+      "checkedAt": "2026-11-03"
+    },
+    "XZ-4": {
+      "title": "梁丰《玄奘译经》，中国国家博物馆",
+      "url": "https://www.chnmuseum.cn/yj/xscg/xslw/201812/t20181224_33185.shtml",
+      "kind": "现代研究介绍",
+      "limits": "记627年西行，与教学材料和传记所载629年不同，保留分歧。",
+      "checkedAt": "2026-11-03"
+    },
+    "XZ-5": {
+      "title": "西安曲江新区：玄奘法师",
+      "url": "https://qjxq.xa.gov.cn/zjqj/gyqj/tsqj/5df21c54fd8508098d284dea.html",
+      "kind": "地方政府文化介绍",
+      "limits": "只辅助602年与缑氏籍贯／出生地的常见说法；不据概述推算西行各站年份。",
+      "checkedAt": "2026-11-03"
+    },
+    "XX-1": {
+      "title": "故宫博物院：徐霞客",
+      "url": "https://www.dpm.org.cn/lemmas/241596.html",
+      "kind": "博物馆人物介绍",
+      "limits": "用于生卒年、江阴及1640年病归概述；不证明具体归程。",
+      "checkedAt": "2026-11-03"
+    },
+    "XX-2": {
+      "title": "徐霞客《游天台山日记》",
+      "url": "https://zh.wikisource.org/wiki/徐霞客遊記/遊天台山日記",
+      "kind": "本人日记；维基文库在线录文",
+      "limits": "已查开篇癸丑三月晦、四月初一；尚未逐页对照影印本。",
+      "checkedAt": "2026-11-03"
+    },
+    "XX-3": {
+      "title": "徐霞客《浙游日记》",
+      "url": "https://zh.wikisource.org/wiki/徐霞客遊記/浙遊日記",
+      "kind": "本人日记；维基文库在线录文",
+      "limits": "已查丙子九月十九至二十二；未逐页对照影印本。",
+      "checkedAt": "2026-11-03"
+    },
+    "XX-4": {
+      "title": "中国旅游报：徐霞客的桂林足迹",
+      "url": "https://www.ctnews.com.cn/paper/content/202205/24/content_71395.html",
+      "kind": "现代报刊介绍",
+      "limits": "用于1637年桂林府地区游踪；进入全州与到桂林府城须分开。",
+      "checkedAt": "2026-11-03"
+    },
+    "XX-5": {
+      "title": "云南日报／云南网：徐霞客与鸡足山之缘",
+      "url": "https://yn.yunnan.cn/system/2019/04/07/030246410.shtml",
+      "kind": "现代报刊介绍",
+      "limits": "支持两次鸡足山及其间游历的概况；第二次到访日与社科联材料有出入。",
+      "checkedAt": "2026-11-03"
+    },
+    "XX-6": {
+      "title": "浙江省社科联：徐霞客研究活动资料",
+      "url": "https://www.zjskw.gov.cn/art/2023/8/23/art_1229501916_53859.html",
+      "kind": "现代学术活动介绍",
+      "limits": "记1638年十二月及1639年八月两次鸡足山；不能视为独立日记原文。",
+      "checkedAt": "2026-11-03"
+    },
+    "XX-7": {
+      "title": "江阴市政府：徐霞客人物介绍",
+      "url": "https://www.jiangyin.gov.cn/doc/2018/08/29/146.shtml",
+      "kind": "地方政府人物介绍",
+      "limits": "所载1641年5月8日卒与常见3月8日说不同；本轮仅采用卒年，不采用具体月日。",
+      "checkedAt": "2026-11-03"
+    },
+    "LQ-1": {
+      "title": "《李清照志》年表，山东地方志在线存档",
+      "url": "https://shandong-chorography.org/database/c1a/section/3/article/9/",
+      "kind": "地方志年表；第三方在线存档",
+      "limits": "当前载体是存档网站，不冒称官方原站或书籍影印本。年表的推断、约年须保留；没有核对纸本页码。",
+      "checkedAt": "2026-11-03"
+    },
+    "LQ-2": {
+      "title": "李清照《金石录后序》",
+      "url": "https://zh.wikisource.org/zh-hant/金石錄後序_(李清照)",
+      "kind": "本人自述；维基文库在线录文",
+      "limits": "后序为回忆文本；文末系年存在问题。须分清本人、赵明诚与搬运行李的仆从。未逐页核影印本。",
+      "checkedAt": "2026-11-03"
+    },
+    "LQ-3": {
+      "title": "山东地方志：李清照《金石录后序》系年辨析",
+      "url": "https://shandong-chorography.org/database/a/section/87/article/19/",
+      "kind": "后世考订；第三方在线存档",
+      "limits": "用于识别后序署年1132与1134考订分歧，不单独建立写作地点节点。",
+      "checkedAt": "2026-11-03"
+    },
+    "QL-1": {
+      "title": "《明史》卷二百七十·秦良玉传",
+      "url": "https://zh.wikisource.org/wiki/明史/卷270",
+      "kind": "后修正史；维基文库在线录文",
+      "limits": "可证明明确写到本人亲赴的战事；同段常有兄弟、侄辈行迹，不能合并。未逐页核影印本。",
+      "checkedAt": "2026-11-03"
+    },
+    "QL-2": {
+      "title": "重庆市地方志办公室：秦良玉",
+      "url": "https://dfz.cq.gov.cn/zqlswh/rwby_417819/202311/t20231102_12510540.html",
+      "kind": "地方志机构人物介绍",
+      "limits": "本次直接页面访问超时，核到搜索缓存正文；生卒与继职先作附条件记录，正式上图前复查原页／底本。",
+      "checkedAt": "2026-11-03"
+    },
+    "QJ-1": {
+      "title": "中国国家博物馆：秋瑾男装像",
+      "url": "https://www.chnmuseum.cn/zp/zpml/gmww/202112/t20211209_252836.shtml",
+      "kind": "博物馆藏品说明",
+      "limits": "绍兴为籍贯，不等于出生地。1906年回国办报概述不能代替1907年创刊日期。",
+      "checkedAt": "2026-11-03"
+    },
+    "QJ-2": {
+      "title": "浙江档案：浙江历史名人辞典·秋瑾",
+      "url": "https://zjdy.zjdafw.gov.cn/art/2012/9/12/art_25_6531.html",
+      "kind": "档案机构人物辞典条目",
+      "limits": "本轮读取到的内容支持出生福建闽侯、1894随父赴湖南、1896婚姻；具体出生县仍与其他材料有分歧。",
+      "checkedAt": "2026-11-03"
+    },
+    "QJ-3": {
+      "title": "湖南省文史研究馆：我的曾祖母秋瑾",
+      "url": "https://css.hunan.gov.cn/css/tslm/hxws/wssy/201604/sxrj_18/201703/t20170324_4114557.html",
+      "kind": "后人回忆",
+      "limits": "记1903年再赴北京；文中出生地、早期北京经历与其他材料不一，不能整篇照用。",
+      "checkedAt": "2026-11-03"
+    },
+    "QJ-4": {
+      "title": "广东政协：半天足，行天下——秋瑾的革命人生",
+      "url": "https://www.gdszx.gov.cn/zxkw/tzgj/2023/01/content/post_32450.html",
+      "kind": "现代人物介绍",
+      "limits": "出生福建及童年云霄须与闽侯说分别核对，不能把童年居处当出生地。",
+      "checkedAt": "2026-11-03"
+    },
+    "QJ-5": {
+      "title": "上海吴淞中学：秋瑾与中国公学",
+      "url": "https://school.bsedu.org.cn/shwusong/app/info/doc/index.php/53",
+      "kind": "学校历史介绍",
+      "limits": "直接访问超时，本轮核到搜索缓存全文。支持1904东京及1906上海参与筹办中国公学；文中入学年、归国叙述需另核，不据开学日推断抵达日。",
+      "checkedAt": "2026-11-03"
+    },
+    "QJ-6": {
+      "title": "中国档案报转载：中国女报相关史料",
+      "url": "https://gddazx.southcn.com/node_ad21912ce2/7f4dce6249.shtml",
+      "kind": "档案报刊文章；南方网转载",
+      "limits": "支持1906年初冬上海筹办、1907年1月14日创刊；出版日不能直接当作本人抵沪日。",
+      "checkedAt": "2026-11-03"
+    }
+  },
+  "people": [
+    {
+      "id": "xuanzang",
+      "name": "玄奘",
+      "stage": "主要行迹首轮资料底稿；尚未替换线上样本",
+      "focus": "西行年份异说、印度段逐站系年、返国后往返和译经居处。",
+      "records": [
+        {
+          "id": "xuanzang-001",
+          "year": 602,
+          "place": "洛州缑氏一带",
+          "title": "出生地与常见生年",
+          "dateLabel": "602年（采用常见说法）",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "XZ-5",
+              "locator": "人物生平开篇",
+              "supports": "支持602年、缑氏这一常见叙述。"
+            }
+          ],
+          "limits": "生年有异说；现代区域对照尚未校准。",
+          "coordinates": null,
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "id": "xuanzang-002",
+          "year": 629,
+          "place": "长安",
+          "title": "启程西行",
+          "dateLabel": "贞观三年四月；另有627年说",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "XZ-1",
+              "locator": "返国前上表自述“遂以贞观三年四月”段",
+              "supports": "支持其自述西行起始纪年。"
+            }
+          ],
+          "limits": "XZ-4记627年；上图须同时保留异说，不能由此自动推算西域各站。",
+          "coordinates": null,
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "id": "xuanzang-003",
+          "year": 645,
+          "place": "长安",
+          "title": "携经归来",
+          "dateLabel": "贞观十九年正月",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "XZ-1",
+              "locator": "“贞观十九年春正月”入都段",
+              "supports": "支持返长安，入城后居都亭驿。"
+            }
+          ],
+          "limits": "与洛阳、再回长安为同年不同记录。",
+          "coordinates": null,
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "id": "xuanzang-004",
+          "year": 645,
+          "place": "洛阳",
+          "title": "赴洛阳见唐太宗",
+          "dateLabel": "贞观十九年二月",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "XZ-1",
+              "locator": "洛阳宫、仪鸾殿段",
+              "supports": "支持本人到洛阳并受召见。"
+            }
+          ],
+          "limits": "召见记日不等于抵达日。",
+          "coordinates": null,
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "id": "xuanzang-005",
+          "year": 645,
+          "place": "长安弘福寺",
+          "title": "回长安译经",
+          "dateLabel": "贞观十九年三月",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "XZ-1",
+              "locator": "“三月己巳…自洛阳还至长安，即居弘福寺”",
+              "supports": "支持洛阳返回长安并居弘福寺。"
+            }
+          ],
+          "limits": "日干支先保留在引用定位，未作公历换算。",
+          "coordinates": null,
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "id": "xuanzang-006",
+          "year": 659,
+          "place": "玉华寺",
+          "title": "迁往玉华寺译经",
+          "dateLabel": "显庆四年十月",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "XZ-3",
+              "locator": "藏品说明中的赴玉华寺段",
+              "supports": "支持659年十月前往玉华寺。"
+            }
+          ],
+          "limits": "寺址需要另做古今地望核对。",
+          "coordinates": null,
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "id": "xuanzang-007",
+          "year": 664,
+          "place": "玉华寺",
+          "title": "生命最后的译经居处",
+          "dateLabel": "麟德元年二月",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "XZ-3",
+              "locator": "藏品说明卒年段",
+              "supports": "支持在玉华寺去世。"
+            }
+          ],
+          "limits": "身后墓地不接入生前路线。",
+          "coordinates": null,
+          "checkedAt": "2026-11-03"
+        }
+      ],
+      "pending": [
+        {
+          "item": "高昌、龟兹及西域各站",
+          "known": "教学路线与传记可以确认西行曾经部分地区。",
+          "missing": "逐站停留年份、先后细节及历史城址尚未逐一核到。",
+          "nextCheck": "逐卷读《大唐大慈恩寺三藏法师传》，对照《大唐西域记》及校注年表。"
+        },
+        {
+          "item": "那烂陀求学",
+          "known": "学习经历有资料支持。",
+          "missing": "旧节点635年没有在本轮找到足以钉定该年的依据；学习起止亦有不同说法。",
+          "nextCheck": "核传记入寺、戒贤授学与离寺段，保留年区间，不把区间中点当实年。"
+        },
+        {
+          "item": "返国全程与晚年居处",
+          "known": "645返国及659迁玉华寺已列记录。",
+          "missing": "于阗、葱岭等返程逐站，以及弘福寺、大慈恩寺等居处变动尚未展开。",
+          "nextCheck": "先读传记对应卷，再逐条记录年、地与原文主体。"
+        }
+      ],
+      "oldNodeReview": [
+        "629保留但补627异说。",
+        "630高昌、635那烂陀转入待核，不凭旧示意年继续扩展。",
+        "645拆分长安—洛阳—长安，补659玉华寺。"
+      ]
+    },
+    {
+      "id": "xuxiake",
+      "name": "徐霞客",
+      "stage": "主要行迹首轮资料底稿；尚未替换线上样本",
+      "focus": "以日记原文为主，分清出游日、抵达日、游记记日与后人推年。",
+      "records": [
+        {
+          "id": "xuxiake-001",
+          "year": 1587,
+          "place": "江阴",
+          "title": "出生于江阴",
+          "dateLabel": "1587年",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "XX-1",
+              "locator": "人物介绍生卒与籍里",
+              "supports": "支持生年和江阴地域。"
+            }
+          ],
+          "limits": "出生宅址未核，不赋精确坐标。",
+          "coordinates": null,
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "id": "xuxiake-002",
+          "year": 1613,
+          "place": "宁海",
+          "title": "从宁海出西门",
+          "dateLabel": "癸丑三月晦",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "XX-2",
+              "locator": "日记开篇",
+              "supports": "支持从宁海出发，宿梁隍山。"
+            }
+          ],
+          "limits": "三月晦为原历月末，不写成公历3月31日。",
+          "coordinates": null,
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "id": "xuxiake-003",
+          "year": 1613,
+          "place": "天台山一带",
+          "title": "沿山路进入天台",
+          "dateLabel": "癸丑四月初一及随后日条",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "XX-2",
+              "locator": "四月初一松门岭、筋竹庵、弥陀庵段",
+              "supports": "支持天台山地区游踪。"
+            }
+          ],
+          "limits": "这是区域合并记录；若画实际道路，须再拆分日条。",
+          "coordinates": null,
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "id": "xuxiake-004",
+          "year": 1636,
+          "place": "江阴出发区域",
+          "title": "启程西南远游",
+          "dateLabel": "丙子九月十九夜",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "XX-3",
+              "locator": "九月十九日条",
+              "supports": "支持夜间放舟出游。"
+            }
+          ],
+          "limits": "家乡定位需结合XX-1；土渎庄的准确地望未核。",
+          "coordinates": null,
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "id": "xuxiake-005",
+          "year": 1636,
+          "place": "无锡",
+          "title": "舟抵锡邑",
+          "dateLabel": "丙子九月二十",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "XX-3",
+              "locator": "九月二十日条",
+              "supports": "支持本人抵达锡邑。"
+            }
+          ],
+          "limits": "",
+          "coordinates": null,
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "id": "xuxiake-006",
+          "year": 1636,
+          "place": "苏州虎丘、半塘一带",
+          "title": "经过虎丘，泊舟半塘",
+          "dateLabel": "丙子九月二十一",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "XX-3",
+              "locator": "九月二十一日条；二十二日苏州城门段",
+              "supports": "支持本人经过虎丘、停泊半塘。"
+            }
+          ],
+          "limits": "地点合并在苏州区域；不能将现代市中心视为泊舟点。",
+          "coordinates": null,
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "id": "xuxiake-007",
+          "year": 1637,
+          "place": "桂林府地区",
+          "title": "考察桂林山水",
+          "dateLabel": "1637年",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "XX-4",
+              "locator": "桂林游踪介绍",
+              "supports": "支持1637年桂林府地区考察。"
+            }
+          ],
+          "limits": "闰四月进入全州不等于同日到桂林城；待日记逐日复核。",
+          "coordinates": null,
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "id": "xuxiake-008",
+          "year": 1638,
+          "place": "鸡足山",
+          "title": "第一次登临鸡足山",
+          "dateLabel": "1638年十二月（原历）",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "XX-6",
+              "locator": "首次赴鸡足山段",
+              "supports": "支持首次到访的年、月。"
+            }
+          ],
+          "limits": "XX-5叙述日期需互校；未换算公历，原历年底可能跨西历年。",
+          "coordinates": null,
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "id": "xuxiake-009",
+          "year": 1639,
+          "place": "丽江",
+          "title": "在云南继续行旅",
+          "dateLabel": "1639年",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "XX-5",
+              "locator": "首次鸡足山之后赴丽江的叙述",
+              "supports": "支持两次鸡足山之间的丽江行旅。"
+            }
+          ],
+          "limits": "现代报道转述日记，未逐日核原文；不赋具体抵达日。",
+          "coordinates": null,
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "id": "xuxiake-010",
+          "year": 1639,
+          "place": "鸡足山",
+          "title": "再次回到鸡足山",
+          "dateLabel": "1639年八月（原历）",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "XX-6",
+              "locator": "第二次赴鸡足山段",
+              "supports": "支持八月再次到访。"
+            }
+          ],
+          "limits": "XX-5记二十二，XX-6记二十；先保留到月。",
+          "coordinates": null,
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "id": "xuxiake-011",
+          "year": 1640,
+          "place": "江阴",
+          "title": "病中归乡",
+          "dateLabel": "1640年",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "XX-1",
+              "locator": "晚年病归段",
+              "supports": "支持病归江阴的概述。"
+            }
+          ],
+          "limits": "归程中间各站和到家月日未核。",
+          "coordinates": null,
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "id": "xuxiake-012",
+          "year": 1641,
+          "place": "江阴",
+          "title": "在家乡走完一生",
+          "dateLabel": "1641年",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "XX-1",
+              "locator": "人物介绍卒年段",
+              "supports": "支持卒年与江阴。"
+            }
+          ],
+          "limits": "XX-7具体卒日与常见说法不同；不使用具体月日。",
+          "coordinates": null,
+          "checkedAt": "2026-11-03"
+        }
+      ],
+      "pending": [
+        {
+          "item": "早期多次出游",
+          "known": "1613以前及之后另有多次旅行。",
+          "missing": "黄山、雁荡、福建、武当等路线没有完成逐日摘录。",
+          "nextCheck": "逐篇建立游记篇名—干支年—日条对照，再扩展。"
+        },
+        {
+          "item": "西南远游中间段",
+          "known": "1636至1640远游为多省连续行旅。",
+          "missing": "江西、湖南、广西、贵州、云南大量节点未展开；现有连线不能代表走法。",
+          "nextCheck": "按游记篇章逐日提取，先核同名异地和缺页。"
+        },
+        {
+          "item": "1640归程与1641卒日",
+          "known": "病归、卒于江阴有概述依据。",
+          "missing": "具体回乡途经地点、卒日冲突尚未解决。",
+          "nextCheck": "查家谱、墓志及有校注的年谱，分清公历／农历与转录错误。"
+        }
+      ],
+      "oldNodeReview": [
+        "1613天台山补宁海及原历日条。",
+        "1636出发补无锡、苏州两站。",
+        "1639云南大范围概述拆为具体可查停留，完整滇游仍留待日记摘录。"
+      ]
+    },
+    {
+      "id": "liqingzhao",
+      "name": "李清照",
+      "stage": "主要行迹首轮资料底稿；尚未替换线上样本",
+      "focus": "南渡中的本人行动、家属和行李运输分开；晚年与卒年不写死。",
+      "records": [
+        {
+          "id": "liqingzhao-001",
+          "year": 1084,
+          "place": "济南地区",
+          "title": "出生与早年地域",
+          "dateLabel": "1084年（通常系年）",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "LQ-1",
+              "locator": "1084年条",
+              "supports": "支持常见生年及济南地域。"
+            }
+          ],
+          "limits": "明水等具体出生地仍需考辨；不据单一地方志精确定位。",
+          "coordinates": null,
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "id": "liqingzhao-002",
+          "year": 1101,
+          "place": "汴京",
+          "title": "与赵明诚成婚",
+          "dateLabel": "建中靖国元年",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "LQ-2",
+              "locator": "开篇“余建中辛巳，始归赵氏”及太学、相国寺段",
+              "supports": "支持成婚纪年与京城生活语境。"
+            }
+          ],
+          "limits": "婚礼日期和抵京日期不同；尚无确定抵京日。",
+          "coordinates": null,
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "id": "liqingzhao-003",
+          "year": 1108,
+          "place": "青州",
+          "title": "屏居乡里的岁月",
+          "dateLabel": "1108年前后",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "LQ-1",
+              "locator": "1107—1108年条",
+              "supports": "年表支持这一阶段移居、生活于青州。"
+            }
+          ],
+          "limits": "1107、1108迁居系年有差异；这里只作阶段性居住记录，不指1108才抵达。",
+          "coordinates": null,
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "id": "liqingzhao-004",
+          "year": 1121,
+          "place": "莱州",
+          "title": "赴莱州与丈夫团聚",
+          "dateLabel": "1121年秋",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "LQ-1",
+              "locator": "1121年条",
+              "supports": "支持赴莱州。"
+            }
+          ],
+          "limits": "日级记录未核影印底本，先保留季节。",
+          "coordinates": null,
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "id": "liqingzhao-005",
+          "year": 1128,
+          "place": "江宁／建康",
+          "title": "南渡后的居处",
+          "dateLabel": "1128年春（地方志年表系年）",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "LQ-1",
+              "locator": "1127—1128年条",
+              "supports": "年表将到江宁系于1128春。"
+            }
+          ],
+          "limits": "LQ-2丁未南来段需辨主体与叙事跨度；1127/1128问题未解决，不能标确定抵达年。",
+          "coordinates": null,
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "id": "liqingzhao-006",
+          "year": 1129,
+          "place": "芜湖",
+          "title": "乘舟上行",
+          "dateLabel": "己酉春三月",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "LQ-2",
+              "locator": "“具舟上芜湖，入姑孰”",
+              "supports": "支持本人舟行经过芜湖。"
+            }
+          ],
+          "limits": "",
+          "coordinates": null,
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "id": "liqingzhao-007",
+          "year": 1129,
+          "place": "姑孰",
+          "title": "由芜湖入姑孰",
+          "dateLabel": "己酉春三月",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "LQ-2",
+              "locator": "“具舟上芜湖，入姑孰，将卜居”",
+              "supports": "支持到姑孰并考虑居住。"
+            }
+          ],
+          "limits": "有卜居意向不代表已长期定居。",
+          "coordinates": null,
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "id": "liqingzhao-008",
+          "year": 1129,
+          "place": "池阳",
+          "title": "暂居池阳",
+          "dateLabel": "己酉夏五月",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "LQ-2",
+              "locator": "“既驻家池阳”前后",
+              "supports": "支持家居池阳及随后与丈夫分别。"
+            }
+          ],
+          "limits": "丈夫赴任湖州不能移作她的路线。",
+          "coordinates": null,
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "id": "liqingzhao-009",
+          "year": 1129,
+          "place": "建康",
+          "title": "赴病中的赵明诚身边",
+          "dateLabel": "己酉七月末至八月",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "LQ-1",
+              "locator": "1129年条",
+              "supports": "年表明确建康；后序记七月末得书后解舟下行及八月十八丧夫。"
+            }
+          ],
+          "limits": "后序单段不直书城名，地点用年表辅助；八月十八为丈夫卒日。",
+          "coordinates": null,
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "id": "liqingzhao-010",
+          "year": 1130,
+          "place": "温州",
+          "title": "海路避乱中的一站",
+          "dateLabel": "1130年前后",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "LQ-1",
+              "locator": "1130年条；后序海道之温段可互校",
+              "supports": "年表将温州段系在1130，后序确认曾至温。"
+            }
+          ],
+          "limits": "仅能确认这一阶段；未核具体到达日及往返细节。",
+          "coordinates": null,
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "id": "liqingzhao-011",
+          "year": 1130,
+          "place": "衢州",
+          "title": "赴衢州",
+          "dateLabel": "庚戌十二月",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "LQ-2",
+              "locator": "“庚戌十二月…遂之衢”",
+              "supports": "支持这一原历月赴衢。"
+            }
+          ],
+          "limits": "未换算为公历月份。",
+          "coordinates": null,
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "id": "liqingzhao-012",
+          "year": 1131,
+          "place": "越州",
+          "title": "再次赴越州",
+          "dateLabel": "绍兴辛亥春三月",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "LQ-2",
+              "locator": "“绍兴辛亥春三月，复赴越”",
+              "supports": "支持本人重返越州。"
+            }
+          ],
+          "limits": "",
+          "coordinates": null,
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "id": "liqingzhao-013",
+          "year": 1132,
+          "place": "杭州",
+          "title": "赴杭州",
+          "dateLabel": "壬子",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "LQ-2",
+              "locator": "“壬子，又赴杭”",
+              "supports": "支持壬子年赴杭州。"
+            }
+          ],
+          "limits": "本文署年问题另见LQ-3；不据此推断全年居杭。",
+          "coordinates": null,
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "id": "liqingzhao-014",
+          "year": 1134,
+          "place": "金华",
+          "title": "避乱金华",
+          "dateLabel": "1134年十月",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "LQ-1",
+              "locator": "1134年条",
+              "supports": "年表支持赴金华避乱。"
+            }
+          ],
+          "limits": "原历月份；赴杭返回时间另核。",
+          "coordinates": null,
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "id": "liqingzhao-015",
+          "year": 1135,
+          "place": "金华",
+          "title": "金华时期的生活",
+          "dateLabel": "1135年",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "LQ-1",
+              "locator": "1135年条",
+              "supports": "支持金华阶段。"
+            }
+          ],
+          "limits": "同年何时返临安未核，不能把下一年自动放在临安。",
+          "coordinates": null,
+          "checkedAt": "2026-11-03"
+        }
+      ],
+      "pending": [
+        {
+          "item": "晚年与卒年",
+          "known": "晚年相关诗文、后人回忆和年谱存在不同系年。",
+          "missing": "1155不是已经证实的卒年；也有1156或以后说，最后居处未定。",
+          "nextCheck": "核晚年作品、孙氏女相关记载及现代校注年谱；界面结束年须标展示范围。"
+        },
+        {
+          "item": "南渡前婚后行旅",
+          "known": "汴京、青州、莱州等主要居处已列。",
+          "missing": "淄州等往返及任所与本人实际到访的关系未逐一核定。",
+          "nextCheck": "对读赵明诚任官资料与李清照自述、诗词题序，不用配偶任命补路线。"
+        },
+        {
+          "item": "1130海路避乱细节",
+          "known": "后序涉及台、剡、睦、黄岩、章安、温、越。",
+          "missing": "逐站现代地望、叙次及确切年份仍需校勘。",
+          "nextCheck": "原文逐句辨明主体、时间承接及往返，不直接将地名串转成连续折线。"
+        },
+        {
+          "item": "后序写作日期",
+          "known": "在线本署绍兴二年；有绍兴四年考订。",
+          "missing": "本轮未解决文内年龄与署年的冲突。",
+          "nextCheck": "查LQ-3所引考证及影印底本；写作日期单列，不混入迁徙日期。"
+        }
+      ],
+      "oldNodeReview": [
+        "青州1107不再写成毫无争议的抵达年。",
+        "南渡按江宁、芜湖、姑孰、池阳、建康和避乱各站拆分。",
+        "不增加洪州运书路线、赵明诚湖州任所或1155确定死亡节点。"
+      ]
+    },
+    {
+      "id": "qinliangyu",
+      "name": "秦良玉",
+      "stage": "主要行迹首轮资料底稿；尚未替换线上样本",
+      "focus": "每场战事先辨明本人、丈夫、兄弟、儿子或侄辈；任命和未成行的计划不能画成到访。",
+      "records": [
+        {
+          "id": "qinliangyu-001",
+          "year": 1574,
+          "place": "忠州地区",
+          "title": "出生与早年",
+          "dateLabel": "1574年",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "QL-2",
+              "locator": "人物介绍开篇",
+              "supports": "支持常见生年与忠州出生地域。"
+            }
+          ],
+          "limits": "仅核到缓存正文；鸣玉溪地望与具体生日仍需原页／底本。",
+          "coordinates": null,
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "id": "qinliangyu-002",
+          "year": 1599,
+          "place": "播州战区",
+          "title": "随马千乘参与播州之役",
+          "dateLabel": "万历二十七年",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "QL-1",
+              "locator": "“二十七年…良玉别统精卒五百”段",
+              "supports": "支持本人统兵参与。"
+            }
+          ],
+          "limits": "只到战区级；不能把府城当本人驻营点。",
+          "coordinates": null,
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "id": "qinliangyu-003",
+          "year": 1600,
+          "place": "播州战区",
+          "title": "播州战役继续",
+          "dateLabel": "次年正月初二及随后",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "QL-1",
+              "locator": "“明年正月二日”至桑木关段",
+              "supports": "支持次年参战与攻关。"
+            }
+          ],
+          "limits": "古关隘位置未校准，暂不赋坐标。",
+          "coordinates": null,
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "id": "qinliangyu-004",
+          "year": 1613,
+          "place": "石砫",
+          "title": "接掌石砫事务",
+          "dateLabel": "1613年",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "QL-2",
+              "locator": "马千乘去世及继职段",
+              "supports": "支持继职年份与石砫这一任所。"
+            }
+          ],
+          "limits": "这是职务／居处线索，不能单凭任职推出当天抵达；来源为缓存。",
+          "coordinates": null,
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "id": "qinliangyu-005",
+          "year": 1621,
+          "place": "榆关",
+          "title": "亲自率兵至榆关",
+          "dateLabel": "天启元年",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "QL-1",
+              "locator": "“良玉身督精兵三千抵榆关”",
+              "supports": "明确支持本人抵榆关。"
+            }
+          ],
+          "limits": "此前浑河参战的兄弟行迹不并入此条。",
+          "coordinates": null,
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "id": "qinliangyu-006",
+          "year": 1621,
+          "place": "重庆南坪关一带",
+          "title": "返川后参与平乱",
+          "dateLabel": "天启元年叙事段",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "QL-1",
+              "locator": "奢崇明党樊龙反重庆；“奄至重庆南坪关”段",
+              "supports": "支持本人参与返川后的平乱。"
+            }
+          ],
+          "limits": "具体日月和行军路径未定；南坪关现代定位尚待考。",
+          "coordinates": null,
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "id": "qinliangyu-007",
+          "year": 1630,
+          "place": "北京",
+          "title": "入京勤王",
+          "dateLabel": "崇祯三年",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "QL-1",
+              "locator": "“崇祯三年…良玉与翼明奉诏勤王…召见平台”段",
+              "supports": "支持本人到京、受召见。"
+            }
+          ],
+          "limits": "召见地不等于驻军地；之后侄辈留镇的行迹另分。",
+          "coordinates": null,
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "id": "qinliangyu-008",
+          "year": 1634,
+          "place": "太平一带",
+          "title": "解太平之围",
+          "dateLabel": "崇祯七年二月",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "QL-1",
+              "locator": "“贼陷夔州，围太平，良玉至乃走”",
+              "supports": "支持本人赴太平解围。"
+            }
+          ],
+          "limits": "句中夔州是先被攻陷之地；不直接以夔州替代本人抵达地点。古太平地望另核。",
+          "coordinates": null,
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "id": "qinliangyu-009",
+          "year": 1640,
+          "place": "巫山一带",
+          "title": "在巫山作战",
+          "dateLabel": "崇祯十三年",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "QL-1",
+              "locator": "“良玉扼罗汝才于巫山”",
+              "supports": "支持本人巫山战事。"
+            }
+          ],
+          "limits": "不画具体战场边界。",
+          "coordinates": null,
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "id": "qinliangyu-010",
+          "year": 1644,
+          "place": "夔州",
+          "title": "驰援夔州",
+          "dateLabel": "崇祯十七年春",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "QL-1",
+              "locator": "“驰援…夔州”战败段",
+              "supports": "支持本人驰援与战败。"
+            }
+          ],
+          "limits": "同年退回石砫另列，未明日期不设日级先后。",
+          "coordinates": null,
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "id": "qinliangyu-011",
+          "year": 1644,
+          "place": "石砫",
+          "title": "回守石砫",
+          "dateLabel": "崇祯十七年相关叙事",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "QL-1",
+              "locator": "败后守石砫段",
+              "supports": "支持战败后守石砫。"
+            }
+          ],
+          "limits": "不等于从此每年始终未离开。",
+          "coordinates": null,
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "id": "qinliangyu-012",
+          "year": 1648,
+          "place": "石砫",
+          "title": "晚年与去世",
+          "dateLabel": "永历二年",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "QL-2",
+              "locator": "石砫玉音楼卒年段",
+              "supports": "地方志介绍支持1648卒于石砫。"
+            }
+          ],
+          "limits": "《明史》此传只概述寿终；具体卒日暂不采用，缓存需复查。",
+          "coordinates": null,
+          "checkedAt": "2026-11-03"
+        }
+      ],
+      "pending": [
+        {
+          "item": "1595婚姻及移居石砫",
+          "known": "旧样本给出了1595。",
+          "missing": "本轮尚无足够直接材料把婚年与本人抵达石砫时间同时钉定。",
+          "nextCheck": "核地方志婚姻记载与马氏家族资料，分开婚礼、任所与迁居。"
+        },
+        {
+          "item": "1621—1623四川平乱诸站",
+          "known": "正史记重庆及新都、成都相关战事。",
+          "missing": "各站明确年份、本人／部属主体及现代关隘位置需展开。",
+          "nextCheck": "逐段对读《明史》相关列传、纪和四川地方志。"
+        },
+        {
+          "item": "不应进入本人路线的战事／计划",
+          "known": "浑河主要为兄弟参战；后续部分辽东记录属于侄辈；1646赴福建护驾未成行。",
+          "missing": "不能据亲属或部属活动、未成行计划给本人落点。",
+          "nextCheck": "作为排除清单保留；只有新材料明确本人到场才重新评估。"
+        }
+      ],
+      "oldNodeReview": [
+        "婚姻节点与迁居分开，1595先移待核。",
+        "删除将浑河／亲属辽东战事当本人到场的推断。",
+        "1634按正史辨太平与夔州，不把整场战役归为一个确定城市点。"
+      ]
+    },
+    {
+      "id": "qiujin",
+      "name": "秋瑾",
+      "stage": "主要行迹首轮资料底稿；尚未替换线上样本",
+      "focus": "出生地与籍贯分开，留日往返逐次核，办报和革命组织活动不自动等于所在地。",
+      "records": [
+        {
+          "id": "qiujin-001",
+          "year": 1894,
+          "place": "湖南（省域）",
+          "title": "随父赴湖南",
+          "dateLabel": "1894年",
+          "calendar": "近代资料纪年；具体月日仅在来源明确时保留",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "QJ-2",
+              "locator": "人物辞典早年段",
+              "supports": "支持随父到湖南。"
+            }
+          ],
+          "limits": "未核具体城市，不能直接落在湘潭；保留省域记录。",
+          "coordinates": null,
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "id": "qiujin-002",
+          "year": 1903,
+          "place": "北京",
+          "title": "再次到北京生活",
+          "dateLabel": "1903年",
+          "calendar": "近代资料纪年；具体月日仅在来源明确时保留",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "QJ-3",
+              "locator": "农历二月再赴北京段",
+              "supports": "后人回忆支持1903再赴北京。"
+            }
+          ],
+          "limits": "该文其他年份、出生地有问题；须与年谱互校，本条不作为已定到达日。",
+          "coordinates": null,
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "id": "qiujin-003",
+          "year": 1904,
+          "place": "东京",
+          "title": "赴日本求学",
+          "dateLabel": "1904年",
+          "calendar": "近代资料纪年；具体月日仅在来源明确时保留",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "QJ-5",
+              "locator": "留日经历段",
+              "supports": "支持1904赴东京求学；QJ-1亦支持本年留日。"
+            }
+          ],
+          "limits": "出发、抵达及入学是不同日期；现有具体日期不一，不选定日。",
+          "coordinates": null,
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "id": "qiujin-004",
+          "year": 1906,
+          "place": "上海",
+          "title": "参与中国公学",
+          "dateLabel": "1906年",
+          "calendar": "近代资料纪年；具体月日仅在来源明确时保留",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "QJ-5",
+              "locator": "为中国公学筹措资金及上海开办段",
+              "supports": "支持参与上海中国公学的筹办活动。"
+            }
+          ],
+          "limits": "开学日不等于本人抵沪或到校日；没有用这篇材料认定其任教起止。缓存原页需复查。",
+          "coordinates": null,
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "id": "qiujin-005",
+          "year": 1906,
+          "place": "上海",
+          "title": "筹办《中国女报》",
+          "dateLabel": "1906年初冬",
+          "calendar": "近代资料纪年；具体月日仅在来源明确时保留",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "QJ-6",
+              "locator": "北四川路厚德里租屋筹报段",
+              "supports": "支持上海筹办报刊。"
+            }
+          ],
+          "limits": "现代街址定位未校准，先保留城市级。",
+          "coordinates": null,
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "id": "qiujin-006",
+          "year": 1907,
+          "place": "上海（报刊活动）",
+          "title": "《中国女报》创刊",
+          "dateLabel": "1907年1月14日为创刊日",
+          "calendar": "近代资料纪年；具体月日仅在来源明确时保留",
+          "status": "暂不上图",
+          "evidence": [
+            {
+              "source": "QJ-6",
+              "locator": "创刊及两期出版段",
+              "supports": "支持报刊在上海创刊与秋瑾的办报活动。"
+            }
+          ],
+          "limits": "这是活动记录；不能单凭创刊日断定本人当天在沪。上图前须补本人在场证据。",
+          "coordinates": null,
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "id": "qiujin-007",
+          "year": 1907,
+          "place": "绍兴",
+          "title": "主持大通学堂",
+          "dateLabel": "1907年",
+          "calendar": "近代资料纪年；具体月日仅在来源明确时保留",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "QJ-1",
+              "locator": "归国后大通学堂段",
+              "supports": "支持主持绍兴大通学堂。"
+            }
+          ],
+          "limits": "到任具体日及其间往返另核。",
+          "coordinates": null,
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "id": "qiujin-008",
+          "year": 1907,
+          "place": "绍兴轩亭口",
+          "title": "生命的终点",
+          "dateLabel": "1907年7月15日",
+          "calendar": "近代资料纪年；具体月日仅在来源明确时保留",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "QJ-1",
+              "locator": "被捕遇害段",
+              "supports": "支持遇害日期和绍兴。"
+            }
+          ],
+          "limits": "后来的迁葬不纳入生前路线；轩亭口仍需历史位置校准。",
+          "coordinates": null,
+          "checkedAt": "2026-11-03"
+        }
+      ],
+      "pending": [
+        {
+          "item": "1875出生地",
+          "known": "1875为本轮资料采用的生年；福建出生有多处记载。",
+          "missing": "闽侯、云霄童年经历、绍兴籍贯在转述中混用；旧样本厦门未获可靠支持。",
+          "nextCheck": "核出生地考证、父亲任官档案与校注年谱；暂不建立出生点。"
+        },
+        {
+          "item": "1896婚姻与早年湖南居处",
+          "known": "辞典支持1896成婚。",
+          "missing": "具体婚地、迁居路径、停留起止未核。",
+          "nextCheck": "先核家谱、婚姻与王廷钧任官材料，不由丈夫籍贯推她的住址。"
+        },
+        {
+          "item": "1900—1903北京往返",
+          "known": "后人回忆提到首次入京、回湘和再赴京。",
+          "missing": "1900、1901相关叙述需独立核对，不能完整照搬。",
+          "nextCheck": "对读秋瑾年谱、同时代书信，逐次分开出发与到达。"
+        },
+        {
+          "item": "1905回国和第二次赴日",
+          "known": "人物介绍可见归国与革命组织活动线索。",
+          "missing": "本轮未完成返国停留城市、再赴东京日期与入学记录的原始材料核对。",
+          "nextCheck": "核日本学校档案、同期书信和年谱；不把入会日自动当所在地。"
+        },
+        {
+          "item": "1907上海—绍兴往返",
+          "known": "筹报、主持学堂及遇害已有记录。",
+          "missing": "期间来往、各次离沪和抵绍日尚未逐一确认。",
+          "nextCheck": "核报刊原件、书信和同时代回忆，创刊日另作活动事件。"
+        },
+        {
+          "item": "1906护送灵柩及1907湖南、浙江联络行程",
+          "known": "QJ-5缓存全文提到1906护送至长沙、1907赴湖南及浙江多县联络。",
+          "missing": "现代校史介绍尚未与同期记录互校；其留日入学等叙述另有问题，不能整段直接转为轨迹。",
+          "nextCheck": "核秋瑾书信、年谱与湖南、浙江地方档案，先确认本人行程和年份，再按站录入。"
+        }
+      ],
+      "oldNodeReview": [
+        "旧出生点厦门移出候选地图；不改填籍贯绍兴。",
+        "1904留日保留年级，具体出海日与入学日分开。",
+        "1907办报活动和实际所在位置分开；安葬、迁葬均不作生前行迹。"
+      ]
+    }
+  ]
+}

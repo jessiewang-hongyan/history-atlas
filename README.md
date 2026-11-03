@@ -2,6 +2,15 @@
 
 中国历史人物地图交互原型。完整候选名单与已确认产品原则见 [PLAN.md](PLAN.md)。
 
+## 人物研究记录
+
+- [工作记录](research/WORK_LOG.md)：苏轼核验、北归补查、信息源、地图和文案工作的回顾，以及五人准备进度。
+- [人物整理流程](research/PERSON_WORKFLOW.md)：日期、来源、本人行迹、古今地名和发布检查的统一做法。
+- 五人首轮底稿：[玄奘](research/people/xuanzang.md)、[徐霞客](research/people/xuxiake.md)、[李清照](research/people/liqingzhao.md)、[秦良玉](research/people/qinliangyu.md)、[秋瑾](research/people/qiujin.md)。共54条候选记录、23个来源入口，保留异说、排除项和待核线索。
+- [结构化研究底稿](research/people/initial-review.json)是上述五份报告的数据来源；运行 `python3 scripts/render_people.py` 生成报告，`python3 scripts/render_people.py --check` 检查一致性、排序和来源关联。
+
+这批底稿尚未替换线上29个样本节点，坐标也尚未校准；候选记录不能直接视为确定的地图位置。这里的准备进度与下文的线上数据数量分别统计。
+
 ## 源码与托管
 
 源码托管于公开 GitHub 仓库 `jessiewang-hongyan/history-atlas`。按用户选择，仓库于2026-10-30改为公开并启用 GitHub Pages；不再发布到 Sites。
