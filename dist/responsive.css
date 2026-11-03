@@ -101,4 +101,9 @@
 .history-lane>div{position:relative;flex:1;height:8px;background:#e6e9de;margin-right:4px}
 .history-lane i{position:absolute;height:8px;max-width:100%;background:#647a51;transform:translateX(-1px)}.history-lane i.military{background:#9c7b54}
 #history-ticks{margin:14px 0 0}
+.map-controls{position:absolute;right:14px;bottom:106px;display:flex;flex-direction:column;gap:6px;z-index:3}
+.map-controls button{width:38px;height:38px;background:#fcfaf1ed;border:1px solid #b9c8b8;border-radius:5px;font-size:22px;box-shadow:0 2px 5px #304b3810}
+.map-controls button:hover{background:#e7eddf}.map-view-hint{position:absolute;left:14px;bottom:77px;display:flex;flex-direction:column;gap:3px;font-size:10px;color:#526c61;pointer-events:none;background:#f8f7efdf;padding:6px 8px;border-radius:4px}
+#map{touch-action:none;cursor:grab}#map:active{cursor:grabbing}#map .map-node{cursor:pointer}#map .place-name{font-size:12px;fill:#54634d;stroke-width:3px}#map .active-place{font-size:14px;font-weight:600;fill:#994a34;stroke-width:4px}#map .region-label{font-size:20px;letter-spacing:5px;opacity:.35}#map .ocean-label{font-size:12px;letter-spacing:3px}.map-panel .compass{display:none}
+@media(max-width:900px){.map-panel{height:520px}.map-top{top:14px;left:14px;right:14px}.layers{font-size:10px;padding:9px}.map-view-hint{bottom:84px;font-size:9px;max-width:230px}.map-controls{bottom:128px;right:12px}.map-legend{font-size:8px;gap:9px}.map-footer>span{max-width:70%}}
 @media(max-width:900px){.history-panel{grid-row:6;margin-top:0;padding:20px 16px}.story-panel{grid-row:5}footer{grid-row:7}#history-events{grid-template-columns:minmax(0,1fr)}.history-head h2{font-size:21px}.history-head label{font-size:12px}.history-note{overflow-wrap:anywhere}}

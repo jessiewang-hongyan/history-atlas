@@ -27,6 +27,7 @@ jobs:
           node --check dist/data.js
           node --check dist/sushi.js
           node --check dist/history.js
+          node --check dist/map-detail.js
           node tests/history.test.cjs
       - uses: actions/upload-pages-artifact@v3
         with:
