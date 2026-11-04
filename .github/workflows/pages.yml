@@ -6,6 +6,8 @@ on:
     paths:
       - 'dist/**'
       - 'tests/**'
+      - 'scripts/build_lives.py'
+      - 'research/people/initial-review.json'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
 
@@ -29,6 +31,10 @@ jobs:
           node --check dist/history.js
           node --check dist/map-detail.js
           node tests/history.test.cjs
+          node --check dist/lives-data.js
+          node --check dist/lives-ui.js
+          python3 scripts/build_lives.py --check
+          node tests/lives.test.cjs
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

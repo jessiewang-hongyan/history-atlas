@@ -4,7 +4,7 @@ const basicDraw=draw;
 project=function(p){return [(p[0]-view[0])/(view[2]-view[0])*mapWidth,mapHeight-(p[1]-view[1])/(view[3]-view[1])*mapHeight];};
 function sizeMap(){const r=$('map').getBoundingClientRect();mapWidth=Math.max(1,r.width);mapHeight=Math.max(1,r.height);$('map').setAttribute('viewBox',`0 0 ${mapWidth} ${mapHeight}`);$('map').querySelectorAll(':scope > rect').forEach(r=>{r.setAttribute('width',mapWidth);r.setAttribute('height',mapHeight);});}
 function mapRatio(lat){return mapWidth/mapHeight/Math.cos(lat*Math.PI/180);}
-fit=function(){sizeMap();const xs=person.nodes.map(n=>n.xy[0]),ys=person.nodes.map(n=>n.xy[1]),cx=(Math.min(...xs)+Math.max(...xs))/2,cy=(Math.min(...ys)+Math.max(...ys))/2;let w=Math.max(8,(Math.max(...xs)-Math.min(...xs))*1.45),h=Math.max(8,(Math.max(...ys)-Math.min(...ys))*1.55);const ratio=mapRatio(cy);if(w/h<ratio)w=h*ratio;else h=w/ratio;view=[cx-w/2,cy-h/2,cx+w/2,cy+h/2];draw();};
+fit=function(){sizeMap();const xs=person.nodes.filter(n=>n.xy).map(n=>n.xy[0]),ys=person.nodes.filter(n=>n.xy).map(n=>n.xy[1]),cx=(Math.min(...xs)+Math.max(...xs))/2,cy=(Math.min(...ys)+Math.max(...ys))/2;let w=Math.max(8,(Math.max(...xs)-Math.min(...xs))*1.45),h=Math.max(8,(Math.max(...ys)-Math.min(...ys))*1.55);const ratio=mapRatio(cy);if(w/h<ratio)w=h*ratio;else h=w/ratio;view=[cx-w/2,cy-h/2,cx+w/2,cy+h/2];draw();};
 function changeMapView(cx,cy,w){cy=Math.max(-55,Math.min(65,cy));w=Math.max(1.5,Math.min(120,120*mapRatio(cy),w));const h=w/mapRatio(cy);cy=Math.max(-65+h/2,Math.min(80-h/2,cy));view=[cx-w/2,cy-h/2,cx+w/2,cy+h/2];draw();}
 function zoomMap(factor){changeMapView((view[0]+view[2])/2,(view[1]+view[3])/2,(view[2]-view[0])*factor);}
 drawLand=function(){
@@ -15,9 +15,9 @@ drawLand=function(){
 };
 function detailedRoute(){
  const target=$('route-layer');target.replaceChildren();if(!$('route').checked)return;const i=currentIndex();if(i<0||year>person.end)return;const nodes=person.nodes.slice(0,i+1);
- if(nodes.length>1)target.append(svg('path',{d:path(nodes.map(n=>n.xy)),fill:'none',stroke:person.color,'stroke-width':1.8,'stroke-dasharray':'5 4','stroke-linejoin':'round',opacity:.75}));
+ if(!person.lifeResearch&&nodes.length>1)target.append(svg('path',{d:path(nodes.map(n=>n.xy)),fill:'none',stroke:person.color,'stroke-width':1.8,'stroke-dasharray':'5 4','stroke-linejoin':'round',opacity:.75}));
  const seen=new Set(),marks=[];
- for(let j=i;j>=0;j--){const n=nodes[j],key=n.xy.map(x=>x.toFixed(2)).join(',');if(seen.has(key))continue;seen.add(key);const [x,y]=project(n.xy);if(x<0||x>mapWidth||y<0||y>mapHeight)continue;marks.push({n,j,x,y});}
+ for(let j=i;j>=0;j--){const n=nodes[j];if(!n.xy)continue;const key=n.xy.map(x=>x.toFixed(2)).join(',');if(seen.has(key))continue;seen.add(key);const [x,y]=project(n.xy);if(x<0||x>mapWidth||y<0||y>mapHeight)continue;marks.push({n,j,x,y});}
  const labels=[];
  for(const {n,j,x,y} of marks){const active=j===i,group=svg('g',{role:'button',tabindex:0,'aria-label':`${n.year}年 ${n.place}，查看人生节点`,'data-node':j,class:active?'map-node current-node':'map-node'});group.append(svg('circle',{cx:x,cy:y,r:12,fill:'transparent'}));group.append(svg('circle',{cx:x,cy:y,r:active?6:3.5,fill:active?person.color:'#fcf9ed',stroke:person.color,'stroke-width':1.5}));if(active)group.append(svg('circle',{cx:x,cy:y,r:11,fill:'none',stroke:person.color,'stroke-opacity':.35}));group.append(svg('title',{},`${n.year} · ${n.place} · ${n.title}`));
  const width=n.place.length*12+10,tx=x+width+14>mapWidth?x-width-10:x+10,ty=y<30?y+22:y-12,box=[tx,ty-12,tx+width,ty+4];
@@ -29,7 +29,7 @@ draw=function(){basicDraw();detailedRoute();$('map-view-status').textContent=`�
 const waterLabel=document.createElement('label');waterLabel.innerHTML='<input id="water-reference" type="checkbox" checked> 现代水系参照';document.querySelector('.layers').append(waterLabel);$('water-reference').onchange=draw;
 const mapControls=document.createElement('div');mapControls.className='map-controls';mapControls.innerHTML='<button id="map-zoom-in" aria-label="放大地图" title="放大地图">＋</button><button id="map-zoom-out" aria-label="缩小地图" title="缩小地图">−</button><button id="map-locate" aria-label="定位最近人生记录" title="定位最近人生记录">◎</button>';document.querySelector('.map-panel').append(mapControls);
 const mapStatus=document.createElement('div');mapStatus.className='map-view-hint';mapStatus.innerHTML='<span id="map-view-status" aria-live="polite"></span><span>拖动平移 · ＋／− 缩放</span><span id="water-status">水系加载中…</span>';document.querySelector('.map-panel').append(mapStatus);
-$('map-zoom-in').onclick=()=>zoomMap(.65);$('map-zoom-out').onclick=()=>zoomMap(1/.65);$('map-locate').onclick=()=>{const i=currentIndex();if(i<0||year>person.end){fit();return;}const n=person.nodes[i];changeMapView(n.xy[0],n.xy[1],Math.min(8,view[2]-view[0]));};$('fit').onclick=fit;
+$('map-zoom-in').onclick=()=>zoomMap(.65);$('map-zoom-out').onclick=()=>zoomMap(1/.65);$('map-locate').onclick=()=>{const i=currentIndex();if(i<0||year>person.end){fit();return;}const n=person.nodes[i];if(!n.xy){fit();return;}changeMapView(n.xy[0],n.xy[1],Math.min(8,view[2]-view[0]));};$('fit').onclick=fit;
 const mapElement=$('map');mapElement.addEventListener('pointerdown',e=>{if(e.button!==0||mapDrag)return;mapMoved=false;mapDrag={id:e.pointerId,x:e.clientX,y:e.clientY,view:[...view]};});
 mapElement.addEventListener('pointermove',e=>{if(!mapDrag||mapDrag.id!==e.pointerId)return;const dx=e.clientX-mapDrag.x,dy=e.clientY-mapDrag.y;if(Math.hypot(dx,dy)<5&&!mapMoved)return;mapMoved=true;mapElement.setPointerCapture(e.pointerId);const v=mapDrag.view,lon=dx/mapWidth*(v[2]-v[0]),lat=dy/mapHeight*(v[3]-v[1]);changeMapView((v[0]+v[2])/2-lon,(v[1]+v[3])/2+lat,v[2]-v[0]);});
 function endMapDrag(e){if(mapDrag?.id===e.pointerId){mapDrag=null;if(mapElement.hasPointerCapture(e.pointerId))mapElement.releasePointerCapture(e.pointerId);}}

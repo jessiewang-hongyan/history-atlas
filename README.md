@@ -9,7 +9,7 @@
 - 五人人生底稿（2026-11-04第二轮）：[玄奘](research/people/xuanzang.md)、[徐霞客](research/people/xuxiake.md)、[李清照](research/people/liqingzhao.md)、[秦良玉](research/people/qinliangyu.md)、[秋瑾](research/people/qiujin.md)。共110条年度索引记录、17条未定年阶段、37个来源入口。新增求学、家庭、创作、教学、译经与军中处境，并保留异说和待核线索；数量包含活动事件，并非127个确定地图位置。
 - [结构化研究底稿](research/people/initial-review.json)是上述五份报告的数据来源；运行 `python3 scripts/render_people.py` 生成报告，`python3 scripts/render_people.py --check` 检查一致性、排序和来源关联。
 
-这批底稿尚未替换线上29个样本节点，坐标也尚未校准；候选记录不能直接视为确定的地图位置。这里的准备进度与下文的线上数据数量分别统计。
+五人的110条年度经历已替换原先29个样本节点；17段未定年经历在“人生全览”中阅读，每条均可查看出处。地图仅复用18个城市或区域近似标记，未校准的经历只展示文字；这些标记不连成推定路线。苏轼97条记录保持原样。运行 `python3 scripts/build_lives.py` 更新网站数据，使用 `--check` 检查同步。
 
 ## 源码与托管
 
@@ -27,16 +27,17 @@
 
 - `dist/index.html`：页面结构。
 - `dist/style.css`：响应式布局与视觉样式。
-- `dist/data.js`：其他五人29个样本节点；苏轼节点见 sushi.js、46人候选名单、少量战争事件。
+- `dist/data.js`：人物元信息、旧样本（被 lives-data.js 替换）、46人候选名单与少量战争事件。
 - `dist/sushi.js`：苏轼全生涯首轮核验的97条附出处记录。
 - `dist/sushi-audit.html`：可公开阅读的逐条核验表、异说与待核清单。
 - `research/SUSHI_AUDIT.md`：同版核验报告，古代文本引文为公有领域。
+- `dist/lives-data.js`、`lives-ui.js`、`lives.css`：五人人生资料、全览与逐条出处。
 - `dist/app.js`：人物切换、年度时间轴、播放、范围切换、地图绘制、图层与资料对话框。
 - `dist/land.json`：Natural Earth 1:110m 陆地轮廓，公共领域，来源 https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_land.geojson ，条款 https://www.naturalearthdata.com/about/terms-of-use/ 。
 
 ## 数据边界
 
-政治范围为原创粗略交互示意，不能当作考证疆界。仅制作六人相关时期的部分背景；完整历史模式并不意味着已经完成全时段地图。节点连线不是实际道路。未记录年份显示最近记录，而不是人物当年确定所在地。苏轼已建立节点级出处及异说说明；其他五人仍只有人物级资料入口。苏轼也不是穷尽全集的完整行程：未核定的游访、坐标、具体到达日不补造。未导入CBDB、CHGIS；人生随机模拟尚未实现。
+政治范围为原创粗略交互示意，不能当作考证疆界。仅制作六人相关时期的部分背景；完整历史模式并不意味着已经完成全时段地图。节点连线不是实际道路。未记录年份显示最近记录，而不是人物当年确定所在地。苏轼已建立节点级出处及异说说明；其他五人已建立逐条出处，日期不明的阶段单独阅读。苏轼也不是穷尽全集的完整行程：未核定的游访、坐标、具体到达日不补造。未导入CBDB、CHGIS；人生随机模拟尚未实现。
 
 ## 验证记录（2026-10-30）
 
