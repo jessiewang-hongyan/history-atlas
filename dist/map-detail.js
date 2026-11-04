@@ -19,9 +19,9 @@ function detailedRoute(){
  const seen=new Set(),marks=[];
  for(let j=i;j>=0;j--){const n=nodes[j];if(!n.xy)continue;const key=n.xy.map(x=>x.toFixed(2)).join(',');if(seen.has(key))continue;seen.add(key);const [x,y]=project(n.xy);if(x<0||x>mapWidth||y<0||y>mapHeight)continue;marks.push({n,j,x,y});}
  const labels=[];
- for(const {n,j,x,y} of marks){const active=j===i,group=svg('g',{role:'button',tabindex:0,'aria-label':`${n.year}年 ${n.place}，查看人生节点`,'data-node':j,class:active?'map-node current-node':'map-node'});group.append(svg('circle',{cx:x,cy:y,r:12,fill:'transparent'}));group.append(svg('circle',{cx:x,cy:y,r:active?6:3.5,fill:active?person.color:'#fcf9ed',stroke:person.color,'stroke-width':1.5}));if(active)group.append(svg('circle',{cx:x,cy:y,r:11,fill:'none',stroke:person.color,'stroke-opacity':.35}));group.append(svg('title',{},`${n.year} · ${n.place} · ${n.title}`));
- const width=n.place.length*12+10,tx=x+width+14>mapWidth?x-width-10:x+10,ty=y<30?y+22:y-12,box=[tx,ty-12,tx+width,ty+4];
- if(active||!labels.some(b=>box[0]<b[2]+7&&box[2]>b[0]-7&&box[1]<b[3]+6&&box[3]>b[1]-6)){labels.push(box);group.append(svg('text',{x:Math.max(3,tx),y:ty,class:active?'active-place':'place-name'},n.place));}
+ for(const {n,j,x,y} of marks){const mapPlace=n.locationReview?.name||n.place,active=j===i,group=svg('g',{role:'button',tabindex:0,'aria-label':`${n.year}年 ${mapPlace}，查看人生节点`,'data-node':j,class:active?'map-node current-node':'map-node'});group.append(svg('circle',{cx:x,cy:y,r:12,fill:'transparent'}));group.append(svg('circle',{cx:x,cy:y,r:active?6:3.5,fill:active?person.color:'#fcf9ed',stroke:person.color,'stroke-width':1.5}));if(active)group.append(svg('circle',{cx:x,cy:y,r:11,fill:'none',stroke:person.color,'stroke-opacity':.35}));group.append(svg('title',{},`${n.year} · ${mapPlace} · ${n.title}`));
+ const width=mapPlace.length*12+10,tx=x+width+14>mapWidth?x-width-10:x+10,ty=y<30?y+22:y-12,box=[tx,ty-12,tx+width,ty+4];
+ if(active||!labels.some(b=>box[0]<b[2]+7&&box[2]>b[0]-7&&box[1]<b[3]+6&&box[3]>b[1]-6)){labels.push(box);group.append(svg('text',{x:Math.max(3,tx),y:ty,class:active?'active-place':'place-name'},mapPlace));}
  group.onclick=()=>{if(!mapMoved)jumpNode(j);};group.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();jumpNode(j);}};active?marks.current=group:target.append(group);
  }if(marks.current)target.append(marks.current);
 }
