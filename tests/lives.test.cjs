@@ -45,3 +45,14 @@ const xu=people.find(p=>p.id==='xuxiake');
 assert.deepEqual(Array.from(xu.nodes.filter(n=>n.year===1613),n=>n.id),['xuxiake-002','xuxiake-003',...Array.from({length:11},(_,i)=>`xuxiake-${String(i+30).padStart(3,'0')}`),'xuxiake-013','xuxiake-014']);
 assert.equal(xu.nodes.filter(n=>n.year===1632).length,13);
 console.log('PASS: 136 annual records, 20 undated episodes, 64 regional markers, 48 geography reviews; diary chronology and withheld locations preserved');
+// Region-only evidence must remain usable without inventing a person coordinate.
+const hunan=records.get('qiujin-001');
+assert.equal(hunan.xy,null);assert.equal(hunan.area.name,'湖南一带');
+assert.ok(hunan.locationReview.sources.includes('AREA-HUNAN'));
+assert.equal(records.get('liqingzhao-027').area,null); // shipment is not a personal visit
+assert.equal(records.get('qinliangyu-019').area,null); // unfulfilled journey
+let areas=0;
+for(const n of records.values())if(n.area){areas++;const [w,s,e,north]=n.area.bounds;assert.ok([w,s,e,north].every(Number.isFinite));assert.ok(w<e&&s<north);assert.ok(n.area.note);}
+assert.equal(areas,49);
+for(const id of Object.keys(review.withheld))assert.equal(records.get(id).area,null,id);
+console.log('PASS: 49 regional displays, including a province-only record without a point; unvisited places excluded');

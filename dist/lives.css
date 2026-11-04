@@ -3,3 +3,5 @@
 .map-legend>span[hidden]{display:none}
 
 .events .event .event-date{display:block;font-size:10px;font-weight:400;line-height:1.6;color:#77766a;margin-top:3px}
+
+#map .area-caption{font-size:11px;stroke-width:3px}

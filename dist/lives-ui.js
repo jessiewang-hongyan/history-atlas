@@ -26,8 +26,8 @@ render=function(){
  $('life-range').textContent=`${person.name} · ${person.birth}—${person.end}${person.id==='liqingzhao'?'（展示范围，卒年未定）':''}`;
  $('events').querySelectorAll('[data-event-index]').forEach(b=>{const r=person.nodes[Number(b.dataset.eventIndex)];b.innerHTML=`<b>${r.year}</b><span>${lifeEscape(r.title)}<small class="event-date">${lifeEscape(r.dateLabel)}</small></span>`;});
  if(active&&i<0){$('place-label').textContent='这一段，还没有确切的行迹';$('event-title').textContent='故事的开头，仍有一些空白';$('event-desc').textContent=`目前收录的第一条经历在${person.nodes[0].year}年。更早的岁月，可在下方的人生介绍中阅读。`;$('evidence').textContent='出生地与早年居处有疑问时，我们先不在地图上落点。';$('step-count').textContent='—';$('location-legend').textContent='这一年还没有位置记录';}
- if(active&&n&&!n.xy){$('location-legend').textContent='此条未定位；图上仅保留较早的参考点';$('evidence').textContent=n.note;}
- if(active&&n?.locationReview){$('location-legend').textContent=(n.year===year?'本条位置':'最近记录')+' · '+n.locationReview.precision;$('evidence').textContent=[n.date,n.limits,n.mapNote].filter(Boolean).join(' · ');}
+ if(active&&n&&!n.xy&&!n.area){$('location-legend').textContent='此条未定位；图上仅保留较早的参考点';$('evidence').textContent=n.note;}
+ if(active&&n?.locationReview){$('location-legend').textContent=(n.year===year?'本条大致区域':'最近记录的大致区域')+' · 非活动边界';$('evidence').textContent=[n.date,n.limits,n.mapNote].filter(Boolean).join(' · ');}
  if(person.id==='liqingzhao'&&year>person.end)$('event-desc').textContent='这里展示到1155年。她的卒年与最后的居处仍有不同说法，可以在下方继续阅读晚年记录。';
  if($('life-record-select'))$('life-record-select').value=active&&n?String(i):'';
  $('year-detail').textContent='用 ‹ › 查看同年不同经历；有些记录关乎生活与工作，未标地图位置。古籍月日沿用原历。';
