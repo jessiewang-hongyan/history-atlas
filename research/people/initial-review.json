@@ -55,8 +55,8 @@
       "title": "徐霞客《游天台山日记》",
       "url": "https://zh.wikisource.org/wiki/徐霞客遊記/遊天台山日記",
       "kind": "本人日记；维基文库在线录文",
-      "limits": "已查开篇癸丑三月晦、四月初一；尚未逐页对照影印本。",
-      "checkedAt": "2026-11-03"
+      "limits": "已读癸丑三月晦至四月初八诸条；沿用原历，未逐字校勘影印本。",
+      "checkedAt": "2026-11-04"
     },
     "XX-3": {
       "title": "徐霞客《浙游日记》",
@@ -267,13 +267,27 @@
       "kind": "博物馆原始档案藏品说明",
       "limits": "支持所藏堂讯供状、指印与37卷案卷的存在；未读案卷全文。页面生年、创刊年份等概述与其他材料不一致，不用这些概述覆盖现有结论。",
       "checkedAt": "2026-11-04"
+    },
+    "XX-17": {
+      "title": "徐霞客《后游天台山日记》",
+      "url": "https://zh.wikisource.org/zh-hans/徐霞客遊記/後遊天台山日記",
+      "kind": "本人日记；维基文库在线录文",
+      "limits": "已读壬申三月十四日至四月十八日诸条；沿用原历，未逐字校勘影印本。",
+      "checkedAt": "2026-11-04"
+    },
+    "QJ-11": {
+      "title": "大通学堂：市文广旅游局（市文物局）介绍",
+      "url": "https://lib.zjsru.edu.cn/info/1767/44676.htm",
+      "kind": "文物部门介绍；浙江树人学院图书馆转载",
+      "limits": "用于校址、1907年2月下半月接任及7月13日被捕；不据此复述受审对白。",
+      "checkedAt": "2026-11-04"
     }
   },
   "people": [
     {
       "id": "xuanzang",
       "name": "玄奘",
-      "stage": "第二轮人生资料；已接入网站阅读，历史坐标另行审核",
+      "stage": "已有年度经历、未定年阶段与独立地图核验；继续按原始材料细化",
       "focus": "西行年份异说、印度段逐站系年、返国后往返和译经居处。",
       "records": [
         {
@@ -897,7 +911,7 @@
     {
       "id": "xuxiake",
       "name": "徐霞客",
-      "stage": "第二轮人生资料；已接入网站阅读，历史坐标另行审核",
+      "stage": "已有年度经历、未定年阶段与独立地图核验；继续按原始材料细化",
       "focus": "以日记原文为主，分清出游日、抵达日、游记记日与后人推年。",
       "records": [
         {
@@ -942,29 +956,283 @@
           "checkedAt": "2026-11-03",
           "recordType": "行迹或人生事件",
           "mapReady": false,
-          "withinYearOrder": 50
+          "withinYearOrder": 10
         },
         {
           "id": "xuxiake-003",
           "year": 1613,
-          "place": "天台山一带",
-          "title": "沿山路进入天台",
-          "dateLabel": "癸丑四月初一及随后日条",
+          "place": "弥陀庵",
+          "title": "山路入天台，夜宿弥陀庵",
+          "dateLabel": "癸丑四月初一",
           "calendar": "原文纪年／原历月日；未换算公历",
           "status": "可采用",
           "evidence": [
             {
               "source": "XX-2",
-              "locator": "四月初一松门岭、筋竹庵、弥陀庵段",
-              "supports": "支持天台山地区游踪。"
+              "locator": "癸丑四月初一条",
+              "supports": "经松门岭，在筋竹庵吃饭后，他与莲舟沿山路走向石梁，暮色中抵弥陀庵借宿。担夫随云峰去了国清寺，两路人此时并未同行。"
             }
           ],
-          "limits": "这是区域合并记录；若画实际道路，须再拆分日条。",
+          "limits": "此日只记到弥陀庵；同行担夫去国清，不是徐霞客当天到了国清。",
           "coordinates": null,
-          "checkedAt": "2026-11-03",
+          "checkedAt": "2026-11-04",
           "recordType": "行迹或人生事件",
           "mapReady": false,
-          "withinYearOrder": 50
+          "withinYearOrder": 20,
+          "narrative": "经松门岭，在筋竹庵吃饭后，他与莲舟沿山路走向石梁，暮色中抵弥陀庵借宿。担夫随云峰去了国清寺，两路人此时并未同行。"
+        },
+        {
+          "id": "xuxiake-030",
+          "year": 1613,
+          "place": "天封寺",
+          "title": "雨后赶路，暮抵天封寺",
+          "dateLabel": "癸丑四月初二",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "XX-2",
+              "locator": "癸丑四月初二日条",
+              "supports": "饭后雨停，他继续走了二十里，到暮色时抵达天封寺。"
+            }
+          ],
+          "limits": "日记沿用原历；地图若有标记，只表示本条所选的到访地，不代表当天走过的整条山路。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹",
+          "mapReady": false,
+          "withinYearOrder": 30,
+          "narrative": "饭后雨停，他继续走了二十里，到暮色时抵达天封寺。"
+        },
+        {
+          "id": "xuxiake-031",
+          "year": 1613,
+          "place": "华顶峰",
+          "title": "登上华顶",
+          "dateLabel": "癸丑四月初三（先）",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "XX-2",
+              "locator": "癸丑四月初三日条",
+              "supports": "从华顶庵出发，经过太白堂，循小径探黄经洞，却见洞口被僧人用石封住；折回太白堂后，沿路登上华顶绝顶。"
+            }
+          ],
+          "limits": "日记沿用原历；地图若有标记，只表示本条所选的到访地，不代表当天走过的整条山路。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹",
+          "mapReady": false,
+          "withinYearOrder": 40,
+          "narrative": "从华顶庵出发，经过太白堂，循小径探黄经洞，却见洞口被僧人用石封住；折回太白堂后，沿路登上华顶绝顶。"
+        },
+        {
+          "id": "xuxiake-032",
+          "year": 1613,
+          "place": "石梁",
+          "title": "下山看石梁与飞瀑",
+          "dateLabel": "癸丑四月初三（后）",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "XX-2",
+              "locator": "癸丑四月初三日条",
+              "supports": "下华顶后，经上方广来到石梁，又往断桥、珠帘一带看瀑布，随后折返。"
+            }
+          ],
+          "limits": "日记沿用原历；地图若有标记，只表示本条所选的到访地，不代表当天走过的整条山路。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹",
+          "mapReady": false,
+          "withinYearOrder": 50,
+          "narrative": "下华顶后，经上方广来到石梁，又往断桥、珠帘一带看瀑布，随后折返。"
+        },
+        {
+          "id": "xuxiake-033",
+          "year": 1613,
+          "place": "万年寺",
+          "title": "到万年寺登藏经阁",
+          "dateLabel": "癸丑四月初四（午后）",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "XX-2",
+              "locator": "癸丑四月初四日条",
+              "supports": "清早再次观石梁，饭后走向万年寺，登上藏经阁。"
+            }
+          ],
+          "limits": "日记沿用原历；地图若有标记，只表示本条所选的到访地，不代表当天走过的整条山路。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹",
+          "mapReady": false,
+          "withinYearOrder": 60,
+          "narrative": "清早再次观石梁，饭后走向万年寺，登上藏经阁。"
+        },
+        {
+          "id": "xuxiake-034",
+          "year": 1613,
+          "place": "国清寺",
+          "title": "暮抵国清，与云峰相会",
+          "dateLabel": "癸丑四月初四（暮）",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "XX-2",
+              "locator": "癸丑四月初四日条",
+              "supports": "离开万年寺后又行四十里，天黑时抵国清寺，与先到这里的云峰相会。"
+            }
+          ],
+          "limits": "日记沿用原历；地图若有标记，只表示本条所选的到访地，不代表当天走过的整条山路。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹",
+          "mapReady": false,
+          "withinYearOrder": 70,
+          "narrative": "离开万年寺后又行四十里，天黑时抵国清寺，与先到这里的云峰相会。"
+        },
+        {
+          "id": "xuxiake-035",
+          "year": 1613,
+          "place": "明岩寺",
+          "title": "穿过步头，宿明岩",
+          "dateLabel": "癸丑四月初五",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "XX-2",
+              "locator": "癸丑四月初五日条",
+              "supports": "从国清西行，经步头来到明岩，在寺中吃饭、歇宿。夜间月光照着岩壁。"
+            }
+          ],
+          "limits": "日记沿用原历；地图若有标记，只表示本条所选的到访地，不代表当天走过的整条山路。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹",
+          "mapReady": false,
+          "withinYearOrder": 80,
+          "narrative": "从国清西行，经步头来到明岩，在寺中吃饭、歇宿。夜间月光照着岩壁。"
+        },
+        {
+          "id": "xuxiake-036",
+          "year": 1613,
+          "place": "寒岩",
+          "title": "由明岩往寒岩探洞",
+          "dateLabel": "癸丑四月初六（先）",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "XX-2",
+              "locator": "癸丑四月初六日条",
+              "supports": "清早离开明岩，来到寒岩，走入岩洞，再回僧舍吃饭。"
+            }
+          ],
+          "limits": "日记沿用原历；地图若有标记，只表示本条所选的到访地，不代表当天走过的整条山路。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹",
+          "mapReady": false,
+          "withinYearOrder": 90,
+          "narrative": "清早离开明岩，来到寒岩，走入岩洞，再回僧舍吃饭。"
+        },
+        {
+          "id": "xuxiake-037",
+          "year": 1613,
+          "place": "坪头潭",
+          "title": "寻桃源误路，借宿坪头潭",
+          "dateLabel": "癸丑四月初六（后）",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "XX-2",
+              "locator": "癸丑四月初六日条",
+              "supports": "下午寻找桃源，途中走错了路，到坪头潭寻得住处。"
+            }
+          ],
+          "limits": "日记沿用原历；地图若有标记，只表示本条所选的到访地，不代表当天走过的整条山路。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹",
+          "mapReady": false,
+          "withinYearOrder": 100,
+          "narrative": "下午寻找桃源，途中走错了路，到坪头潭寻得住处。"
+        },
+        {
+          "id": "xuxiake-038",
+          "year": 1613,
+          "place": "桃源—琼台双阙对面",
+          "title": "沿溪寻访，遥望琼台双阙",
+          "dateLabel": "癸丑四月初七（先）",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "XX-2",
+              "locator": "癸丑四月初七日条",
+              "supports": "沿鸣玉涧探寻桃源，再溯溪寻找琼台双阙；天色已晚，只能在对面望见山峰，没有登上琼台。"
+            }
+          ],
+          "limits": "日记沿用原历；地图若有标记，只表示本条所选的到访地，不代表当天走过的整条山路。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹",
+          "mapReady": false,
+          "withinYearOrder": 110,
+          "narrative": "沿鸣玉涧探寻桃源，再溯溪寻找琼台双阙；天色已晚，只能在对面望见山峰，没有登上琼台。"
+        },
+        {
+          "id": "xuxiake-039",
+          "year": 1613,
+          "place": "国清寺",
+          "title": "绕过赤城，返宿国清",
+          "dateLabel": "癸丑四月初七（后）",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "XX-2",
+              "locator": "癸丑四月初七日条",
+              "supports": "从琼台双阙一带折返，绕过赤城山后回到国清寺。"
+            }
+          ],
+          "limits": "日记沿用原历；地图若有标记，只表示本条所选的到访地，不代表当天走过的整条山路。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹",
+          "mapReady": false,
+          "withinYearOrder": 120,
+          "narrative": "从琼台双阙一带折返，绕过赤城山后回到国清寺。"
+        },
+        {
+          "id": "xuxiake-040",
+          "year": 1613,
+          "place": "赤城山",
+          "title": "离国清，登赤城",
+          "dateLabel": "癸丑四月初八",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "XX-2",
+              "locator": "癸丑四月初八日条",
+              "supports": "离开国清寺后，登赤城山，探访玉京洞、金钱池、洗肠井。"
+            }
+          ],
+          "limits": "日记沿用原历；地图若有标记，只表示本条所选的到访地，不代表当天走过的整条山路。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹",
+          "mapReady": false,
+          "withinYearOrder": 130,
+          "narrative": "离开国清寺后，登赤城山，探访玉京洞、金钱池、洗肠井。"
         },
         {
           "id": "xuxiake-013",
@@ -987,7 +1255,7 @@
           "recordType": "行迹",
           "mapReady": false,
           "narrative": "离开天台山后，徐霞客到黄岩，再向雁荡方向走。",
-          "withinYearOrder": 50
+          "withinYearOrder": 200
         },
         {
           "id": "xuxiake-014",
@@ -1010,7 +1278,7 @@
           "recordType": "行迹",
           "mapReady": false,
           "narrative": "他经大荆、石梁洞进入灵峰，游洞后回寺住宿。",
-          "withinYearOrder": 50
+          "withinYearOrder": 210
         },
         {
           "id": "xuxiake-015",
@@ -1241,6 +1509,305 @@
           "mapReady": false,
           "narrative": "结束这次旅行后，他带着太和山的榔梅回家，为母亲祝寿。",
           "withinYearOrder": 50
+        },
+        {
+          "id": "xuxiake-041",
+          "year": 1632,
+          "place": "宁海—岔路口",
+          "title": "再游天台，从宁海启程",
+          "dateLabel": "壬申三月十四日",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "XX-17",
+              "locator": "壬申三月十四日条",
+              "supports": "从宁海骑马出发，四十五里后在岔路口住宿。"
+            }
+          ],
+          "limits": "日记沿用原历；地图若有标记，只表示本条所选的到访地，不代表当天走过的整条山路。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹",
+          "mapReady": false,
+          "withinYearOrder": 140,
+          "narrative": "从宁海骑马出发，四十五里后在岔路口住宿。"
+        },
+        {
+          "id": "xuxiake-042",
+          "year": 1632,
+          "place": "天封寺",
+          "title": "重过旧路，来到天封寺",
+          "dateLabel": "壬申三月十五日（先）",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "XX-17",
+              "locator": "壬申三月十五日条",
+              "supports": "经松门岭、箸竹岭庵，见到昔日弥陀庵已经荒废；继续翻岭，来到天封寺。"
+            }
+          ],
+          "limits": "日记沿用原历；地图若有标记，只表示本条所选的到访地，不代表当天走过的整条山路。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹",
+          "mapReady": false,
+          "withinYearOrder": 150,
+          "narrative": "经松门岭、箸竹岭庵，见到昔日弥陀庵已经荒废；继续翻岭，来到天封寺。"
+        },
+        {
+          "id": "xuxiake-043",
+          "year": 1632,
+          "place": "华顶峰",
+          "title": "夜登华顶，先误上望海尖",
+          "dateLabel": "壬申三月十五日（夜）",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "XX-17",
+              "locator": "壬申三月十五日条",
+              "supports": "在华顶寺净因房住宿后，乘月独自上山，先误登东面的望海尖，向西转才找到华顶的路，夜深后回寺。"
+            }
+          ],
+          "limits": "日记沿用原历；地图若有标记，只表示本条所选的到访地，不代表当天走过的整条山路。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹",
+          "mapReady": false,
+          "withinYearOrder": 160,
+          "narrative": "在华顶寺净因房住宿后，乘月独自上山，先误登东面的望海尖，向西转才找到华顶的路，夜深后回寺。"
+        },
+        {
+          "id": "xuxiake-044",
+          "year": 1632,
+          "place": "华顶峰",
+          "title": "五鼓出发，看华顶日出",
+          "dateLabel": "壬申三月十六日（五鼓）",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "XX-17",
+              "locator": "壬申三月十六日条",
+              "supports": "五鼓再次上华顶看日出，衣履湿透，回寺烘干后才继续赶路。"
+            }
+          ],
+          "limits": "日记沿用原历；地图若有标记，只表示本条所选的到访地，不代表当天走过的整条山路。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹",
+          "mapReady": false,
+          "withinYearOrder": 170,
+          "narrative": "五鼓再次上华顶看日出，衣履湿透，回寺烘干后才继续赶路。"
+        },
+        {
+          "id": "xuxiake-045",
+          "year": 1632,
+          "place": "石梁",
+          "title": "过分水岭，再看石梁",
+          "dateLabel": "壬申三月十六日（后）",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "XX-17",
+              "locator": "壬申三月十六日条",
+              "supports": "越岭下到分水岭，循溪经上方广寺，抵昙花亭观看石梁。"
+            }
+          ],
+          "limits": "日记沿用原历；地图若有标记，只表示本条所选的到访地，不代表当天走过的整条山路。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹",
+          "mapReady": false,
+          "withinYearOrder": 180,
+          "narrative": "越岭下到分水岭，循溪经上方广寺，抵昙花亭观看石梁。"
+        },
+        {
+          "id": "xuxiake-046",
+          "year": 1632,
+          "place": "高明寺",
+          "title": "轻装东下高明寺",
+          "dateLabel": "壬申三月十七日",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "XX-17",
+              "locator": "壬申三月十七日条",
+              "supports": "在大悲寺吃饭后，让行囊从国清下县，自己与仲昭轻装东下高明寺。"
+            }
+          ],
+          "limits": "日记沿用原历；地图若有标记，只表示本条所选的到访地，不代表当天走过的整条山路。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹",
+          "mapReady": false,
+          "withinYearOrder": 190,
+          "narrative": "在大悲寺吃饭后，让行囊从国清下县，自己与仲昭轻装东下高明寺。"
+        },
+        {
+          "id": "xuxiake-047",
+          "year": 1632,
+          "place": "螺溪—高明寺松风阁",
+          "title": "探螺溪，遇雨返阁",
+          "dateLabel": "壬申三月十八日",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "XX-17",
+              "locator": "壬申三月十八日条",
+              "supports": "在寺僧引导下沿螺溪看石笋、螺蛳潭，因骤雨未能再往仙人鞋，回松风阁休息。"
+            }
+          ],
+          "limits": "日记沿用原历；地图若有标记，只表示本条所选的到访地，不代表当天走过的整条山路。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹",
+          "mapReady": false,
+          "withinYearOrder": 200,
+          "narrative": "在寺僧引导下沿螺溪看石笋、螺蛳潭，因骤雨未能再往仙人鞋，回松风阁休息。"
+        },
+        {
+          "id": "xuxiake-048",
+          "year": 1632,
+          "place": "天台县城",
+          "title": "抵天台县城",
+          "dateLabel": "壬申三月二十日",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "XX-17",
+              "locator": "壬申三月二十日条",
+              "supports": "日记这一天只简记抵达天台县，没有留下更细的城中行程。"
+            }
+          ],
+          "limits": "日记沿用原历；地图若有标记，只表示本条所选的到访地，不代表当天走过的整条山路。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹",
+          "mapReady": false,
+          "withinYearOrder": 210,
+          "narrative": "日记这一天只简记抵达天台县，没有留下更细的城中行程。"
+        },
+        {
+          "id": "xuxiake-049",
+          "year": 1632,
+          "place": "赤城山中岩",
+          "title": "从雁宕返天台，登赤城中岩",
+          "dateLabel": "壬申四月十六日（先）",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "XX-17",
+              "locator": "壬申四月十六日条",
+              "supports": "从雁宕回来，来到赤城山，登中岩；急于前往琼台、双阙，没有再登上岩。"
+            }
+          ],
+          "limits": "日记沿用原历；地图若有标记，只表示本条所选的到访地，不代表当天走过的整条山路。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹",
+          "mapReady": false,
+          "withinYearOrder": 220,
+          "narrative": "从雁宕回来，来到赤城山，登中岩；急于前往琼台、双阙，没有再登上岩。"
+        },
+        {
+          "id": "xuxiake-050",
+          "year": 1632,
+          "place": "琼台",
+          "title": "这一次登上琼台",
+          "dateLabel": "壬申四月十六日（后）",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "XX-17",
+              "locator": "壬申四月十六日条",
+              "supports": "经桐柏宫，请当地人引路，攀登琼台，从崖上俯看龙潭与双阙。上次只从外涧进入，这次走得更深。"
+            }
+          ],
+          "limits": "日记沿用原历；地图若有标记，只表示本条所选的到访地，不代表当天走过的整条山路。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹",
+          "mapReady": false,
+          "withinYearOrder": 230,
+          "narrative": "经桐柏宫，请当地人引路，攀登琼台，从崖上俯看龙潭与双阙。上次只从外涧进入，这次走得更深。"
+        },
+        {
+          "id": "xuxiake-051",
+          "year": 1632,
+          "place": "寒岩",
+          "title": "重访寒岩，攀龙须洞",
+          "dateLabel": "壬申四月十七日（先）",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "XX-17",
+              "locator": "壬申四月十七日条",
+              "supports": "由坪头潭前往寒岩，入洞察看后，又沿荆棘遮蔽的山路攀上龙须洞。"
+            }
+          ],
+          "limits": "日记沿用原历；地图若有标记，只表示本条所选的到访地，不代表当天走过的整条山路。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹",
+          "mapReady": false,
+          "withinYearOrder": 240,
+          "narrative": "由坪头潭前往寒岩，入洞察看后，又沿荆棘遮蔽的山路攀上龙须洞。"
+        },
+        {
+          "id": "xuxiake-052",
+          "year": 1632,
+          "place": "明岩寺",
+          "title": "到明岩寺吃饭，再往护国寺",
+          "dateLabel": "壬申四月十七日（后）",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "XX-17",
+              "locator": "壬申四月十七日条",
+              "supports": "探洞后回到旧路，转入明岩寺吃饭；随后经坪头潭、三茅，夜宿护国寺。"
+            }
+          ],
+          "limits": "日记沿用原历；地图若有标记，只表示本条所选的到访地，不代表当天走过的整条山路。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹",
+          "mapReady": false,
+          "withinYearOrder": 250,
+          "narrative": "探洞后回到旧路，转入明岩寺吃饭；随后经坪头潭、三茅，夜宿护国寺。"
+        },
+        {
+          "id": "xuxiake-053",
+          "year": 1632,
+          "place": "万年寺",
+          "title": "游桃源后，再经万年寺",
+          "dateLabel": "壬申四月十八日",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "XX-17",
+              "locator": "壬申四月十八日条",
+              "supports": "早游桃源，回护国寺吃饭后，经秀溪、九里坑到万年寺，再翻山前往斑竹歇宿。"
+            }
+          ],
+          "limits": "日记沿用原历；地图若有标记，只表示本条所选的到访地，不代表当天走过的整条山路。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹",
+          "mapReady": false,
+          "withinYearOrder": 260,
+          "narrative": "早游桃源，回护国寺吃饭后，经秀溪、九里坑到万年寺，再翻山前往斑竹歇宿。"
         },
         {
           "id": "xuxiake-025",
@@ -1591,7 +2158,7 @@
     {
       "id": "liqingzhao",
       "name": "李清照",
-      "stage": "第二轮人生资料；已接入网站阅读，历史坐标另行审核",
+      "stage": "已有年度经历、未定年阶段与独立地图核验；继续按原始材料细化",
       "focus": "南渡中的本人行动、家属和行李运输分开；晚年与卒年不写死。",
       "records": [
         {
@@ -2302,6 +2869,60 @@
           "limits": "这一生活阶段跨多年，不把日常情景编成某日发生的故事。",
           "checkedAt": "2026-11-04",
           "mapReady": false
+        },
+        {
+          "id": "liqingzhao-E003",
+          "year": null,
+          "periodLabel": "1129年丧夫后至1130年避乱期间",
+          "place": "台州",
+          "title": "到了台州，地方官已经离去",
+          "narrative": "赵明诚去世后，她在避乱中辗转到台州；到时，台守已经离开。",
+          "evidence": [
+            {
+              "source": "LQ-2",
+              "locator": "“到台，台守已遁”",
+              "supports": "赵明诚去世后，她在避乱中辗转到台州；到时，台守已经离开。"
+            }
+          ],
+          "limits": "依本人后序保留叙述顺序；年表与后序的路线编排不完全相同，尚不能给每一站钉定抵达日期。",
+          "checkedAt": "2026-11-04",
+          "mapReady": false
+        },
+        {
+          "id": "liqingzhao-E004",
+          "year": null,
+          "periodLabel": "1129年丧夫后至1130年避乱期间",
+          "place": "剡—睦州",
+          "title": "由剡出睦，途中又弃衣被",
+          "narrative": "她记下经剡、出睦的行程，又一次丢下衣被。后序留下了先后，却没有逐站的月日。",
+          "evidence": [
+            {
+              "source": "LQ-2",
+              "locator": "“之剡，出睦，又棄衣被”",
+              "supports": "她记下经剡、出睦的行程，又一次丢下衣被。后序留下了先后，却没有逐站的月日。"
+            }
+          ],
+          "limits": "依本人后序保留叙述顺序；年表与后序的路线编排不完全相同，尚不能给每一站钉定抵达日期。",
+          "checkedAt": "2026-11-04",
+          "mapReady": false
+        },
+        {
+          "id": "liqingzhao-E005",
+          "year": null,
+          "periodLabel": "1129年丧夫后至1130年避乱期间",
+          "place": "黄岩—章安",
+          "title": "从黄岩雇舟入海",
+          "narrative": "她赶到黄岩，雇船入海追随行朝，当时朝廷驻在章安。随后沿海到温州，再到越州。",
+          "evidence": [
+            {
+              "source": "LQ-2",
+              "locator": "“走黃巖，雇舟入海”至“又之越”",
+              "supports": "她赶到黄岩，雇船入海追随行朝，当时朝廷驻在章安。随后沿海到温州，再到越州。"
+            }
+          ],
+          "limits": "依本人后序保留叙述顺序；年表与后序的路线编排不完全相同，尚不能给每一站钉定抵达日期。",
+          "checkedAt": "2026-11-04",
+          "mapReady": false
         }
       ],
       "overview": [
@@ -2313,7 +2934,7 @@
     {
       "id": "qinliangyu",
       "name": "秦良玉",
-      "stage": "第二轮人生资料；已接入网站阅读，历史坐标另行审核",
+      "stage": "已有年度经历、未定年阶段与独立地图核验；继续按原始材料细化",
       "focus": "每场战事先辨明本人、丈夫、兄弟、儿子或侄辈；任命和未成行的计划不能画成到访。",
       "records": [
         {
@@ -2341,46 +2962,94 @@
         {
           "id": "qinliangyu-002",
           "year": 1599,
-          "place": "播州战区",
-          "title": "随马千乘参与播州之役",
+          "place": "邓坎",
+          "title": "统五百人，参与扼守邓坎",
           "dateLabel": "万历二十七年",
           "calendar": "原文纪年／原历月日；未换算公历",
           "status": "可采用",
           "evidence": [
             {
               "source": "QL-1",
-              "locator": "“二十七年…良玉别统精卒五百”段",
-              "supports": "支持本人统兵参与。"
+              "locator": "“良玉别统精卒五百”至“与副将周国柱扼贼邓坎”",
+              "supports": "随马千乘出征时，她另统精兵五百。部队与周国柱合守邓坎。"
             }
           ],
-          "limits": "只到战区级；不能把府城当本人驻营点。",
+          "limits": "《明史》可细到邓坎；旧寨范围尚未核定，先不落地图点。",
           "coordinates": null,
           "checkedAt": "2026-11-03",
           "recordType": "行迹或人生事件",
           "mapReady": false,
-          "withinYearOrder": 50
+          "withinYearOrder": 50,
+          "narrative": "随马千乘出征时，她另统精兵五百。部队与周国柱合守邓坎。"
         },
         {
           "id": "qinliangyu-003",
           "year": 1600,
-          "place": "播州战区",
-          "title": "播州战役继续",
-          "dateLabel": "次年正月初二及随后",
+          "place": "邓坎",
+          "title": "正月初二，迎击来袭",
+          "dateLabel": "万历二十八年正月初二",
           "calendar": "原文纪年／原历月日；未换算公历",
           "status": "可采用",
           "evidence": [
             {
               "source": "QL-1",
-              "locator": "“明年正月二日”至桑木关段",
-              "supports": "支持次年参战与攻关。"
+              "locator": "“明年正月二日”至“追入贼境”",
+              "supports": "趁官军过年，对方发起夜袭；秦良玉夫妇迎击并追逐来军。"
             }
           ],
-          "limits": "古关隘位置未校准，暂不赋坐标。",
+          "limits": "本条只记正月初二的迎击；随后攻寨、攻关另列。",
           "coordinates": null,
           "checkedAt": "2026-11-03",
           "recordType": "行迹或人生事件",
           "mapReady": false,
-          "withinYearOrder": 50
+          "withinYearOrder": 10,
+          "narrative": "趁官军过年，对方发起夜袭；秦良玉夫妇迎击并追逐来军。"
+        },
+        {
+          "id": "qinliangyu-021",
+          "year": 1600,
+          "place": "金筑等七寨",
+          "title": "接连攻下七寨",
+          "dateLabel": "万历二十八年正月初二后，具体日未载",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "QL-1",
+              "locator": "“连破金筑等七寨”",
+              "supports": "本传接着记攻破金筑等七寨；这里保留战事的先后，不补出逐寨日期。"
+            }
+          ],
+          "limits": "七寨不是同一个地点，不能用一个坐标代替；本人逐寨到场也没有分别记载。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹",
+          "mapReady": false,
+          "withinYearOrder": 20,
+          "narrative": "本传接着记攻破金筑等七寨；这里保留战事的先后，不补出逐寨日期。"
+        },
+        {
+          "id": "qinliangyu-022",
+          "year": 1600,
+          "place": "桑木关",
+          "title": "继续攻取桑木关",
+          "dateLabel": "万历二十八年，七寨战事之后",
+          "calendar": "原文纪年／原历月日；未换算公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "QL-1",
+              "locator": "“已，偕酉阳诸军直取桑木关”",
+              "supports": "七寨之后，本传记与酉阳诸军直取桑木关，大败对方。"
+            }
+          ],
+          "limits": "依本传段落记军中经历；古关位置和本人驻营处未核。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹",
+          "mapReady": false,
+          "withinYearOrder": 30,
+          "narrative": "七寨之后，本传记与酉阳诸军直取桑木关，大败对方。"
         },
         {
           "id": "qinliangyu-004",
@@ -2855,7 +3524,7 @@
     {
       "id": "qiujin",
       "name": "秋瑾",
-      "stage": "第二轮人生资料；已接入网站阅读，历史坐标另行审核",
+      "stage": "已有年度经历、未定年阶段与独立地图核验；继续按原始材料细化",
       "focus": "出生地与籍贯分开，留日往返逐次核，办报和革命组织活动不自动等于所在地。",
       "records": [
         {
@@ -3131,9 +3800,9 @@
         {
           "id": "qiujin-007",
           "year": 1907,
-          "place": "绍兴",
+          "place": "绍兴大通学堂",
           "title": "主持大通学堂",
-          "dateLabel": "1907年",
+          "dateLabel": "1907年2月下半月",
           "calendar": "近代资料纪年；具体月日仅在来源明确时保留",
           "status": "可采用",
           "evidence": [
@@ -3141,11 +3810,16 @@
               "source": "QJ-1",
               "locator": "归国后大通学堂段",
               "supports": "支持主持绍兴大通学堂。"
+            },
+            {
+              "source": "QJ-11",
+              "locator": "大通学堂介绍，1907年接任段",
+              "supports": "记2月下半月接任督办，校址位于绍兴胜利路西端。"
             }
           ],
-          "limits": "到任具体日及其间往返另核。",
+          "limits": "文物部门介绍记接任在2月下半月，具体到校日尚未找到。",
           "coordinates": null,
-          "checkedAt": "2026-11-03",
+          "checkedAt": "2026-11-04",
           "recordType": "行迹或人生事件",
           "mapReady": false,
           "withinYearOrder": 50
@@ -3176,9 +3850,9 @@
         {
           "id": "qiujin-016",
           "year": 1907,
-          "place": "绍兴",
-          "title": "被捕与堂讯",
-          "dateLabel": "1907年七月；本条不定被捕具体日",
+          "place": "绍兴大通学堂",
+          "title": "在大通学堂被捕",
+          "dateLabel": "1907年7月13日",
           "calendar": "近代资料纪年；涉及原历时在日期中明示",
           "status": "附条件采用",
           "evidence": [
@@ -3186,6 +3860,11 @@
               "source": "QJ-10",
               "locator": "藏品“秋瑾供词”说明",
               "supports": "她在大通学堂事件中被捕。上海博物馆保存的相关案卷包含署有她指印的堂讯供状。"
+            },
+            {
+              "source": "QJ-11",
+              "locator": "1907年7月13日段",
+              "supports": "明确记7月13日学堂被围，秋瑾被捕；地图只标被捕处，不代指受审处。"
             }
           ],
           "limits": "本轮只核藏品说明，未读供状全文；不据后世故事补写受审对白。",
@@ -3193,7 +3872,7 @@
           "checkedAt": "2026-11-04",
           "recordType": "人生事件",
           "mapReady": false,
-          "narrative": "她在大通学堂事件中被捕。上海博物馆保存的相关案卷包含署有她指印的堂讯供状。",
+          "narrative": "清军包围大通学堂，秋瑾在这里被捕。之后的堂讯，在上海博物馆所藏案卷中留下了记录。",
           "withinYearOrder": 90
         },
         {

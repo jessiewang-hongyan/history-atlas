@@ -6,12 +6,12 @@
 
 - [工作记录](research/WORK_LOG.md)：苏轼核验、北归补查、信息源、地图和文案工作的回顾，以及五人准备进度。
 - [人物整理流程](research/PERSON_WORKFLOW.md)：日期、来源、本人行迹、古今地名和发布检查的统一做法。
-- 五人人生底稿（2026-11-04第二轮）：[玄奘](research/people/xuanzang.md)、[徐霞客](research/people/xuxiake.md)、[李清照](research/people/liqingzhao.md)、[秦良玉](research/people/qinliangyu.md)、[秋瑾](research/people/qiujin.md)。共110条年度索引记录、17条未定年阶段、37个来源入口。新增求学、家庭、创作、教学、译经与军中处境，并保留异说和待核线索；数量包含活动事件，并非127个确定地图位置。
+- 五人人生底稿（2026-11-04行程细化）：[玄奘](research/people/xuanzang.md)、[徐霞客](research/people/xuxiake.md)、[李清照](research/people/liqingzhao.md)、[秦良玉](research/people/qinliangyu.md)、[秋瑾](research/people/qiujin.md)。共136条年度索引记录、20条未定年阶段、39个来源入口。新增求学、家庭、创作、教学、译经与军中处境，并保留异说和待核线索；数量包含活动事件，并非156个确定地图位置。
 - [结构化研究底稿](research/people/initial-review.json)是上述五份报告的数据来源；运行 `python3 scripts/render_people.py` 生成报告，`python3 scripts/render_people.py --check` 检查一致性、排序和来源关联。
 
-五人的110条年度经历已替换原先29个样本节点；17段未定年经历在“人生全览”中阅读，每条均可查看出处。地图现有34条带位置的记录，其中16条完成本轮区域定位并附地理依据，18条沿用原型近似标记；其余经历只展示文字。这些标记不连成推定路线。苏轼97条记录保持原样。运行 `python3 scripts/build_lives.py` 更新网站数据，使用 `--check` 检查同步。
+五人的136条年度经历已替换原先29个样本节点；20段未定年经历在“人生全览”中阅读，每条均可查看出处。地图现有64条带位置的记录，其中48条附独立区域定位与地理依据，16条沿用原型近似标记；其余经历只展示文字。这些标记不连成推定路线。苏轼97条记录保持原样。运行 `python3 scripts/build_lives.py` 更新网站数据，使用 `--check` 检查同步。
 
-- [五人地图核验记录](research/people/MAP_REVIEW.md)：16条新增区域定位、古今地名对应和保留意见；机器数据见 `research/people/map-review.json`。人生底稿与地理审核分开保存。
+- [五人地图核验记录](research/people/MAP_REVIEW.md)：48条区域定位、古今地名对应和保留意见；机器数据见 `research/people/map-review.json`。人生底稿与地理审核分开保存。
 
 ## 源码与托管
 
@@ -70,3 +70,5 @@
 - 靖康之变收窄到1127年；明清鼎革拆为1644年北京更替与山海关战役。缺年明确提示未收录，不把最近事件当作当年事件。
 政治／军事时间轴验证：`node tests/history.test.cjs` 检查来源关联、跨年首尾边界、同年多事件、筛选和报告覆盖。浏览器已验证 1082 年双事件展示、年份跳转、分类筛选及出处弹窗；410px 窄屏无横向溢出。
 地图细化（2026-11-03）：底图升级为 Natural Earth 1:50m，增加可开关的现代河流与自然湖泊参照；支持按钮缩放、拖动平移、键盘方向键平移、最近记录定位和全行程复位。地图按容器比例重算视野，地名字号不随缩放缩小；重叠地名隐藏，最新记录优先。地理来源及处理方法见 `research/MAP_SOURCES.md`。政治色块仍为示意，不是考证疆界。
+
+行程细化：徐霞客1613、1632两次天台行程增补24条日记记录；秦良玉播州战事拆出2条；李清照避乱增补3段未定年经历。地图定位寺院、岩洞和山峰时支持局部放大，最低视野宽度0.15度；底图仍是现代自然地理参照。DILA选取地名的版本、许可和坐标摘录见 `research/people/geography-extract.json`（CC BY-SA 3.0）。

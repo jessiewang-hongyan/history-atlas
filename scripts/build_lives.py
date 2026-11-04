@@ -7,7 +7,7 @@ d=json.loads((ROOT/'research/people/initial-review.json').read_text())
 geo=json.loads((ROOT/'research/people/map-review.json').read_text())
 d['geography']=geo
 # Only established regional reference coordinates are reused, never invented from an event's place text.
-points={'长安':[108.94,34.26],'江阴':[120.28,31.92],'天台山一带':[121.03,29.15],'鸡足山':[100.37,25.96],'汴京':[114.31,34.8],'北京':[116.4,39.9],'东京':[139.69,35.68],'上海':[121.47,31.23],'绍兴':[120.58,30],'绍兴轩亭口':[120.58,30]}
+points={'长安':[108.94,34.26],'江阴':[120.28,31.92],'天台山一带':[121.03,29.15],'鸡足山':[100.37,25.96],'汴京':[114.31,34.8],'北京':[116.4,39.9],'东京':[139.69,35.68],'上海':[121.47,31.23],'绍兴':[120.58,30],'绍兴大通学堂':[120.58,30],'绍兴轩亭口':[120.58,30]}
 # Record-level opt-in: no event locations, contested arrival dates, or unsupported birthplaces.
 allowed={'xuanzang':{'xuanzang-003','xuanzang-005','xuanzang-008','xuanzang-014'},'xuxiake':{'xuxiake-001','xuxiake-003','xuxiake-008','xuxiake-010','xuxiake-011','xuxiake-012'},'liqingzhao':{'liqingzhao-002'},'qinliangyu':{'qinliangyu-007'},'qiujin':{'qiujin-002','qiujin-003','qiujin-005','qiujin-007','qiujin-008','qiujin-012'}}
 record_ids={r['id'] for p in d['people'] for r in p['records']}
@@ -43,7 +43,11 @@ else:
  target.write_text(output)
 print('Published',sum(len(p['records']) for p in d['people']),'records and',sum(len(p['episodes']) for p in d['people']),'episodes;',sum(bool(r['displayXY']) for p in d['people'] for r in p['records']),'regional markers')
 
-lines=['# 五人地图位置核验 · 2026-11-04','','本轮新增16条有到访依据的区域标记，覆盖12个地理参照区域；加上此前18条近似标记，网站共34条带位置的人生记录。其余76条年度经历及17段未定年经历仍以文字展示。没有把全部110条经历都称为已完成地理校准。','',geo['coordinatePolicy'],'','原先18条标记仍保留“沿用原型、历史城址尚未校准”的说明；本轮16条新增记录分别附到访依据、地名对应、坐标出处与精度说明。不同年份重复到同一区域，仍算不同人生记录。','','## 本轮新增','']
+total=sum(len(p['records']) for p in d['people'])
+episodes=sum(len(p['episodes']) for p in d['people'])
+markers=sum(bool(r['displayXY']) for p in d['people'] for r in p['records'])
+reviewed=len(geo['records'])
+lines=['# 五人地图位置核验 · 2026-11-04','',f'目前共{total}条年度索引经历、{episodes}段未定年经历；{markers}条年度记录带地图位置。其中{reviewed}条附独立地理核验，{markers-reviewed}条仍沿用原型城市或区域近似点。其余{total-markers}条年度经历只展示文字。','',geo['coordinatePolicy'],'','同一地点多次到访，仍分别算作人生记录。地名能定位不等于人物到访日期已经确定；来源与条件逐条保留。','', 'DILA新增地名的摘录、版本与许可见 [geography-extract.json](geography-extract.json)。摘录及其改编按 CC BY-SA 3.0 提供；来源数据库为法鼓文理学院。', '', '## 已核区域记录','']
 for person in d['people']:
  lines += ['### '+person['name'],'']
  for r in person['records']:
@@ -54,7 +58,7 @@ lines += ['## 继续保留文字的记录','','这里只列本轮重点检查的
 lines += [f'- {id}：{reason}' for id,reason in geo['withheld'].items()]
 lines += ['','## 地理资料与使用范围','']
 for sid,source in geo['sources'].items():lines += [f"- {sid} · [{source['title']}]({source['url']})：{source['notes']} 查阅：{source['checkedAt']}。"]
-lines += ['','## 后续优先项','','秦良玉的石砫、南坪关与太平，以及徐霞客的均州旧城，应结合方志和历史地图进一步核定。玄奘西行的未定年阶段不赋予猜测年份。','']
+lines += ['','## 后续优先项','','秦良玉的南坪关、太平与播州旧寨，以及徐霞客的均州旧城，应结合方志和历史地图进一步核定。玄奘西行的未定年阶段不赋予猜测年份。','']
 report='\n'.join(lines)
 report_path=ROOT/'research/people/MAP_REVIEW.md'
 if '--check' in sys.argv:

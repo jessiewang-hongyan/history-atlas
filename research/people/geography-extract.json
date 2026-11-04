@@ -1,0 +1,359 @@
+{
+  "provider": "法鼓文理学院 DILA 地名规范资料库",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "snapshotUrl": "https://github.com/DILA-edu/Authority-Databases/blob/9dd2d959255caf7c2406e4b68b961af0246c046d/authority_place/Buddhist_Studies_Place_Authority.xml",
+  "checkedAt": "2026-11-04",
+  "entries": [
+    {
+      "code": "PL000000056974",
+      "names": [
+        "彌陀庵"
+      ],
+      "referenceCoordinates": [
+        121.159596,
+        29.20421
+      ],
+      "usedCoordinates": [
+        121.16,
+        29.2
+      ],
+      "interpretation": "资料指泳溪杨家岙北山坳的废庵；不是今天同名寺庵。"
+    },
+    {
+      "code": "PL000000014700",
+      "names": [
+        "天封寺",
+        "靈墟道場",
+        "智者院",
+        "壽昌寺",
+        "瑞雲閣"
+      ],
+      "referenceCoordinates": [
+        121.104012,
+        29.235819
+      ],
+      "usedCoordinates": [
+        121.1,
+        29.24
+      ],
+      "interpretation": "采用天台华顶下天封寺，避开宁波同名寺塔。"
+    },
+    {
+      "code": "PL000000014412",
+      "names": [
+        "華頂峰",
+        "別峯",
+        "華頂"
+      ],
+      "referenceCoordinates": [
+        121.100218,
+        29.25699
+      ],
+      "usedCoordinates": [
+        121.1,
+        29.26
+      ],
+      "interpretation": "区域点表示华顶，不细分山顶观日点与华顶寺僧房。"
+    },
+    {
+      "code": "PL000000014426",
+      "names": [
+        "石梁橋",
+        "石樑飛瀑",
+        "石梁",
+        "石橋",
+        "石樑雪瀑",
+        "石橋雪瀑",
+        "國清瀑"
+      ],
+      "referenceCoordinates": [
+        121.058127,
+        29.274915
+      ],
+      "usedCoordinates": [
+        121.06,
+        29.27
+      ],
+      "interpretation": "地名对应天然石梁；不是以石梁镇中心代替飞瀑。"
+    },
+    {
+      "code": "PL000000014782",
+      "names": [
+        "萬年寺",
+        "平田寺",
+        "福田寺",
+        "壽昌寺",
+        "天寧萬年寺",
+        "報恩廣孝寺",
+        "報恩光孝寺",
+        "鎮國平田寺",
+        "受業寺"
+      ],
+      "referenceCoordinates": [
+        121.007681,
+        29.283074
+      ],
+      "usedCoordinates": [
+        121.01,
+        29.28
+      ],
+      "interpretation": "对应天台县西北的万年寺，非峨眉山同名寺院。"
+    },
+    {
+      "code": "PL000000014664",
+      "names": [
+        "國清寺",
+        "天台寺",
+        "景德國清寺",
+        "佛隴寺",
+        "天台山寺"
+      ],
+      "referenceCoordinates": [
+        121.043018,
+        29.173344
+      ],
+      "usedCoordinates": [
+        121.04,
+        29.17
+      ],
+      "interpretation": "只表示到寺，未确定明代客房或入寺道路。"
+    },
+    {
+      "code": "PL000000014720",
+      "names": [
+        "明巖寺",
+        "雲光院",
+        "暗巖",
+        "大梵寺"
+      ],
+      "referenceCoordinates": [
+        120.825677,
+        29.088596
+      ],
+      "usedCoordinates": [
+        120.83,
+        29.09
+      ],
+      "interpretation": "明岩寺所在山谷的参照点；本条如另记夜宿他处，点仍只表示途经明岩。"
+    },
+    {
+      "code": "PL000000014547",
+      "names": [
+        "潛真洞",
+        "拊石洞",
+        "寒岩洞天",
+        "寒岩",
+        "附石洞"
+      ],
+      "referenceCoordinates": [
+        120.818511,
+        29.075247
+      ],
+      "usedCoordinates": [
+        120.82,
+        29.08
+      ],
+      "interpretation": "岩洞及邻近寺院区域，不是精确洞口测绘。"
+    },
+    {
+      "code": "PL000000014519",
+      "names": [
+        "赤城山",
+        "燒山",
+        "消山",
+        "赤城支提山",
+        "天台山南門"
+      ],
+      "referenceCoordinates": [
+        121.021941,
+        29.169391
+      ],
+      "usedCoordinates": [
+        121.02,
+        29.17
+      ],
+      "interpretation": "表示登临山域，不把中岩、上岩混作同一到达点。"
+    },
+    {
+      "code": "PL000000014568",
+      "names": [
+        "瓊臺山",
+        "琼台山",
+        "瓊台仙谷"
+      ],
+      "referenceCoordinates": [
+        121.000244,
+        29.213396
+      ],
+      "usedCoordinates": [
+        121.0,
+        29.21
+      ],
+      "interpretation": "1632年日记明确登台；1613年只在对面遥望，不据此在台上落点。"
+    },
+    {
+      "code": "PL000000014692",
+      "names": [
+        "高明寺",
+        "幽溪高明寺",
+        "智者幽溪道場",
+        "淨名寺",
+        "幽溪禪院"
+      ],
+      "referenceCoordinates": [
+        121.058658,
+        29.195517
+      ],
+      "usedCoordinates": [
+        121.06,
+        29.2
+      ],
+      "interpretation": "高明寺及幽溪旁参照区域；三月十八日取返松风阁这一站，不代替螺溪探访路线。"
+    },
+    {
+      "code": "PL000000042305",
+      "names": [
+        "弘福寺",
+        "興福寺",
+        "洪福寺",
+        "廣福寺_諱",
+        "宏福寺_諱"
+      ],
+      "referenceCoordinates": [
+        108.914152,
+        34.280205
+      ],
+      "usedCoordinates": [
+        108.91,
+        34.28
+      ],
+      "interpretation": "对应唐修德坊西北旧址；资料另记明代迁址，地图不采用迁址后的寺院位置。"
+    },
+    {
+      "code": "PL000000042216",
+      "names": [
+        "西明寺",
+        "福壽寺",
+        "福祐寺"
+      ],
+      "referenceCoordinates": [
+        108.914578,
+        34.236717
+      ],
+      "usedCoordinates": [
+        108.91,
+        34.24
+      ],
+      "interpretation": "对应唐延康坊西南寺址，不表示某座译经房的位置。"
+    },
+    {
+      "code": "PL000000015121",
+      "names": [
+        "蕪湖"
+      ],
+      "referenceCoordinates": [
+        118.3715,
+        31.3338
+      ],
+      "usedCoordinates": [
+        118.37,
+        31.33
+      ],
+      "interpretation": "只标行经芜湖的城镇区域；船泊处未核。"
+    },
+    {
+      "code": "PL000000016629",
+      "names": [
+        "池州",
+        "池陽"
+      ],
+      "referenceCoordinates": [
+        117.4907,
+        30.6535
+      ],
+      "usedCoordinates": [
+        117.49,
+        30.65
+      ],
+      "interpretation": "池阳对应池州一带；未找到当年居所位置。"
+    },
+    {
+      "code": "PL000000012513",
+      "names": [
+        "溫州府",
+        "鹿城"
+      ],
+      "referenceCoordinates": [
+        120.6619,
+        28.0169
+      ],
+      "usedCoordinates": [
+        120.66,
+        28.02
+      ],
+      "interpretation": "采用温州城镇地理参照；此资料条为后世温州府，不把其行政边界套用于宋代。"
+    },
+    {
+      "code": "PL000000013659",
+      "names": [
+        "衢州",
+        "三衢"
+      ],
+      "referenceCoordinates": [
+        118.8764,
+        28.9555
+      ],
+      "usedCoordinates": [
+        118.88,
+        28.96
+      ],
+      "interpretation": "到衢州的区域参考；不把参照坐标认作居宅。"
+    },
+    {
+      "code": "PL000000013512",
+      "names": [
+        "金華"
+      ],
+      "referenceCoordinates": [
+        119.6586,
+        29.1034
+      ],
+      "usedCoordinates": [
+        119.66,
+        29.1
+      ],
+      "interpretation": "地方志记她居金华；陈氏第的具体所在尚未落实。"
+    },
+    {
+      "code": "PL000000034596",
+      "names": [
+        "石砫宣撫司"
+      ],
+      "referenceCoordinates": [
+        108.127,
+        29.9922
+      ],
+      "usedCoordinates": [
+        108.13,
+        29.99
+      ],
+      "interpretation": "采用明代石砫司治参照；不采用元代水车坝旧治，也不认作秦良玉府宅或军营。"
+    },
+    {
+      "code": "PL000000012737",
+      "names": [
+        "嘉興府"
+      ],
+      "referenceCoordinates": [
+        120.7621,
+        30.7661
+      ],
+      "usedCoordinates": [
+        120.76,
+        30.77
+      ],
+      "interpretation": "地名可定位到嘉兴；到访时间仍依据后人回忆，保留附条件说明。"
+    }
+  ]
+}

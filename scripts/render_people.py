@@ -11,11 +11,11 @@ def render(data, person):
     records = person['records']
     counts = Counter(r['status'] for r in records)
     episodes = person.get('episodes', [])
-    lines = [f"# {person['name']}人生记录 · 第二轮扩充", '',
+    lines = [f"# {person['name']}人生记录 · 行程细化", '',
              f"初稿日期：{data['preparedAt']}；更新日期：{data.get('updatedAt', data['preparedAt'])}。{person['stage']}。", '',
              f"本轮重点：{person['focus']}", '',
              f"共{len(records)}条年度索引记录，另有{len(episodes)}条未定年阶段；" + '，'.join(f'{k}{v}条' for k, v in counts.items()) + '（仅统计年度记录）。', '',
-             '“可采用”指核心事实已有对应材料，不表示历史坐标、整段路线或逐日顺序都已核定。附条件记录必须保留说明；所有坐标尚为空。', '',
+             '“可采用”指核心事实已有对应材料，不表示历史坐标、整段路线或逐日顺序都已核定。附条件记录保留说明；人生底稿不直接填坐标，已核区域另见 MAP_REVIEW.md。', '',
              '## 人生脉络', '']
     lines += [f'- {s}' for s in person.get('overview', [])]
     lines += ['', '下述概述的依据逐条列在后文。年度索引也包括创作、家庭与组织活动，并非每一项都证明人物身处某地。同年排列用于阅读，不表示已核出连续路线。', '',
@@ -38,7 +38,7 @@ def render(data, person):
             if ev.get('quote'):
                 lines += ['', f"> {ev['quote']}", '']
         lines += ['', f"限制：{r['limits'] or '暂未发现本条核心事实的冲突；具体地理定位仍需另核。'}", '',
-                  f"核验日期：{r['checkedAt']}。坐标：未校准。", '']
+                  f"核验日期：{r['checkedAt']}。地理核验另见 MAP_REVIEW.md。", '']
     if episodes:
         lines += ['## 年份尚未钉定的阶段经历', '', '以下经历已有文献依据，但本轮无法赋予可靠的单一年份。保留文字叙述，不放进年度位置时间轴。', '']
         for item in episodes:
@@ -62,7 +62,7 @@ def render(data, person):
             lines += [f"- **{key}** [{s['title']}]({s['url']})。{s['kind']}。{s['limits']} 核验日期：{s['checkedAt']}。"]
     lines += ['', '## 维护说明', '',
               '本文由 `initial-review.json` 生成。修改事实请先改结构化底稿，再运行 `python3 scripts/render_people.py`。', '',
-              '本轮没有给出完整逐日路线，也没有把这些候选记录自动发布为地图节点。后续按[人物整理流程](../PERSON_WORKFLOW.md)继续。', '']
+              '这些记录仍不是完整逐日路线；年度经历已同步网站，经过独立地理核验的部分才增加地图位置。后续按[人物整理流程](../PERSON_WORKFLOW.md)继续。', '']
     return '\n'.join(lines)
 
 

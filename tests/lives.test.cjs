@@ -2,7 +2,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('nod
 const ctx=vm.createContext({});
 for(const file of ['data','sushi','lives-data'])vm.runInContext(fs.readFileSync(`dist/${file}.js`,'utf8'),ctx);
 const people=vm.runInContext('PEOPLE',ctx),data=vm.runInContext('LIVES_RESEARCH',ctx);
-assert.equal(data.people.length,5);assert.equal(data.people.reduce((n,p)=>n+p.records.length,0),110);assert.equal(data.people.reduce((n,p)=>n+p.episodes.length,0),17);
+assert.equal(data.people.length,5);assert.equal(data.people.reduce((n,p)=>n+p.records.length,0),136);assert.equal(data.people.reduce((n,p)=>n+p.episodes.length,0),20);
 assert.equal(people.find(p=>p.id==='sushi').nodes.length,97);
 let markers=0;
 for(const life of data.people){
@@ -16,10 +16,10 @@ for(const life of data.people){
  }
  for(const e of life.episodes){assert.equal(e.year,null);for(const s of e.evidence)assert.ok(data.sources[s.source]?.url);}
 }
-assert.equal(markers,34);
+assert.equal(markers,64);
 const review=JSON.parse(fs.readFileSync('research/people/map-review.json','utf8'));
 const records=new Map(people.flatMap(p=>p.nodes).map(n=>[n.id,n]));
-assert.equal(Object.keys(review.records).length,16);
+assert.equal(Object.keys(review.records).length,48);
 for(const [id,r] of Object.entries(review.records)){
  const n=records.get(id);assert.ok(n,id);assert.ok(n.locationReview.presenceBasis);
  const place=review.places[r.placeId];assert.ok(place);
@@ -34,4 +34,14 @@ assert.deepEqual(Array.from(records.get('qiujin-014').xy),[120.43,30.88]);
 assert.deepEqual(Array.from(records.get('xuanzang-007').xy),[108.91,35.33]);
 const li=people.find(p=>p.id==='liqingzhao');assert.equal(li.nodes.find(n=>n.id==='liqingzhao-027').xy,null);
 const qiu=people.find(p=>p.id==='qiujin');assert.ok(qiu.nodes[0].year>qiu.birth);assert.equal(qiu.nodes.find(n=>n.id==='qiujin-006').xy,null);
-console.log('PASS: 110 annual records, 17 undated episodes, source links, 34 regional markers, 16 geographical reviews and withheld-location safeguards; Su Shi preserved');
+// Daily records must not mistake companions' luggage or a distant view for a visit.
+assert.equal(records.get('xuxiake-003').locationReview.name,'天台弥陀庵废址一带');
+assert.equal(records.get('xuxiake-038').xy,null);
+assert.equal(records.get('xuxiake-050').locationReview.name,'天台琼台一带');
+assert.equal(records.get('xuxiake-046').locationReview.name,'天台高明寺一带');
+assert.deepEqual(Array.from(records.get('xuanzang-005').xy),[108.91,34.28]);
+assert.equal(records.get('qinliangyu-021').xy,null);
+const xu=people.find(p=>p.id==='xuxiake');
+assert.deepEqual(Array.from(xu.nodes.filter(n=>n.year===1613),n=>n.id),['xuxiake-002','xuxiake-003',...Array.from({length:11},(_,i)=>`xuxiake-${String(i+30).padStart(3,'0')}`),'xuxiake-013','xuxiake-014']);
+assert.equal(xu.nodes.filter(n=>n.year===1632).length,13);
+console.log('PASS: 136 annual records, 20 undated episodes, 64 regional markers, 48 geography reviews; diary chronology and withheld locations preserved');
