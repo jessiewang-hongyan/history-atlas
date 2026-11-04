@@ -1,10 +1,10 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "preparedAt": "2026-11-03",
-  "scope": "五人主要行迹的首轮研究底稿，非完整路线，未发布为地图节点",
+  "scope": "五人人生经历第二轮扩充；含年度记录、活动与未定年阶段，尚未替换线上样本",
   "coordinatePolicy": "所有 coordinates 为 null。文献证实到访不等于已完成历史地理定位；禁止自动取现代城市中心或插值。",
   "statusPolicy": {
-    "可采用": "证据直接支持本条核心事实；仍需地理定位及上图检查。",
+    "可采用": "核心事实有对应材料；是否有可靠位置、日期及坐标仍须逐条检查。所有研究记录mapReady=false。",
     "附条件采用": "日期、主体、转引或载体有限制，须连同说明展示；不可当确定点自动导入。",
     "暂不上图": "活动有据，但尚不足以证明本人该时刻身在此地。"
   },
@@ -13,7 +13,7 @@
       "title": "慧立、彦悰《大唐大慈恩寺三藏法师传》",
       "url": "https://buddhism.lib.ntu.edu.tw/FULLTEXT/sutra/chi_pdf/sutra20/T50n2053.pdf",
       "kind": "古代传记；台湾大学佛学数字图书馆所载《大正藏》文本",
-      "limits": "已查西行自述及贞观十九年返国段落；没有逐卷完成全程校勘。篇内叙事与其他系年仍需互校。",
+      "limits": "本轮补读卷一早年／出关、卷二若干西域与迦湿弥罗段、卷三那烂陀学习段、卷五于阗返程、卷七及卷十晚年段。所用PDF为CBETA 2023.Q4电子本，非古籍原稿或完整影印校勘。传记有宗教神异叙事，未作为客观事件导入。",
       "checkedAt": "2026-11-03"
     },
     "XZ-2": {
@@ -169,13 +169,111 @@
       "kind": "档案报刊文章；南方网转载",
       "limits": "支持1906年初冬上海筹办、1907年1月14日创刊；出版日不能直接当作本人抵沪日。",
       "checkedAt": "2026-11-03"
+    },
+    "XX-8": {
+      "title": "徐霞客《遊雁宕山日記》",
+      "url": "https://zh.wikisource.org/wiki/徐霞客遊記/遊雁宕山日記",
+      "kind": "本人作品；维基文库在线录文",
+      "limits": "已读所引日条，尚未逐页校对影印底本。",
+      "checkedAt": "2026-11-04"
+    },
+    "XX-9": {
+      "title": "徐霞客《遊黃山日記》",
+      "url": "https://zh.wikisource.org/wiki/徐霞客遊記/遊黃山日記",
+      "kind": "本人作品；维基文库在线录文",
+      "limits": "已读所引日条，尚未逐页校对影印底本。",
+      "checkedAt": "2026-11-04"
+    },
+    "XX-10": {
+      "title": "徐霞客《後遊黃山日記》",
+      "url": "https://zh.wikisource.org/wiki/徐霞客遊記/後遊黃山日記",
+      "kind": "本人作品；维基文库在线录文",
+      "limits": "已读所引日条，尚未逐页校对影印底本。",
+      "checkedAt": "2026-11-04"
+    },
+    "XX-11": {
+      "title": "徐霞客《遊嵩山日記》",
+      "url": "https://zh.wikisource.org/wiki/徐霞客遊記/遊嵩山日記",
+      "kind": "本人作品；维基文库在线录文",
+      "limits": "已读所引日条，尚未逐页校对影印底本。",
+      "checkedAt": "2026-11-04"
+    },
+    "XX-12": {
+      "title": "徐霞客《遊太華山日記》",
+      "url": "https://zh.wikisource.org/wiki/徐霞客遊記/遊太華山日記",
+      "kind": "本人作品；维基文库在线录文",
+      "limits": "已读所引日条，尚未逐页校对影印底本。",
+      "checkedAt": "2026-11-04"
+    },
+    "XX-13": {
+      "title": "徐霞客《遊太和山日記》",
+      "url": "https://zh.wikisource.org/wiki/徐霞客遊記/遊太和山日記",
+      "kind": "本人作品；维基文库在线录文",
+      "limits": "已读所引日条，尚未逐页校对影印底本。",
+      "checkedAt": "2026-11-04"
+    },
+    "XX-14": {
+      "title": "徐霞客《遊五台山日記》",
+      "url": "https://zh.wikisource.org/wiki/徐霞客遊記/遊五台山日記",
+      "kind": "本人作品；维基文库在线录文",
+      "limits": "已读所引日条，尚未逐页校对影印底本。",
+      "checkedAt": "2026-11-04"
+    },
+    "XX-15": {
+      "title": "徐霞客《遊恒山日記》",
+      "url": "https://zh.wikisource.org/wiki/徐霞客遊記/遊恒山日記",
+      "kind": "本人作品；维基文库在线录文",
+      "limits": "已读所引日条，尚未逐页校对影印底本。",
+      "checkedAt": "2026-11-04"
+    },
+    "XX-16": {
+      "title": "黄山日报：与徐霞客同行，我们一起“黄白游”",
+      "url": "https://www.huangshan.gov.cn/zxzx/zwyw/8400169.html",
+      "kind": "地方报刊；黄山市政府转载",
+      "limits": "仅用于1616、1618两次黄白游的年级辅助；具体经过以日记为据。",
+      "checkedAt": "2026-11-04"
+    },
+    "LQ-4": {
+      "title": "李清照《打马图经》及序",
+      "url": "https://zh.wikisource.org/zh-hans/打馬圖經",
+      "kind": "本人作品；维基文库在线录文",
+      "limits": "页面注明据1927年涵芬楼本《说郛》卷十九；已读序文。原序明确由临安至金华及十一月二十四署日，与年表十月二十四不同。",
+      "checkedAt": "2026-11-04"
+    },
+    "QJ-7": {
+      "title": "湖州市档案馆：清代大事记",
+      "url": "https://daj.huzhou.gov.cn/dawh/ldds/20080422/i3926625.html",
+      "kind": "地方档案机构大事记",
+      "limits": "1906年条明确秋瑾抵南浔浔溪女校执教，未给抵达日。",
+      "checkedAt": "2026-11-04"
+    },
+    "QJ-8": {
+      "title": "孙中山故居纪念馆：秋瑾人物资料",
+      "url": "https://www.sunyat-sen.org/portal/article/index.html?cid=23&id=25221",
+      "kind": "纪念馆人物介绍",
+      "limits": "用于1905东京欢迎孙中山、参加同盟会的经历；文中出生厦门与QJ-2闽侯说不同，出生地仍悬置。八月初未明确历法，不转换具体日。",
+      "checkedAt": "2026-11-04"
+    },
+    "QJ-9": {
+      "title": "一位爱国的政治活动家——纪念祖父褚辅成先生",
+      "url": "https://www.sh93.gov.cn/detailpage/ssgc-33f45eaa-bfbb-11ec-b023-7c8ae163e649.html",
+      "kind": "九三学社上海市委刊载后人回忆",
+      "limits": "用于1906旧历二月嘉兴的线索；后人回忆中光复会入会次序另有问题，仅附条件采用。",
+      "checkedAt": "2026-11-04"
+    },
+    "QJ-10": {
+      "title": "上海博物馆：秋瑾供词",
+      "url": "https://www.shanghaimuseum.net/mu/frontend/pg/m/article/id/CI00005081",
+      "kind": "博物馆原始档案藏品说明",
+      "limits": "支持所藏堂讯供状、指印与37卷案卷的存在；未读案卷全文。页面生年、创刊年份等概述与其他材料不一致，不用这些概述覆盖现有结论。",
+      "checkedAt": "2026-11-04"
     }
   },
   "people": [
     {
       "id": "xuanzang",
       "name": "玄奘",
-      "stage": "主要行迹首轮资料底稿；尚未替换线上样本",
+      "stage": "第二轮人生资料底稿；尚未替换线上样本",
       "focus": "西行年份异说、印度段逐站系年、返国后往返和译经居处。",
       "records": [
         {
@@ -195,14 +293,65 @@
           ],
           "limits": "生年有异说；现代区域对照尚未校准。",
           "coordinates": null,
-          "checkedAt": "2026-11-03"
+          "checkedAt": "2026-11-03",
+          "recordType": "行迹或人生事件",
+          "mapReady": false,
+          "withinYearOrder": 50
+        },
+        {
+          "id": "xuanzang-008",
+          "year": 618,
+          "place": "长安",
+          "title": "与兄长离开战乱中的洛阳",
+          "dateLabel": "武德元年",
+          "calendar": "原历月日未转换公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "XZ-1",
+              "locator": "卷一，洛阳避乱至长安段，电子本第5页",
+              "supports": "玄奘与兄长离开洛阳来到长安。京城尚少讲席，他们随后转往蜀地求学。",
+              "quote": "兄從之，即共俱來，時武德元年矣。"
+            }
+          ],
+          "limits": "",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹",
+          "mapReady": false,
+          "narrative": "玄奘与兄长离开洛阳来到长安。京城尚少讲席，他们随后转往蜀地求学。",
+          "withinYearOrder": 50
+        },
+        {
+          "id": "xuanzang-009",
+          "year": 622,
+          "place": "成都",
+          "title": "受具足戒，继续学律",
+          "dateLabel": "武德五年",
+          "calendar": "原历月日未转换公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "XZ-1",
+              "locator": "卷一，成都受具段，电子本第5页",
+              "supports": "在成都受具足戒后，他继续学习戒律。这段在蜀地的学习先于西行。",
+              "quote": "即以武德五年於成都受具，坐夏學律。"
+            }
+          ],
+          "limits": "",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹",
+          "mapReady": false,
+          "narrative": "在成都受具足戒后，他继续学习戒律。这段在蜀地的学习先于西行。",
+          "withinYearOrder": 50
         },
         {
           "id": "xuanzang-002",
           "year": 629,
           "place": "长安",
           "title": "启程西行",
-          "dateLabel": "贞观三年四月；另有627年说",
+          "dateLabel": "贞观三年（629）；本传四月与八月记载不同，另有627年说",
           "calendar": "原文纪年／原历月日；未换算公历",
           "status": "附条件采用",
           "evidence": [
@@ -212,9 +361,12 @@
               "supports": "支持其自述西行起始纪年。"
             }
           ],
-          "limits": "XZ-4记627年；上图须同时保留异说，不能由此自动推算西域各站。",
+          "limits": "卷五上表记三年四月，卷一叙事记三年秋八月；XZ-4又采用627年。本版不选定出发月份。",
           "coordinates": null,
-          "checkedAt": "2026-11-03"
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹或人生事件",
+          "mapReady": false,
+          "withinYearOrder": 50
         },
         {
           "id": "xuanzang-003",
@@ -233,7 +385,10 @@
           ],
           "limits": "与洛阳、再回长安为同年不同记录。",
           "coordinates": null,
-          "checkedAt": "2026-11-03"
+          "checkedAt": "2026-11-03",
+          "recordType": "行迹或人生事件",
+          "mapReady": false,
+          "withinYearOrder": 10
         },
         {
           "id": "xuanzang-004",
@@ -252,7 +407,10 @@
           ],
           "limits": "召见记日不等于抵达日。",
           "coordinates": null,
-          "checkedAt": "2026-11-03"
+          "checkedAt": "2026-11-03",
+          "recordType": "行迹或人生事件",
+          "mapReady": false,
+          "withinYearOrder": 20
         },
         {
           "id": "xuanzang-005",
@@ -271,7 +429,148 @@
           ],
           "limits": "日干支先保留在引用定位，未作公历换算。",
           "coordinates": null,
-          "checkedAt": "2026-11-03"
+          "checkedAt": "2026-11-03",
+          "recordType": "行迹或人生事件",
+          "mapReady": false,
+          "withinYearOrder": 30
+        },
+        {
+          "id": "xuanzang-010",
+          "year": 648,
+          "place": "长安大慈恩寺",
+          "title": "进入新建的大慈恩寺",
+          "dateLabel": "贞观二十二年十二月",
+          "calendar": "原历月日未转换公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "XZ-1",
+              "locator": "卷七，迎像送僧入慈恩寺段，电子本第69—70页",
+              "supports": "经像与僧众迁入大慈恩寺，玄奘担任上座并继续译经。"
+            }
+          ],
+          "limits": "传记还记当日受召回北阙；入寺不能理解为此后从未离寺。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹与译经活动",
+          "mapReady": false,
+          "narrative": "经像与僧众迁入大慈恩寺，玄奘担任上座并继续译经。",
+          "withinYearOrder": 50
+        },
+        {
+          "id": "xuanzang-011",
+          "year": 649,
+          "place": "翠微宫",
+          "title": "随唐太宗至翠微宫",
+          "dateLabel": "贞观二十三年四月",
+          "calendar": "原历月日未转换公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "XZ-1",
+              "locator": "卷七，翠微宫段，电子本第70页",
+              "supports": "玄奘随唐太宗至翠微宫，参与佛学问答。"
+            }
+          ],
+          "limits": "宫址另核；太宗行程不能自动全部复制给玄奘。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹与译经活动",
+          "mapReady": false,
+          "narrative": "玄奘随唐太宗至翠微宫，参与佛学问答。",
+          "withinYearOrder": 50
+        },
+        {
+          "id": "xuanzang-012",
+          "year": 649,
+          "place": "长安大慈恩寺",
+          "title": "从宫中返回译场",
+          "dateLabel": "贞观二十三年五月以后",
+          "calendar": "原历月日未转换公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "XZ-1",
+              "locator": "卷七，太宗崩后还寺段，电子本第70页",
+              "supports": "太宗去世后，玄奘回大慈恩寺，继续翻译和讲授经论。"
+            }
+          ],
+          "limits": "原文未给出返寺的独立月日。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹与译经活动",
+          "mapReady": false,
+          "narrative": "太宗去世后，玄奘回大慈恩寺，继续翻译和讲授经论。",
+          "withinYearOrder": 50
+        },
+        {
+          "id": "xuanzang-013",
+          "year": 652,
+          "place": "长安大慈恩寺",
+          "title": "为保存经像筹建佛塔",
+          "dateLabel": "永徽三年三月",
+          "calendar": "原历月日未转换公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "XZ-1",
+              "locator": "卷七，造石浮图改甎塔段，电子本第71—72页",
+              "supports": "他提出建塔保存从西域带回的经像，方案随后改为砖塔。"
+            }
+          ],
+          "limits": "这是建塔活动，不能把奏请日当塔建成日。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹与译经活动",
+          "mapReady": false,
+          "narrative": "他提出建塔保存从西域带回的经像，方案随后改为砖塔。",
+          "withinYearOrder": 50
+        },
+        {
+          "id": "xuanzang-014",
+          "year": 658,
+          "place": "长安",
+          "title": "从洛阳返回长安",
+          "dateLabel": "显庆三年正月",
+          "calendar": "原历月日未转换公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "XZ-1",
+              "locator": "卷十开篇，电子本第96页",
+              "supports": "玄奘随车驾从洛阳回到长安。"
+            }
+          ],
+          "limits": "本轮未展开这次赴洛阳的前程。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹与译经活动",
+          "mapReady": false,
+          "narrative": "玄奘随车驾从洛阳回到长安。",
+          "withinYearOrder": 50
+        },
+        {
+          "id": "xuanzang-015",
+          "year": 658,
+          "place": "长安西明寺",
+          "title": "迁居西明寺",
+          "dateLabel": "显庆三年秋七月",
+          "calendar": "原历月日未转换公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "XZ-1",
+              "locator": "卷十开篇，电子本第96页",
+              "supports": "他迁往西明寺，继续译经。此后为专心完成《大般若经》，又请求前往玉华宫。"
+            }
+          ],
+          "limits": "寺院营建年与迁居年分开。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹与译经活动",
+          "mapReady": false,
+          "narrative": "他迁往西明寺，继续译经。此后为专心完成《大般若经》，又请求前往玉华宫。",
+          "withinYearOrder": 50
         },
         {
           "id": "xuanzang-006",
@@ -290,7 +589,56 @@
           ],
           "limits": "寺址需要另做古今地望核对。",
           "coordinates": null,
-          "checkedAt": "2026-11-03"
+          "checkedAt": "2026-11-03",
+          "recordType": "行迹或人生事件",
+          "mapReady": false,
+          "withinYearOrder": 50
+        },
+        {
+          "id": "xuanzang-016",
+          "year": 660,
+          "place": "玉华寺",
+          "title": "开始译《大般若经》",
+          "dateLabel": "显庆五年正月初一",
+          "calendar": "原历月日未转换公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "XZ-1",
+              "locator": "卷十，起首翻大般若段，电子本第96页",
+              "supports": "玄奘在玉华寺开始翻译《大般若经》，遇有疑文便校勘不同梵本。"
+            }
+          ],
+          "limits": "",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹与译经活动",
+          "mapReady": false,
+          "narrative": "玄奘在玉华寺开始翻译《大般若经》，遇有疑文便校勘不同梵本。",
+          "withinYearOrder": 50
+        },
+        {
+          "id": "xuanzang-017",
+          "year": 663,
+          "place": "玉华寺",
+          "title": "完成六百卷译本",
+          "dateLabel": "龙朔三年十月二十三",
+          "calendar": "原历月日未转换公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "XZ-1",
+              "locator": "卷十，功毕绝笔段，电子本第97页",
+              "supports": "《大般若经》六百卷译成。这是他晚年最重要的工作之一。"
+            }
+          ],
+          "limits": "译毕日为原历；不是迁居或到达日期。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹与译经活动",
+          "mapReady": false,
+          "narrative": "《大般若经》六百卷译成。这是他晚年最重要的工作之一。",
+          "withinYearOrder": 50
         },
         {
           "id": "xuanzang-007",
@@ -309,19 +657,22 @@
           ],
           "limits": "身后墓地不接入生前路线。",
           "coordinates": null,
-          "checkedAt": "2026-11-03"
+          "checkedAt": "2026-11-03",
+          "recordType": "行迹或人生事件",
+          "mapReady": false,
+          "withinYearOrder": 50
         }
       ],
       "pending": [
         {
           "item": "高昌、龟兹及西域各站",
-          "known": "教学路线与传记可以确认西行曾经部分地区。",
+          "known": "第二轮已直接核到传记所载到访与学习内容，并录为未定年阶段。",
           "missing": "逐站停留年份、先后细节及历史城址尚未逐一核到。",
           "nextCheck": "逐卷读《大唐大慈恩寺三藏法师传》，对照《大唐西域记》及校注年表。"
         },
         {
           "item": "那烂陀求学",
-          "known": "学习经历有资料支持。",
+          "known": "第二轮已直接核到传记所载到访与学习内容，并录为未定年阶段。",
           "missing": "旧节点635年没有在本轮找到足以钉定该年的依据；学习起止亦有不同说法。",
           "nextCheck": "核传记入寺、戒贤授学与离寺段，保留年区间，不把区间中点当实年。"
         },
@@ -336,12 +687,217 @@
         "629保留但补627异说。",
         "630高昌、635那烂陀转入待核，不凭旧示意年继续扩展。",
         "645拆分长安—洛阳—长安，补659玉华寺。"
+      ],
+      "episodes": [
+        {
+          "id": "xuanzang-E001",
+          "year": null,
+          "periodLabel": "少年时期，具体年待核",
+          "place": "洛阳净土寺",
+          "title": "随兄出家，学习经论",
+          "narrative": "玄奘随已出家的兄长到洛阳净土寺，学习《涅槃经》和《摄大乘论》。",
+          "evidence": [
+            {
+              "source": "XZ-1",
+              "locator": "卷一，长捷、景法师、严法师段，第4—5页",
+              "supports": "玄奘随已出家的兄长到洛阳净土寺，学习《涅槃经》和《摄大乘论》。"
+            }
+          ],
+          "limits": "原文“年十三”不能直接依有争议的出生年推成确定年份。",
+          "checkedAt": "2026-11-04",
+          "mapReady": false
+        },
+        {
+          "id": "xuanzang-E002",
+          "year": null,
+          "periodLabel": "618年以后、622年受戒以前",
+          "place": "汉川—成都",
+          "title": "向蜀地求学",
+          "narrative": "他与兄长经子午谷入汉川，停留学习一个多月，再往成都听讲经论。",
+          "evidence": [
+            {
+              "source": "XZ-1",
+              "locator": "卷一，子午谷入汉川段，第5页",
+              "supports": "他与兄长经子午谷入汉川，停留学习一个多月，再往成都听讲经论。"
+            }
+          ],
+          "limits": "只按原文先后限定阶段，不分配逐站到达年。",
+          "checkedAt": "2026-11-04",
+          "mapReady": false
+        },
+        {
+          "id": "xuanzang-E003",
+          "year": null,
+          "periodLabel": "成都受戒后、西行以前",
+          "place": "荆州—相州—赵州—长安",
+          "title": "沿江北上访师",
+          "narrative": "离蜀后，他到荆州天皇寺讲学，又赴相州、赵州访师，最后回长安学习《俱舍论》等。",
+          "evidence": [
+            {
+              "source": "XZ-1",
+              "locator": "卷一，天皇寺至大觉寺段，第5—6页",
+              "supports": "离蜀后，他到荆州天皇寺讲学，又赴相州、赵州访师，最后回长安学习《俱舍论》等。"
+            }
+          ],
+          "limits": "荆州讲学“自夏及冬”没有独立纪年；不强行写成622年全程。",
+          "checkedAt": "2026-11-04",
+          "mapReady": false
+        },
+        {
+          "id": "xuanzang-E004",
+          "year": null,
+          "periodLabel": "西行求法期间；逐站年份尚未核定",
+          "place": "秦州—兰州—凉州",
+          "title": "沿河西走向西域",
+          "narrative": "西行初段，他经秦州和兰州到凉州，曾停留一个多月讲经。",
+          "evidence": [
+            {
+              "source": "XZ-1",
+              "locator": "卷一，第6页秦州、兰州、凉州段",
+              "supports": "西行初段，他经秦州和兰州到凉州，曾停留一个多月讲经。"
+            }
+          ],
+          "limits": "本传明确记载到访，但本轮未核定具体到达年。此条不进入年度位置时间轴。",
+          "checkedAt": "2026-11-04",
+          "mapReady": false
+        },
+        {
+          "id": "xuanzang-E005",
+          "year": null,
+          "periodLabel": "西行求法期间；逐站年份尚未核定",
+          "place": "瓜州及玉门关外",
+          "title": "越关前的停留",
+          "narrative": "他到瓜州打听道路，随后越过关防，进入沙碛。",
+          "evidence": [
+            {
+              "source": "XZ-1",
+              "locator": "卷一，第7—9页瓜州及五烽段",
+              "supports": "他到瓜州打听道路，随后越过关防，进入沙碛。"
+            }
+          ],
+          "limits": "本传明确记载到访，但本轮未核定具体到达年。此条不进入年度位置时间轴。",
+          "checkedAt": "2026-11-04",
+          "mapReady": false
+        },
+        {
+          "id": "xuanzang-E006",
+          "year": null,
+          "periodLabel": "西行求法期间；逐站年份尚未核定",
+          "place": "伊吾—高昌",
+          "title": "进入绿洲城国",
+          "narrative": "走出沙漠后，他先到伊吾，再应高昌王邀请赴高昌。",
+          "evidence": [
+            {
+              "source": "XZ-1",
+              "locator": "卷一，第9—10页伊吾、高昌段",
+              "supports": "走出沙漠后，他先到伊吾，再应高昌王邀请赴高昌。"
+            }
+          ],
+          "limits": "本传明确记载到访，但本轮未核定具体到达年。此条不进入年度位置时间轴。",
+          "checkedAt": "2026-11-04",
+          "mapReady": false
+        },
+        {
+          "id": "xuanzang-E007",
+          "year": null,
+          "periodLabel": "西行求法期间；逐站年份尚未核定",
+          "place": "阿耆尼—屈支",
+          "title": "在屈支与僧人讨论学问",
+          "narrative": "离开高昌后，他途经阿耆尼到屈支，与当地僧人讨论经论，也说明了继续向西求学的缘由。",
+          "evidence": [
+            {
+              "source": "XZ-1",
+              "locator": "卷二，阿耆尼、屈支段",
+              "supports": "离开高昌后，他途经阿耆尼到屈支，与当地僧人讨论经论，也说明了继续向西求学的缘由。"
+            }
+          ],
+          "limits": "本传明确记载到访，但本轮未核定具体到达年。此条不进入年度位置时间轴。",
+          "checkedAt": "2026-11-04",
+          "mapReady": false
+        },
+        {
+          "id": "xuanzang-E008",
+          "year": null,
+          "periodLabel": "西行求法期间；逐站年份尚未核定",
+          "place": "飒秣建",
+          "title": "经过中亚城国",
+          "narrative": "玄奘到飒秣建，与当地统治者交流佛教信仰；传记随后记他继续向西南行进。",
+          "evidence": [
+            {
+              "source": "XZ-1",
+              "locator": "卷二，飒秣建段",
+              "supports": "玄奘到飒秣建，与当地统治者交流佛教信仰；传记随后记他继续向西南行进。"
+            }
+          ],
+          "limits": "本传明确记载到访，但本轮未核定具体到达年。此条不进入年度位置时间轴。",
+          "checkedAt": "2026-11-04",
+          "mapReady": false
+        },
+        {
+          "id": "xuanzang-E009",
+          "year": null,
+          "periodLabel": "西行求法期间；逐站年份尚未核定",
+          "place": "迦湿弥罗",
+          "title": "学习论书与语言",
+          "narrative": "在迦湿弥罗，他从僧称学习《俱舍论》《顺正理论》及因明、声明。",
+          "evidence": [
+            {
+              "source": "XZ-1",
+              "locator": "卷二，僧称授学段，第20—21页",
+              "supports": "在迦湿弥罗，他从僧称学习《俱舍论》《顺正理论》及因明、声明。"
+            }
+          ],
+          "limits": "本传明确记载到访，但本轮未核定具体到达年。此条不进入年度位置时间轴。",
+          "checkedAt": "2026-11-04",
+          "mapReady": false
+        },
+        {
+          "id": "xuanzang-E010",
+          "year": null,
+          "periodLabel": "西行求法期间；逐站年份尚未核定",
+          "place": "那烂陀",
+          "title": "从戒贤学习",
+          "narrative": "玄奘进入那烂陀，向戒贤求学；所学包括《瑜伽论》，也继续研习梵文。",
+          "evidence": [
+            {
+              "source": "XZ-1",
+              "locator": "卷三，入那烂陀及戒贤讲论段，第30—35页",
+              "supports": "玄奘进入那烂陀，向戒贤求学；所学包括《瑜伽论》，也继续研习梵文。"
+            }
+          ],
+          "limits": "本传明确记载到访，但本轮未核定具体到达年。此条不进入年度位置时间轴。",
+          "checkedAt": "2026-11-04",
+          "mapReady": false
+        },
+        {
+          "id": "xuanzang-E011",
+          "year": null,
+          "periodLabel": "返国前；645年入长安以前",
+          "place": "于阗",
+          "title": "返程中补经、讲学并等候回信",
+          "narrative": "返程到于阗后，他派人寻补途中散失的经本，一面讲学，一面遣使向唐廷报告归程。",
+          "evidence": [
+            {
+              "source": "XZ-1",
+              "locator": "卷五，于阗上表段，第56—57页",
+              "supports": "返程到于阗后，他派人寻补途中散失的经本，一面讲学，一面遣使向唐廷报告归程。"
+            }
+          ],
+          "limits": "本传明确记载到访，但本轮未核定具体到达年。此条不进入年度位置时间轴。",
+          "checkedAt": "2026-11-04",
+          "mapReady": false
+        }
+      ],
+      "overview": [
+        "少年在洛阳随兄出家；唐初到长安、汉川、成都求学，622年在成都受具足戒。",
+        "西行前继续访师；西行途中经历河西、西域、中亚及印度求学。新增阶段条目保留地点与学习内容，逐站年份仍未钉定。",
+        "645年返国后，人生重心转为译经；慈恩寺、西明寺、玉华寺的变化，以及660—663年的大般若译事已补入。"
       ]
     },
     {
       "id": "xuxiake",
       "name": "徐霞客",
-      "stage": "主要行迹首轮资料底稿；尚未替换线上样本",
+      "stage": "第二轮人生资料底稿；尚未替换线上样本",
       "focus": "以日记原文为主，分清出游日、抵达日、游记记日与后人推年。",
       "records": [
         {
@@ -361,7 +917,10 @@
           ],
           "limits": "出生宅址未核，不赋精确坐标。",
           "coordinates": null,
-          "checkedAt": "2026-11-03"
+          "checkedAt": "2026-11-03",
+          "recordType": "行迹或人生事件",
+          "mapReady": false,
+          "withinYearOrder": 50
         },
         {
           "id": "xuxiake-002",
@@ -380,7 +939,10 @@
           ],
           "limits": "三月晦为原历月末，不写成公历3月31日。",
           "coordinates": null,
-          "checkedAt": "2026-11-03"
+          "checkedAt": "2026-11-03",
+          "recordType": "行迹或人生事件",
+          "mapReady": false,
+          "withinYearOrder": 50
         },
         {
           "id": "xuxiake-003",
@@ -399,7 +961,401 @@
           ],
           "limits": "这是区域合并记录；若画实际道路，须再拆分日条。",
           "coordinates": null,
-          "checkedAt": "2026-11-03"
+          "checkedAt": "2026-11-03",
+          "recordType": "行迹或人生事件",
+          "mapReady": false,
+          "withinYearOrder": 50
+        },
+        {
+          "id": "xuxiake-013",
+          "year": 1613,
+          "place": "黄岩",
+          "title": "离开天台后到黄岩",
+          "dateLabel": "四月初十",
+          "calendar": "原历月日未转换公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "XX-8",
+              "locator": "开篇初九、初十日条；承接XX-2癸丑年",
+              "supports": "离开天台山后，徐霞客到黄岩，再向雁荡方向走。"
+            }
+          ],
+          "limits": "年份月份承接《游天台山日记》，本篇开头只记日。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹",
+          "mapReady": false,
+          "narrative": "离开天台山后，徐霞客到黄岩，再向雁荡方向走。",
+          "withinYearOrder": 50
+        },
+        {
+          "id": "xuxiake-014",
+          "year": 1613,
+          "place": "雁荡灵峰",
+          "title": "游灵峰、宿寺",
+          "dateLabel": "四月十一",
+          "calendar": "原历月日未转换公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "XX-8",
+              "locator": "十一日条",
+              "supports": "他经大荆、石梁洞进入灵峰，游洞后回寺住宿。"
+            }
+          ],
+          "limits": "年份月份承接前篇；旧寺与山路位置另核。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹",
+          "mapReady": false,
+          "narrative": "他经大荆、石梁洞进入灵峰，游洞后回寺住宿。",
+          "withinYearOrder": 50
+        },
+        {
+          "id": "xuxiake-015",
+          "year": 1616,
+          "place": "黄山汤口、祥符寺",
+          "title": "第一次黄山之游",
+          "dateLabel": "1616年；本篇初三日",
+          "calendar": "原历月日未转换公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "XX-9",
+              "locator": "初三日汤口、温泉、祥符寺段",
+              "supports": "他从汤口入山，经过积雪，游温泉并宿祥符寺。"
+            }
+          ],
+          "limits": "本篇未独立署年；年份由XX-16辅助，不将日条改成公历日期。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹",
+          "mapReady": false,
+          "narrative": "他从汤口入山，经过积雪，游温泉并宿祥符寺。",
+          "withinYearOrder": 50
+        },
+        {
+          "id": "xuxiake-016",
+          "year": 1618,
+          "place": "白岳—江村",
+          "title": "再次从白岳前往黄山",
+          "dateLabel": "戊午九月初三",
+          "calendar": "原历月日未转换公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "XX-10",
+              "locator": "初三日条",
+              "supports": "从白岳榔梅庵出发，循旧路往黄山，当晚宿江村。"
+            }
+          ],
+          "limits": "江村同名地较多，地点尚待校准。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹",
+          "mapReady": false,
+          "narrative": "从白岳榔梅庵出发，循旧路往黄山，当晚宿江村。",
+          "withinYearOrder": 50
+        },
+        {
+          "id": "xuxiake-017",
+          "year": 1618,
+          "place": "黄山天都峰",
+          "title": "攀登天都峰",
+          "dateLabel": "戊午九月初四",
+          "calendar": "原历月日未转换公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "XX-10",
+              "locator": "初四日条",
+              "supports": "徐霞客与僧人澄源等攀登天都峰，当晚回文殊院。"
+            }
+          ],
+          "limits": "",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹",
+          "mapReady": false,
+          "narrative": "徐霞客与僧人澄源等攀登天都峰，当晚回文殊院。",
+          "withinYearOrder": 50
+        },
+        {
+          "id": "xuxiake-018",
+          "year": 1618,
+          "place": "黄山莲花峰",
+          "title": "登莲花峰，比较群峰",
+          "dateLabel": "戊午九月初五",
+          "calendar": "原历月日未转换公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "XX-10",
+              "locator": "初五日条",
+              "supports": "他登上莲花峰，从高处观察诸峰，随后转往后海和狮子林。"
+            }
+          ],
+          "limits": "",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹",
+          "mapReady": false,
+          "narrative": "他登上莲花峰，从高处观察诸峰，随后转往后海和狮子林。",
+          "withinYearOrder": 50
+        },
+        {
+          "id": "xuxiake-019",
+          "year": 1623,
+          "place": "密县—登封",
+          "title": "开启嵩华太和之行",
+          "dateLabel": "癸亥仲春十九",
+          "calendar": "原历月日未转换公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "XX-11",
+              "locator": "十九日条",
+              "supports": "这次旅行先走嵩山，再访华山和太和山。他经密县进入登封境内。"
+            }
+          ],
+          "limits": "年为癸亥1623；县界与途中旧地名另核。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹",
+          "mapReady": false,
+          "narrative": "这次旅行先走嵩山，再访华山和太和山。他经密县进入登封境内。",
+          "withinYearOrder": 50
+        },
+        {
+          "id": "xuxiake-020",
+          "year": 1623,
+          "place": "潼关—西岳庙",
+          "title": "到华山脚下",
+          "dateLabel": "二月晦",
+          "calendar": "原历月日未转换公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "XX-12",
+              "locator": "开篇二月晦条",
+              "supports": "他入潼关，来到西岳庙，为登华山作准备。"
+            }
+          ],
+          "limits": "年份承接XX-11同次旅行。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹",
+          "mapReady": false,
+          "narrative": "他入潼关，来到西岳庙，为登华山作准备。",
+          "withinYearOrder": 50
+        },
+        {
+          "id": "xuxiake-021",
+          "year": 1623,
+          "place": "华山",
+          "title": "登临华山诸峰",
+          "dateLabel": "三月初一至初二",
+          "calendar": "原历月日未转换公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "XX-12",
+              "locator": "初一、初二日条",
+              "supports": "沿山路、铁索登华山，在迎阳洞留宿，次日再游南峰、西峰等处。"
+            }
+          ],
+          "limits": "年份承接同次旅行；两日合并为一个游山阶段。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹",
+          "mapReady": false,
+          "narrative": "沿山路、铁索登华山，在迎阳洞留宿，次日再游南峰、西峰等处。",
+          "withinYearOrder": 50
+        },
+        {
+          "id": "xuxiake-022",
+          "year": 1623,
+          "place": "均州",
+          "title": "来到汉水边",
+          "dateLabel": "三月十二",
+          "calendar": "原历月日未转换公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "XX-13",
+              "locator": "十二日条",
+              "supports": "经过红粉渡，他沿汉水到均州，计划次日登山。"
+            }
+          ],
+          "limits": "年份及月份承接嵩山、华山连续日记。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹",
+          "mapReady": false,
+          "narrative": "经过红粉渡，他沿汉水到均州，计划次日登山。",
+          "withinYearOrder": 50
+        },
+        {
+          "id": "xuxiake-023",
+          "year": 1623,
+          "place": "太和山（武当山）",
+          "title": "登金顶，访山中宫观",
+          "dateLabel": "三月十三至十五",
+          "calendar": "原历月日未转换公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "XX-13",
+              "locator": "十三至十五日条",
+              "supports": "他登天柱峰金顶，又访南岩、五龙宫等处，记下沿途地形与植物。"
+            }
+          ],
+          "limits": "年份月份承接前篇；不逐一把宫观拆成新的旅行。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹",
+          "mapReady": false,
+          "narrative": "他登天柱峰金顶，又访南岩、五龙宫等处，记下沿途地形与植物。",
+          "withinYearOrder": 50
+        },
+        {
+          "id": "xuxiake-024",
+          "year": 1623,
+          "place": "江阴",
+          "title": "带着榔梅回家",
+          "dateLabel": "浴佛后一日",
+          "calendar": "原历月日未转换公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "XX-13",
+              "locator": "篇末抵家句",
+              "supports": "结束这次旅行后，他带着太和山的榔梅回家，为母亲祝寿。"
+            }
+          ],
+          "limits": "“浴佛后一日”保留原文，不在本轮换算公历。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹",
+          "mapReady": false,
+          "narrative": "结束这次旅行后，他带着太和山的榔梅回家，为母亲祝寿。",
+          "withinYearOrder": 50
+        },
+        {
+          "id": "xuxiake-025",
+          "year": 1633,
+          "place": "北京",
+          "title": "离京赴五台",
+          "dateLabel": "癸酉七月二十八",
+          "calendar": "原历月日未转换公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "XX-14",
+              "locator": "开篇",
+              "supports": "他离开京城，开始五台山之游。"
+            }
+          ],
+          "limits": "只证明离京日，不能补造抵京日。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹",
+          "mapReady": false,
+          "narrative": "他离开京城，开始五台山之游。",
+          "withinYearOrder": 50
+        },
+        {
+          "id": "xuxiake-026",
+          "year": 1633,
+          "place": "阜平—龙泉关",
+          "title": "由阜平向山中走",
+          "dateLabel": "八月初四",
+          "calendar": "原历月日未转换公历",
+          "status": "可采用",
+          "evidence": [
+            {
+              "source": "XX-14",
+              "locator": "初四日条",
+              "supports": "到阜平后，他沿溪谷、山岭前往龙泉关。"
+            }
+          ],
+          "limits": "",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹",
+          "mapReady": false,
+          "narrative": "到阜平后，他沿溪谷、山岭前往龙泉关。",
+          "withinYearOrder": 50
+        },
+        {
+          "id": "xuxiake-027",
+          "year": 1633,
+          "place": "五台山",
+          "title": "登南台、西台、中台和北台",
+          "dateLabel": "八月初六至初八",
+          "calendar": "原历月日未转换公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "XX-14",
+              "locator": "初六至初八日条",
+              "supports": "他数日间登临诸台，观察山势与冰雪，离开北台后转向恒山。"
+            }
+          ],
+          "limits": "没有把未登的东台补入路线。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹",
+          "mapReady": false,
+          "narrative": "他数日间登临诸台，观察山势与冰雪，离开北台后转向恒山。",
+          "withinYearOrder": 50
+        },
+        {
+          "id": "xuxiake-028",
+          "year": 1633,
+          "place": "恒山悬空寺",
+          "title": "进入恒山峡谷",
+          "dateLabel": "八月初十",
+          "calendar": "原历月日未转换公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "XX-15",
+              "locator": "初十日条",
+              "supports": "沿峡谷到悬空寺，游寺后继续向恒山山门走，准备第二天登顶。"
+            }
+          ],
+          "limits": "年、月承接XX-14；与五台山北壑另一座悬空寺分开。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹",
+          "mapReady": false,
+          "narrative": "沿峡谷到悬空寺，游寺后继续向恒山山门走，准备第二天登顶。",
+          "withinYearOrder": 50
+        },
+        {
+          "id": "xuxiake-029",
+          "year": 1633,
+          "place": "恒山—浑源",
+          "title": "登顶后下山",
+          "dateLabel": "八月十一",
+          "calendar": "原历月日未转换公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "XX-15",
+              "locator": "十一日条",
+              "supports": "徐霞客登恒山绝顶，下山后到浑源州西关外。"
+            }
+          ],
+          "limits": "年、月承接前篇。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹",
+          "mapReady": false,
+          "narrative": "徐霞客登恒山绝顶，下山后到浑源州西关外。",
+          "withinYearOrder": 50
         },
         {
           "id": "xuxiake-004",
@@ -418,7 +1374,10 @@
           ],
           "limits": "家乡定位需结合XX-1；土渎庄的准确地望未核。",
           "coordinates": null,
-          "checkedAt": "2026-11-03"
+          "checkedAt": "2026-11-03",
+          "recordType": "行迹或人生事件",
+          "mapReady": false,
+          "withinYearOrder": 50
         },
         {
           "id": "xuxiake-005",
@@ -437,7 +1396,10 @@
           ],
           "limits": "",
           "coordinates": null,
-          "checkedAt": "2026-11-03"
+          "checkedAt": "2026-11-03",
+          "recordType": "行迹或人生事件",
+          "mapReady": false,
+          "withinYearOrder": 50
         },
         {
           "id": "xuxiake-006",
@@ -456,7 +1418,10 @@
           ],
           "limits": "地点合并在苏州区域；不能将现代市中心视为泊舟点。",
           "coordinates": null,
-          "checkedAt": "2026-11-03"
+          "checkedAt": "2026-11-03",
+          "recordType": "行迹或人生事件",
+          "mapReady": false,
+          "withinYearOrder": 50
         },
         {
           "id": "xuxiake-007",
@@ -475,7 +1440,10 @@
           ],
           "limits": "闰四月进入全州不等于同日到桂林城；待日记逐日复核。",
           "coordinates": null,
-          "checkedAt": "2026-11-03"
+          "checkedAt": "2026-11-03",
+          "recordType": "行迹或人生事件",
+          "mapReady": false,
+          "withinYearOrder": 50
         },
         {
           "id": "xuxiake-008",
@@ -494,7 +1462,10 @@
           ],
           "limits": "XX-5叙述日期需互校；未换算公历，原历年底可能跨西历年。",
           "coordinates": null,
-          "checkedAt": "2026-11-03"
+          "checkedAt": "2026-11-03",
+          "recordType": "行迹或人生事件",
+          "mapReady": false,
+          "withinYearOrder": 50
         },
         {
           "id": "xuxiake-009",
@@ -513,7 +1484,10 @@
           ],
           "limits": "现代报道转述日记，未逐日核原文；不赋具体抵达日。",
           "coordinates": null,
-          "checkedAt": "2026-11-03"
+          "checkedAt": "2026-11-03",
+          "recordType": "行迹或人生事件",
+          "mapReady": false,
+          "withinYearOrder": 50
         },
         {
           "id": "xuxiake-010",
@@ -532,7 +1506,10 @@
           ],
           "limits": "XX-5记二十二，XX-6记二十；先保留到月。",
           "coordinates": null,
-          "checkedAt": "2026-11-03"
+          "checkedAt": "2026-11-03",
+          "recordType": "行迹或人生事件",
+          "mapReady": false,
+          "withinYearOrder": 50
         },
         {
           "id": "xuxiake-011",
@@ -551,7 +1528,10 @@
           ],
           "limits": "归程中间各站和到家月日未核。",
           "coordinates": null,
-          "checkedAt": "2026-11-03"
+          "checkedAt": "2026-11-03",
+          "recordType": "行迹或人生事件",
+          "mapReady": false,
+          "withinYearOrder": 50
         },
         {
           "id": "xuxiake-012",
@@ -570,14 +1550,17 @@
           ],
           "limits": "XX-7具体卒日与常见说法不同；不使用具体月日。",
           "coordinates": null,
-          "checkedAt": "2026-11-03"
+          "checkedAt": "2026-11-03",
+          "recordType": "行迹或人生事件",
+          "mapReady": false,
+          "withinYearOrder": 50
         }
       ],
       "pending": [
         {
           "item": "早期多次出游",
-          "known": "1613以前及之后另有多次旅行。",
-          "missing": "黄山、雁荡、福建、武当等路线没有完成逐日摘录。",
+          "known": "第二轮已展开黄山、嵩山、华山、太和山、五台和恒山部分日条。",
+          "missing": "武夷、庐山、福建及多次复游尚未展开；日记中间地名也未全部定位。",
           "nextCheck": "逐篇建立游记篇名—干支年—日条对照，再扩展。"
         },
         {
@@ -597,12 +1580,18 @@
         "1613天台山补宁海及原历日条。",
         "1636出发补无锡、苏州两站。",
         "1639云南大范围概述拆为具体可查停留，完整滇游仍留待日记摘录。"
+      ],
+      "episodes": [],
+      "overview": [
+        "1613年天台、黄岩、雁荡之行可以用相承日记展开；1616与1618的黄山之游分开记录。",
+        "1623年串联嵩山、华山、太和山，返家为母亲祝寿，旅行与家庭生活在本人日记中相连。",
+        "1633年北京—五台—恒山之行补到日条；1636以后西南远游仍有大量未展开内容，不能把当前记录称为全程。"
       ]
     },
     {
       "id": "liqingzhao",
       "name": "李清照",
-      "stage": "主要行迹首轮资料底稿；尚未替换线上样本",
+      "stage": "第二轮人生资料底稿；尚未替换线上样本",
       "focus": "南渡中的本人行动、家属和行李运输分开；晚年与卒年不写死。",
       "records": [
         {
@@ -622,7 +1611,33 @@
           ],
           "limits": "明水等具体出生地仍需考辨；不据单一地方志精确定位。",
           "coordinates": null,
-          "checkedAt": "2026-11-03"
+          "checkedAt": "2026-11-03",
+          "recordType": "行迹或人生事件",
+          "mapReady": false,
+          "withinYearOrder": 50
+        },
+        {
+          "id": "liqingzhao-016",
+          "year": 1089,
+          "place": "汴京",
+          "title": "幼年随家人居京",
+          "dateLabel": "1089年",
+          "calendar": "原历月日未转换公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "LQ-1",
+              "locator": "1089年条",
+              "supports": "年表将她随父母居京系于1089年。"
+            }
+          ],
+          "limits": "属后世系年，父亲任官本身不足以独立证明女儿同日迁居。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "附条件行迹",
+          "mapReady": false,
+          "narrative": "年表将她随父母居京系于1089年。",
+          "withinYearOrder": 50
         },
         {
           "id": "liqingzhao-002",
@@ -641,7 +1656,56 @@
           ],
           "limits": "婚礼日期和抵京日期不同；尚无确定抵京日。",
           "coordinates": null,
-          "checkedAt": "2026-11-03"
+          "checkedAt": "2026-11-03",
+          "recordType": "行迹或人生事件",
+          "mapReady": false,
+          "withinYearOrder": 50
+        },
+        {
+          "id": "liqingzhao-017",
+          "year": 1103,
+          "place": "原籍（济南地区）",
+          "title": "党禁中的离京",
+          "dateLabel": "1103年",
+          "calendar": "原历月日未转换公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "LQ-1",
+              "locator": "1103—1104年条",
+              "supports": "年表依据党禁背景，推定她离京返回原籍。"
+            }
+          ],
+          "limits": "这是年表的推断，不能当作有本人记日的行程。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "附条件行迹",
+          "mapReady": false,
+          "narrative": "年表依据党禁背景，推定她离京返回原籍。",
+          "withinYearOrder": 50
+        },
+        {
+          "id": "liqingzhao-018",
+          "year": 1106,
+          "place": "汴京",
+          "title": "返回京城",
+          "dateLabel": "1106年",
+          "calendar": "原历月日未转换公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "LQ-1",
+              "locator": "1106年条",
+              "supports": "年表记她由原籍返回汴京。"
+            }
+          ],
+          "limits": "缺本人具体记日，暂到年级。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "附条件行迹",
+          "mapReady": false,
+          "narrative": "年表记她由原籍返回汴京。",
+          "withinYearOrder": 50
         },
         {
           "id": "liqingzhao-003",
@@ -660,7 +1724,33 @@
           ],
           "limits": "1107、1108迁居系年有差异；这里只作阶段性居住记录，不指1108才抵达。",
           "coordinates": null,
-          "checkedAt": "2026-11-03"
+          "checkedAt": "2026-11-03",
+          "recordType": "行迹或人生事件",
+          "mapReady": false,
+          "withinYearOrder": 50
+        },
+        {
+          "id": "liqingzhao-019",
+          "year": 1121,
+          "place": "昌乐",
+          "title": "赴莱州途中寄词",
+          "dateLabel": "1121年秋",
+          "calendar": "原历月日未转换公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "LQ-1",
+              "locator": "1121年条，《晚止昌乐馆寄姊妹》题序线索",
+              "supports": "往莱州途中，她在昌乐停留，并以词寄给姊妹。"
+            }
+          ],
+          "limits": "地点、时序据年表引题序，未单独校词集底本。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "附条件行迹",
+          "mapReady": false,
+          "narrative": "往莱州途中，她在昌乐停留，并以词寄给姊妹。",
+          "withinYearOrder": 20
         },
         {
           "id": "liqingzhao-004",
@@ -679,7 +1769,34 @@
           ],
           "limits": "日级记录未核影印底本，先保留季节。",
           "coordinates": null,
-          "checkedAt": "2026-11-03"
+          "checkedAt": "2026-11-03",
+          "recordType": "行迹或人生事件",
+          "mapReady": false,
+          "withinYearOrder": 30
+        },
+        {
+          "id": "liqingzhao-026",
+          "year": 1127,
+          "place": "青州旧第（藏品所在地）",
+          "title": "留在故家的藏书毁于兵火",
+          "dateLabel": "建炎丁未十二月",
+          "calendar": "原历月日未转换公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "LQ-2",
+              "locator": "青州故第十余间藏书段",
+              "supports": "南渡时未能带走的藏书与器物留在青州，后来毁于兵火。",
+              "quote": "凡所謂十餘屋者，已皆為煨燼矣。"
+            }
+          ],
+          "limits": "她此时不在青州；这条只记录财物与生活变化。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "人生事件",
+          "mapReady": false,
+          "narrative": "南渡时未能带走的藏书与器物留在青州，后来毁于兵火。",
+          "withinYearOrder": 50
         },
         {
           "id": "liqingzhao-005",
@@ -698,7 +1815,10 @@
           ],
           "limits": "LQ-2丁未南来段需辨主体与叙事跨度；1127/1128问题未解决，不能标确定抵达年。",
           "coordinates": null,
-          "checkedAt": "2026-11-03"
+          "checkedAt": "2026-11-03",
+          "recordType": "行迹或人生事件",
+          "mapReady": false,
+          "withinYearOrder": 50
         },
         {
           "id": "liqingzhao-006",
@@ -717,7 +1837,10 @@
           ],
           "limits": "",
           "coordinates": null,
-          "checkedAt": "2026-11-03"
+          "checkedAt": "2026-11-03",
+          "recordType": "行迹或人生事件",
+          "mapReady": false,
+          "withinYearOrder": 10
         },
         {
           "id": "liqingzhao-007",
@@ -736,7 +1859,10 @@
           ],
           "limits": "有卜居意向不代表已长期定居。",
           "coordinates": null,
-          "checkedAt": "2026-11-03"
+          "checkedAt": "2026-11-03",
+          "recordType": "行迹或人生事件",
+          "mapReady": false,
+          "withinYearOrder": 20
         },
         {
           "id": "liqingzhao-008",
@@ -755,7 +1881,10 @@
           ],
           "limits": "丈夫赴任湖州不能移作她的路线。",
           "coordinates": null,
-          "checkedAt": "2026-11-03"
+          "checkedAt": "2026-11-03",
+          "recordType": "行迹或人生事件",
+          "mapReady": false,
+          "withinYearOrder": 30
         },
         {
           "id": "liqingzhao-009",
@@ -774,7 +1903,33 @@
           ],
           "limits": "后序单段不直书城名，地点用年表辅助；八月十八为丈夫卒日。",
           "coordinates": null,
-          "checkedAt": "2026-11-03"
+          "checkedAt": "2026-11-03",
+          "recordType": "行迹或人生事件",
+          "mapReady": false,
+          "withinYearOrder": 40
+        },
+        {
+          "id": "liqingzhao-027",
+          "year": 1129,
+          "place": "洪州（寄存地）",
+          "title": "托人运走的藏品再次散失",
+          "dateLabel": "己酉冬；月份有十一／十二月差异",
+          "calendar": "原历月日未转换公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "LQ-2",
+              "locator": "遣二故吏送行李及洪州失陷段",
+              "supports": "丈夫去世后，她遣旧吏转移部分藏品；战乱中，这批寄存的书物也散失了。"
+            }
+          ],
+          "limits": "本人没有因此到洪州；后序记十二月，LQ-1年表记十一月。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "人生事件",
+          "mapReady": false,
+          "narrative": "丈夫去世后，她遣旧吏转移部分藏品；战乱中，这批寄存的书物也散失了。",
+          "withinYearOrder": 50
         },
         {
           "id": "liqingzhao-010",
@@ -793,7 +1948,10 @@
           ],
           "limits": "仅能确认这一阶段；未核具体到达日及往返细节。",
           "coordinates": null,
-          "checkedAt": "2026-11-03"
+          "checkedAt": "2026-11-03",
+          "recordType": "行迹或人生事件",
+          "mapReady": false,
+          "withinYearOrder": 50
         },
         {
           "id": "liqingzhao-011",
@@ -812,7 +1970,10 @@
           ],
           "limits": "未换算为公历月份。",
           "coordinates": null,
-          "checkedAt": "2026-11-03"
+          "checkedAt": "2026-11-03",
+          "recordType": "行迹或人生事件",
+          "mapReady": false,
+          "withinYearOrder": 50
         },
         {
           "id": "liqingzhao-012",
@@ -826,12 +1987,16 @@
             {
               "source": "LQ-2",
               "locator": "“绍兴辛亥春三月，复赴越”",
-              "supports": "支持本人重返越州。"
+              "supports": "后序明确记辛亥三月赴越，并记卜居钟氏及五簏物品被盗。"
             }
           ],
           "limits": "",
           "coordinates": null,
-          "checkedAt": "2026-11-03"
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹或人生事件",
+          "mapReady": false,
+          "narrative": "她在越州卜居钟氏家，留下的部分文物又遭盗失。",
+          "withinYearOrder": 50
         },
         {
           "id": "liqingzhao-013",
@@ -850,7 +2015,56 @@
           ],
           "limits": "本文署年问题另见LQ-3；不据此推断全年居杭。",
           "coordinates": null,
-          "checkedAt": "2026-11-03"
+          "checkedAt": "2026-11-03",
+          "recordType": "行迹或人生事件",
+          "mapReady": false,
+          "withinYearOrder": 50
+        },
+        {
+          "id": "liqingzhao-020",
+          "year": 1132,
+          "place": "杭州（该年生活背景）",
+          "title": "再婚与离异",
+          "dateLabel": "1132年",
+          "calendar": "原历月日未转换公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "LQ-1",
+              "locator": "1132年条",
+              "supports": "年表记她这一年与张汝舟成婚，随后离异。"
+            }
+          ],
+          "limits": "尚未独立核对诉讼文书与谢启版本；不补婚礼、诉讼或入狱的具体地点和日期。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "人生事件",
+          "mapReady": false,
+          "narrative": "年表记她这一年与张汝舟成婚，随后离异。",
+          "withinYearOrder": 50
+        },
+        {
+          "id": "liqingzhao-021",
+          "year": 1133,
+          "place": "临安",
+          "title": "为赴金使者写诗",
+          "dateLabel": "1133年五月",
+          "calendar": "原历月日未转换公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "LQ-1",
+              "locator": "1133年条",
+              "supports": "她为韩肖胄、胡松年出使写诗。"
+            }
+          ],
+          "limits": "创作系年据年表；本条不证明她在某日的确切地点。使者的出使路线不属于她的行迹。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "人生事件",
+          "mapReady": false,
+          "narrative": "她为韩肖胄、胡松年出使写诗。",
+          "withinYearOrder": 50
         },
         {
           "id": "liqingzhao-014",
@@ -859,17 +2073,48 @@
           "title": "避乱金华",
           "dateLabel": "1134年十月",
           "calendar": "原文纪年／原历月日；未换算公历",
-          "status": "附条件采用",
+          "status": "可采用",
           "evidence": [
             {
               "source": "LQ-1",
               "locator": "1134年条",
               "supports": "年表支持赴金华避乱。"
+            },
+            {
+              "source": "LQ-4",
+              "locator": "序文“亦自临安溯流…抵金华”",
+              "supports": "本人文字明确记由临安到金华，卜居陈氏第。"
             }
           ],
           "limits": "原历月份；赴杭返回时间另核。",
           "coordinates": null,
-          "checkedAt": "2026-11-03"
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹或人生事件",
+          "mapReady": false,
+          "withinYearOrder": 50
+        },
+        {
+          "id": "liqingzhao-028",
+          "year": 1134,
+          "place": "金华",
+          "title": "为打马游戏作图经和序",
+          "dateLabel": "绍兴四年十一月二十四",
+          "calendar": "原历月日未转换公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "LQ-4",
+              "locator": "序文由临安至金华、篇末署日",
+              "supports": "避乱金华时，她整理打马游戏规则并写下序文，留下迁居和日常兴趣的自述。"
+            }
+          ],
+          "limits": "日期为原历；年表的十月二十四与本文不同，此处采用序文署日。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "创作",
+          "mapReady": false,
+          "narrative": "避乱金华时，她整理打马游戏规则并写下序文，留下迁居和日常兴趣的自述。",
+          "withinYearOrder": 50
         },
         {
           "id": "liqingzhao-015",
@@ -888,13 +2133,112 @@
           ],
           "limits": "同年何时返临安未核，不能把下一年自动放在临安。",
           "coordinates": null,
-          "checkedAt": "2026-11-03"
+          "checkedAt": "2026-11-03",
+          "recordType": "行迹或人生事件",
+          "mapReady": false,
+          "withinYearOrder": 50
+        },
+        {
+          "id": "liqingzhao-022",
+          "year": 1135,
+          "place": "金华—临安途中",
+          "title": "离开金华后的归途",
+          "dateLabel": "1135年内",
+          "calendar": "原历月日未转换公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "LQ-1",
+              "locator": "1135年条",
+              "supports": "年表记她返临安途中经过严子陵钓台，并作诗。"
+            }
+          ],
+          "limits": "具体月日及诗作系年未独立校注，先保留附条件行迹。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "附条件行迹",
+          "mapReady": false,
+          "narrative": "年表记她返临安途中经过严子陵钓台，并作诗。",
+          "withinYearOrder": 50
+        },
+        {
+          "id": "liqingzhao-023",
+          "year": 1143,
+          "place": "临安",
+          "title": "晚年的写作与献书",
+          "dateLabel": "1143年",
+          "calendar": "原历月日未转换公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "LQ-1",
+              "locator": "1143年条",
+              "supports": "年表把帖子词写作与上《金石录》系于这一年。"
+            }
+          ],
+          "limits": "仅为晚年活动线索；未核作品版本，不据此证明全年居处。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "人生事件",
+          "mapReady": false,
+          "narrative": "年表把帖子词写作与上《金石录》系于这一年。",
+          "withinYearOrder": 50
+        },
+        {
+          "id": "liqingzhao-024",
+          "year": 1145,
+          "place": "地点未定",
+          "title": "出示所藏书籍",
+          "dateLabel": "1145年四月十四",
+          "calendar": "原历月日未转换公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "LQ-1",
+              "locator": "1145年条",
+              "supports": "年表记她将《观音感应录一百事》示户部边知白。"
+            }
+          ],
+          "limits": "属于文献交往记录；对方职衔不等于见面地点。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "人生事件",
+          "mapReady": false,
+          "narrative": "年表记她将《观音感应录一百事》示户部边知白。",
+          "withinYearOrder": 50
+        },
+        {
+          "id": "liqingzhao-025",
+          "year": 1150,
+          "place": "地点未定",
+          "title": "请米友仁为墨迹作跋",
+          "dateLabel": "1149或1150年",
+          "calendar": "原历月日未转换公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "LQ-1",
+              "locator": "1150年条",
+              "supports": "她携米芾墨迹求米友仁题跋。"
+            }
+          ],
+          "limits": "年表自身记“是年或上年”；1150仅作检索索引，不能生成该年确定位置。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "人生事件",
+          "mapReady": false,
+          "narrative": "她携米芾墨迹求米友仁题跋。",
+          "withinYearOrder": 50,
+          "yearCandidates": [
+            1149,
+            1150
+          ]
         }
       ],
       "pending": [
         {
           "item": "晚年与卒年",
-          "known": "晚年相关诗文、后人回忆和年谱存在不同系年。",
+          "known": "第二轮补入1143、1145及1149或1150文献活动；主要仍据年表，未独立核完原始版本。",
           "missing": "1155不是已经证实的卒年；也有1156或以后说，最后居处未定。",
           "nextCheck": "核晚年作品、孙氏女相关记载及现代校注年谱；界面结束年须标展示范围。"
         },
@@ -921,12 +2265,55 @@
         "青州1107不再写成毫无争议的抵达年。",
         "南渡按江宁、芜湖、姑孰、池阳、建康和避乱各站拆分。",
         "不增加洪州运书路线、赵明诚湖州任所或1155确定死亡节点。"
+      ],
+      "episodes": [
+        {
+          "id": "liqingzhao-E001",
+          "year": null,
+          "periodLabel": "婚后在京时期",
+          "place": "汴京",
+          "title": "与赵明诚搜访书画碑刻",
+          "narrative": "夫妻购求碑文、书画，共同赏读，也曾因无力买下画作而惋惜。",
+          "evidence": [
+            {
+              "source": "LQ-2",
+              "locator": "后序开篇相国寺、徐熙牡丹图段",
+              "supports": "夫妻购求碑文、书画，共同赏读，也曾因无力买下画作而惋惜。"
+            }
+          ],
+          "limits": "不能把回忆中的每件事都放在1101婚年；相国寺购物叙述也不证明每次两人同行。",
+          "checkedAt": "2026-11-04",
+          "mapReady": false
+        },
+        {
+          "id": "liqingzhao-E002",
+          "year": null,
+          "periodLabel": "屏居乡里时期",
+          "place": "青州归来堂",
+          "title": "校书、读书与烹茶",
+          "narrative": "他们一起校勘书籍，整理题签，饭后以记得书中出处来决定饮茶先后。",
+          "evidence": [
+            {
+              "source": "LQ-2",
+              "locator": "后序屏居乡里、归来堂段",
+              "supports": "他们一起校勘书籍，整理题签，饭后以记得书中出处来决定饮茶先后。"
+            }
+          ],
+          "limits": "这一生活阶段跨多年，不把日常情景编成某日发生的故事。",
+          "checkedAt": "2026-11-04",
+          "mapReady": false
+        }
+      ],
+      "overview": [
+        "幼年与婚后生活补入汴京背景；早年迁居多依赖后世年表，和她本人回忆的购书、校书生活分别标明。",
+        "南渡经历不只是一串城市：丈夫去世、藏品毁散、居处被盗，都改变了她的生活。财物所在地没有转换为本人路线。",
+        "后半生补入再婚离异、诗文与打马图经，以及晚年文献交往。部分事实仍依赖年表系年，卒年继续留空。"
       ]
     },
     {
       "id": "qinliangyu",
       "name": "秦良玉",
-      "stage": "主要行迹首轮资料底稿；尚未替换线上样本",
+      "stage": "第二轮人生资料底稿；尚未替换线上样本",
       "focus": "每场战事先辨明本人、丈夫、兄弟、儿子或侄辈；任命和未成行的计划不能画成到访。",
       "records": [
         {
@@ -946,7 +2333,10 @@
           ],
           "limits": "仅核到缓存正文；鸣玉溪地望与具体生日仍需原页／底本。",
           "coordinates": null,
-          "checkedAt": "2026-11-03"
+          "checkedAt": "2026-11-03",
+          "recordType": "行迹或人生事件",
+          "mapReady": false,
+          "withinYearOrder": 50
         },
         {
           "id": "qinliangyu-002",
@@ -965,7 +2355,10 @@
           ],
           "limits": "只到战区级；不能把府城当本人驻营点。",
           "coordinates": null,
-          "checkedAt": "2026-11-03"
+          "checkedAt": "2026-11-03",
+          "recordType": "行迹或人生事件",
+          "mapReady": false,
+          "withinYearOrder": 50
         },
         {
           "id": "qinliangyu-003",
@@ -984,7 +2377,10 @@
           ],
           "limits": "古关隘位置未校准，暂不赋坐标。",
           "coordinates": null,
-          "checkedAt": "2026-11-03"
+          "checkedAt": "2026-11-03",
+          "recordType": "行迹或人生事件",
+          "mapReady": false,
+          "withinYearOrder": 50
         },
         {
           "id": "qinliangyu-004",
@@ -1003,7 +2399,10 @@
           ],
           "limits": "这是职务／居处线索，不能单凭任职推出当天抵达；来源为缓存。",
           "coordinates": null,
-          "checkedAt": "2026-11-03"
+          "checkedAt": "2026-11-03",
+          "recordType": "行迹或人生事件",
+          "mapReady": false,
+          "withinYearOrder": 50
         },
         {
           "id": "qinliangyu-005",
@@ -1022,7 +2421,33 @@
           ],
           "limits": "此前浑河参战的兄弟行迹不并入此条。",
           "coordinates": null,
-          "checkedAt": "2026-11-03"
+          "checkedAt": "2026-11-03",
+          "recordType": "行迹或人生事件",
+          "mapReady": false,
+          "withinYearOrder": 10
+        },
+        {
+          "id": "qinliangyu-013",
+          "year": 1621,
+          "place": "石砫",
+          "title": "从榆关返乡募兵",
+          "dateLabel": "天启元年相关叙事",
+          "calendar": "原历月日未转换公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "QL-1",
+              "locator": "“部议再征兵二千。良玉与民屏驰还”段",
+              "supports": "秦良玉与弟弟返回石砫，原本为再次征兵；抵家后很快卷入四川平乱。"
+            }
+          ],
+          "limits": "本传没有返家具体日；排在榆关之后、南坪关之前。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹",
+          "mapReady": false,
+          "narrative": "秦良玉与弟弟返回石砫，原本为再次征兵；抵家后很快卷入四川平乱。",
+          "withinYearOrder": 20
         },
         {
           "id": "qinliangyu-006",
@@ -1041,7 +2466,33 @@
           ],
           "limits": "具体日月和行军路径未定；南坪关现代定位尚待考。",
           "coordinates": null,
-          "checkedAt": "2026-11-03"
+          "checkedAt": "2026-11-03",
+          "recordType": "行迹或人生事件",
+          "mapReady": false,
+          "withinYearOrder": 30
+        },
+        {
+          "id": "qinliangyu-014",
+          "year": 1623,
+          "place": "地点未定",
+          "title": "上疏陈述军中受到的排挤",
+          "dateLabel": "天启三年六月",
+          "calendar": "原历月日未转换公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "QL-1",
+              "locator": "“三年六月，良玉上言”段",
+              "supports": "她在奏疏中陈述作战经过，并批评将领在军中的推诿和排挤。"
+            }
+          ],
+          "limits": "奏疏涉及此前战事，不把上疏地点直接定位为红崖墩。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "人生事件",
+          "mapReady": false,
+          "narrative": "她在奏疏中陈述作战经过，并批评将领在军中的推诿和排挤。",
+          "withinYearOrder": 50
         },
         {
           "id": "qinliangyu-007",
@@ -1060,7 +2511,10 @@
           ],
           "limits": "召见地不等于驻军地；之后侄辈留镇的行迹另分。",
           "coordinates": null,
-          "checkedAt": "2026-11-03"
+          "checkedAt": "2026-11-03",
+          "recordType": "行迹或人生事件",
+          "mapReady": false,
+          "withinYearOrder": 50
         },
         {
           "id": "qinliangyu-008",
@@ -1079,7 +2533,10 @@
           ],
           "limits": "句中夔州是先被攻陷之地；不直接以夔州替代本人抵达地点。古太平地望另核。",
           "coordinates": null,
-          "checkedAt": "2026-11-03"
+          "checkedAt": "2026-11-03",
+          "recordType": "行迹或人生事件",
+          "mapReady": false,
+          "withinYearOrder": 50
         },
         {
           "id": "qinliangyu-009",
@@ -1098,7 +2555,102 @@
           ],
           "limits": "不画具体战场边界。",
           "coordinates": null,
-          "checkedAt": "2026-11-03"
+          "checkedAt": "2026-11-03",
+          "recordType": "行迹或人生事件",
+          "mapReady": false,
+          "withinYearOrder": 10
+        },
+        {
+          "id": "qinliangyu-015",
+          "year": 1640,
+          "place": "夔州",
+          "title": "从巫山转援夔州",
+          "dateLabel": "崇祯十三年",
+          "calendar": "原历月日未转换公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "QL-1",
+              "locator": "秦良玉传，“汝才犯夔州，良玉师至乃去”",
+              "supports": "罗汝才军进入夔州后，她率军赶到，敌军撤离。"
+            }
+          ],
+          "limits": "古战地尚未定位；叙事先后有据，不补具体抵达日。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹",
+          "mapReady": false,
+          "narrative": "罗汝才军进入夔州后，她率军赶到，敌军撤离。",
+          "withinYearOrder": 50
+        },
+        {
+          "id": "qinliangyu-016",
+          "year": 1640,
+          "place": "马家寨—留马垭",
+          "title": "追击中的两处战地",
+          "dateLabel": "崇祯十三年",
+          "calendar": "原历月日未转换公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "QL-1",
+              "locator": "秦良玉传，“邀之马家寨…追败之留马垭”",
+              "supports": "本传记她在马家寨邀击，又在留马垭追击。"
+            }
+          ],
+          "limits": "古战地尚未定位；叙事先后有据，不补具体抵达日。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹",
+          "mapReady": false,
+          "narrative": "本传记她在马家寨邀击，又在留马垭追击。",
+          "withinYearOrder": 50
+        },
+        {
+          "id": "qinliangyu-017",
+          "year": 1640,
+          "place": "潭家坪北山—仙寺岭",
+          "title": "与其他军队合击",
+          "dateLabel": "崇祯十三年",
+          "calendar": "原历月日未转换公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "QL-1",
+              "locator": "秦良玉传，“复合他将…潭家坪北山…仙寺岭”",
+              "supports": "此后她与其他将领合兵，参与北山和仙寺岭战事。"
+            }
+          ],
+          "limits": "古战地尚未定位；叙事先后有据，不补具体抵达日。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹",
+          "mapReady": false,
+          "narrative": "此后她与其他将领合兵，参与北山和仙寺岭战事。",
+          "withinYearOrder": 50
+        },
+        {
+          "id": "qinliangyu-018",
+          "year": 1640,
+          "place": "竹箘坪一带",
+          "title": "救援受挫，部队损失严重",
+          "dateLabel": "崇祯十三年；竹箘坪战事记十月",
+          "calendar": "原历月日未转换公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "QL-1",
+              "locator": "秦良玉传，“其年十月…急扼之竹箘坪”",
+              "supports": "十月战事中，她与张令扼守竹箘坪；张令战死后，她救援未成，转战又败。"
+            }
+          ],
+          "limits": "古战地尚未定位；叙事先后有据，不补具体抵达日。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹",
+          "mapReady": false,
+          "narrative": "十月战事中，她与张令扼守竹箘坪；张令战死后，她救援未成，转战又败。",
+          "withinYearOrder": 50
         },
         {
           "id": "qinliangyu-010",
@@ -1117,7 +2669,10 @@
           ],
           "limits": "同年退回石砫另列，未明日期不设日级先后。",
           "coordinates": null,
-          "checkedAt": "2026-11-03"
+          "checkedAt": "2026-11-03",
+          "recordType": "行迹或人生事件",
+          "mapReady": false,
+          "withinYearOrder": 50
         },
         {
           "id": "qinliangyu-011",
@@ -1136,7 +2691,56 @@
           ],
           "limits": "不等于从此每年始终未离开。",
           "coordinates": null,
-          "checkedAt": "2026-11-03"
+          "checkedAt": "2026-11-03",
+          "recordType": "行迹或人生事件",
+          "mapReady": false,
+          "withinYearOrder": 50
+        },
+        {
+          "id": "qinliangyu-019",
+          "year": 1646,
+          "place": "地点未定；计划赴福建",
+          "title": "接受南明征召，出行未成",
+          "dateLabel": "隆武二年",
+          "calendar": "原历月日未转换公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "QL-2",
+              "locator": "准备赴福建护驾而未成行段",
+              "supports": "地方志介绍记她接受南明征召，计划赴福建，但因局势突变未能成行。"
+            }
+          ],
+          "limits": "该页缓存所载封号仍需独立史料核定；绝不建立福建到访点。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "人生事件",
+          "mapReady": false,
+          "narrative": "地方志介绍记她接受南明征召，计划赴福建，但因局势突变未能成行。",
+          "withinYearOrder": 50
+        },
+        {
+          "id": "qinliangyu-020",
+          "year": 1648,
+          "place": "石砫（地方志所述居处）",
+          "title": "晚年接受招讨任命",
+          "dateLabel": "永历二年五月",
+          "calendar": "原历月日未转换公历",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "QL-2",
+              "locator": "永历二年受诏段",
+              "supports": "地方志介绍记她在晚年病中接受四川招讨使任命。"
+            }
+          ],
+          "limits": "仅有该介绍缓存；授官不等于再度出征。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "人生事件",
+          "mapReady": false,
+          "narrative": "地方志介绍记她在晚年病中接受四川招讨使任命。",
+          "withinYearOrder": 10
         },
         {
           "id": "qinliangyu-012",
@@ -1155,7 +2759,10 @@
           ],
           "limits": "《明史》此传只概述寿终；具体卒日暂不采用，缓存需复查。",
           "coordinates": null,
-          "checkedAt": "2026-11-03"
+          "checkedAt": "2026-11-03",
+          "recordType": "行迹或人生事件",
+          "mapReady": false,
+          "withinYearOrder": 99
         }
       ],
       "pending": [
@@ -1167,7 +2774,7 @@
         },
         {
           "item": "1621—1623四川平乱诸站",
-          "known": "正史记重庆及新都、成都相关战事。",
+          "known": "第二轮已录新都—成都及二郎关—佛图关—重庆阶段，未强行赋到达年。",
           "missing": "各站明确年份、本人／部属主体及现代关隘位置需展开。",
           "nextCheck": "逐段对读《明史》相关列传、纪和四川地方志。"
         },
@@ -1182,12 +2789,73 @@
         "婚姻节点与迁居分开，1595先移待核。",
         "删除将浑河／亲属辽东战事当本人到场的推断。",
         "1634按正史辨太平与夔州，不把整场战役归为一个确定城市点。"
+      ],
+      "episodes": [
+        {
+          "id": "qinliangyu-E001",
+          "year": null,
+          "periodLabel": "1621年返川后至1623年六月上疏前",
+          "place": "新都—成都",
+          "title": "赴成都解围",
+          "narrative": "重庆战事之后，她奉檄向西，收复新都并抵成都解围。",
+          "evidence": [
+            {
+              "source": "QL-1",
+              "locator": "秦良玉传，“收新都，长驱抵成都”段",
+              "supports": "重庆战事之后，她奉檄向西，收复新都并抵成都解围。"
+            }
+          ],
+          "limits": "本段没有独立纪年；不以现代纪念文章直接补1622年某日。",
+          "checkedAt": "2026-11-04",
+          "mapReady": false
+        },
+        {
+          "id": "qinliangyu-E002",
+          "year": null,
+          "periodLabel": "成都解围以后、1623年六月以前",
+          "place": "二郎关—佛图关—重庆",
+          "title": "回军收复重庆",
+          "narrative": "解成都之围后，她回军参与攻关和收复重庆，弟弟民屏也在其中作战。",
+          "evidence": [
+            {
+              "source": "QL-1",
+              "locator": "“还军攻二郎关…克佛图关，复重庆”段",
+              "supports": "解成都之围后，她回军参与攻关和收复重庆，弟弟民屏也在其中作战。"
+            }
+          ],
+          "limits": "兄弟姊妹共同参战仍须辨每处动作主体；不把部属先登写成她亲自先登。",
+          "checkedAt": "2026-11-04",
+          "mapReady": false
+        },
+        {
+          "id": "qinliangyu-E003",
+          "year": null,
+          "periodLabel": "早年，具体年未定",
+          "place": "忠州—石砫",
+          "title": "婚姻与接掌军政",
+          "narrative": "她嫁给石砫宣抚使马千乘，后来在丈夫死后代领其职；传记也记她善骑射、通文翰。",
+          "evidence": [
+            {
+              "source": "QL-1",
+              "locator": "秦良玉传开篇",
+              "supports": "她嫁给石砫宣抚使马千乘，后来在丈夫死后代领其职；传记也记她善骑射、通文翰。"
+            }
+          ],
+          "limits": "本传没有婚姻年份；才学描述不是某日某地的事件。",
+          "checkedAt": "2026-11-04",
+          "mapReady": false
+        }
+      ],
+      "overview": [
+        "婚后随军、继领石砫事务，是她走向军事与地方治理生活的背景。婚年仍没有强行确定。",
+        "1621返川募兵、成都与重庆平乱分段整理；1623奏疏体现她的军中处境。",
+        "1640年追击与败战、1644回守石砫及南明时期的征召一起保留。晚年的任命和未成行计划属于人生事件。"
       ]
     },
     {
       "id": "qiujin",
       "name": "秋瑾",
-      "stage": "主要行迹首轮资料底稿；尚未替换线上样本",
+      "stage": "第二轮人生资料底稿；尚未替换线上样本",
       "focus": "出生地与籍贯分开，留日往返逐次核，办报和革命组织活动不自动等于所在地。",
       "records": [
         {
@@ -1207,7 +2875,33 @@
           ],
           "limits": "未核具体城市，不能直接落在湘潭；保留省域记录。",
           "coordinates": null,
-          "checkedAt": "2026-11-03"
+          "checkedAt": "2026-11-03",
+          "recordType": "行迹或人生事件",
+          "mapReady": false,
+          "withinYearOrder": 50
+        },
+        {
+          "id": "qiujin-009",
+          "year": 1896,
+          "place": "地点未定（湖南生活阶段）",
+          "title": "与王廷钧成婚",
+          "dateLabel": "1896年",
+          "calendar": "近代资料纪年；涉及原历时在日期中明示",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "QJ-2",
+              "locator": "人物辞典“1896年，由父母作主…”",
+              "supports": "秋瑾与王廷钧成婚，这是她后来离家求学之前的重要家庭经历。"
+            }
+          ],
+          "limits": "辞典未明确婚礼地点；不由丈夫籍贯推定在湘潭。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "家庭",
+          "mapReady": false,
+          "narrative": "秋瑾与王廷钧成婚，这是她后来离家求学之前的重要家庭经历。",
+          "withinYearOrder": 50
         },
         {
           "id": "qiujin-002",
@@ -1226,7 +2920,10 @@
           ],
           "limits": "该文其他年份、出生地有问题；须与年谱互校，本条不作为已定到达日。",
           "coordinates": null,
-          "checkedAt": "2026-11-03"
+          "checkedAt": "2026-11-03",
+          "recordType": "行迹或人生事件",
+          "mapReady": false,
+          "withinYearOrder": 50
         },
         {
           "id": "qiujin-003",
@@ -1245,7 +2942,125 @@
           ],
           "limits": "出发、抵达及入学是不同日期；现有具体日期不一，不选定日。",
           "coordinates": null,
-          "checkedAt": "2026-11-03"
+          "checkedAt": "2026-11-03",
+          "recordType": "行迹或人生事件",
+          "mapReady": false,
+          "withinYearOrder": 50
+        },
+        {
+          "id": "qiujin-010",
+          "year": 1904,
+          "place": "日本（留学活动）",
+          "title": "参与办报与妇女组织",
+          "dateLabel": "1904年留日期间",
+          "calendar": "近代资料纪年；涉及原历时在日期中明示",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "QJ-1",
+              "locator": "共爱会、白话报段",
+              "supports": "留日期间，她参与共爱会和《白话报》的活动，宣传革命与男女平权。"
+            }
+          ],
+          "limits": "组织成立、文章刊发与本人当日位置须分开；本条到年级。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "社会活动",
+          "mapReady": false,
+          "narrative": "留日期间，她参与共爱会和《白话报》的活动，宣传革命与男女平权。",
+          "withinYearOrder": 50
+        },
+        {
+          "id": "qiujin-011",
+          "year": 1905,
+          "place": "地点未定",
+          "title": "加入光复会",
+          "dateLabel": "1905年",
+          "calendar": "近代资料纪年；涉及原历时在日期中明示",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "QJ-1",
+              "locator": "1905年加入两会段",
+              "supports": "她加入光复会，革命组织活动成为此后人生的重要部分。"
+            }
+          ],
+          "limits": "该简介未给入会地点；绍兴、回国月份等须另查原始记录。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "社会活动",
+          "mapReady": false,
+          "narrative": "她加入光复会，革命组织活动成为此后人生的重要部分。",
+          "withinYearOrder": 50
+        },
+        {
+          "id": "qiujin-012",
+          "year": 1905,
+          "place": "东京",
+          "title": "参与同盟会活动",
+          "dateLabel": "1905年；具体月日保留历法问题",
+          "calendar": "近代资料纪年；涉及原历时在日期中明示",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "QJ-8",
+              "locator": "欢迎孙中山、黄兴寓所入会段",
+              "supports": "在东京，她参加与孙中山、黄兴有关的革命活动，并加入同盟会，担任组织职务。"
+            }
+          ],
+          "limits": "日级记载涉及新旧历；不据入会日期推定第二次抵日日期。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "社会活动与行迹",
+          "mapReady": false,
+          "narrative": "在东京，她参加与孙中山、黄兴有关的革命活动，并加入同盟会，担任组织职务。",
+          "withinYearOrder": 50
+        },
+        {
+          "id": "qiujin-013",
+          "year": 1906,
+          "place": "嘉兴",
+          "title": "经友人介绍赴女学任教",
+          "dateLabel": "旧历二月",
+          "calendar": "近代资料纪年；涉及原历时在日期中明示",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "QJ-9",
+              "locator": "秋瑾来嘉兴、褚辅成介绍段",
+              "supports": "后人回忆记她到嘉兴，经褚辅成介绍赴浔溪女学任教。"
+            }
+          ],
+          "limits": "回忆文其他次序有疑问，此行需与书信、年谱互校。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹",
+          "mapReady": false,
+          "narrative": "后人回忆记她到嘉兴，经褚辅成介绍赴浔溪女学任教。",
+          "withinYearOrder": 10
+        },
+        {
+          "id": "qiujin-014",
+          "year": 1906,
+          "place": "南浔浔溪女校",
+          "title": "走进女校课堂",
+          "dateLabel": "1906年",
+          "calendar": "近代资料纪年；涉及原历时在日期中明示",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "QJ-7",
+              "locator": "光绪三十二年条",
+              "supports": "支持1906年抵南浔浔溪女校执教。"
+            }
+          ],
+          "limits": "大事记未给抵达日、离任日和具体教学内容。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "行迹",
+          "mapReady": false,
+          "narrative": "秋瑾在南浔浔溪女校执教。任教成为她归国后的一段生活经历。",
+          "withinYearOrder": 20
         },
         {
           "id": "qiujin-004",
@@ -1264,7 +3079,10 @@
           ],
           "limits": "开学日不等于本人抵沪或到校日；没有用这篇材料认定其任教起止。缓存原页需复查。",
           "coordinates": null,
-          "checkedAt": "2026-11-03"
+          "checkedAt": "2026-11-03",
+          "recordType": "行迹或人生事件",
+          "mapReady": false,
+          "withinYearOrder": 30
         },
         {
           "id": "qiujin-005",
@@ -1283,7 +3101,10 @@
           ],
           "limits": "现代街址定位未校准，先保留城市级。",
           "coordinates": null,
-          "checkedAt": "2026-11-03"
+          "checkedAt": "2026-11-03",
+          "recordType": "行迹或人生事件",
+          "mapReady": false,
+          "withinYearOrder": 80
         },
         {
           "id": "qiujin-006",
@@ -1302,7 +3123,10 @@
           ],
           "limits": "这是活动记录；不能单凭创刊日断定本人当天在沪。上图前须补本人在场证据。",
           "coordinates": null,
-          "checkedAt": "2026-11-03"
+          "checkedAt": "2026-11-03",
+          "recordType": "行迹或人生事件",
+          "mapReady": false,
+          "withinYearOrder": 50
         },
         {
           "id": "qiujin-007",
@@ -1321,7 +3145,56 @@
           ],
           "limits": "到任具体日及其间往返另核。",
           "coordinates": null,
-          "checkedAt": "2026-11-03"
+          "checkedAt": "2026-11-03",
+          "recordType": "行迹或人生事件",
+          "mapReady": false,
+          "withinYearOrder": 50
+        },
+        {
+          "id": "qiujin-015",
+          "year": 1907,
+          "place": "金华、兰溪一带",
+          "title": "联络会党，筹备起义",
+          "dateLabel": "1907年",
+          "calendar": "近代资料纪年；涉及原历时在日期中明示",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "QJ-1",
+              "locator": "主持大通学堂后联络金华、兰溪段",
+              "supports": "她联络金华、兰溪等地会党，参与筹组光复军。"
+            }
+          ],
+          "limits": "“联络”不一定每次亲自前往；保留为组织活动，不据此生成两城到访点。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "社会活动",
+          "mapReady": false,
+          "narrative": "她联络金华、兰溪等地会党，参与筹组光复军。",
+          "withinYearOrder": 50
+        },
+        {
+          "id": "qiujin-016",
+          "year": 1907,
+          "place": "绍兴",
+          "title": "被捕与堂讯",
+          "dateLabel": "1907年七月；本条不定被捕具体日",
+          "calendar": "近代资料纪年；涉及原历时在日期中明示",
+          "status": "附条件采用",
+          "evidence": [
+            {
+              "source": "QJ-10",
+              "locator": "藏品“秋瑾供词”说明",
+              "supports": "她在大通学堂事件中被捕。上海博物馆保存的相关案卷包含署有她指印的堂讯供状。"
+            }
+          ],
+          "limits": "本轮只核藏品说明，未读供状全文；不据后世故事补写受审对白。",
+          "coordinates": null,
+          "checkedAt": "2026-11-04",
+          "recordType": "人生事件",
+          "mapReady": false,
+          "narrative": "她在大通学堂事件中被捕。上海博物馆保存的相关案卷包含署有她指印的堂讯供状。",
+          "withinYearOrder": 90
         },
         {
           "id": "qiujin-008",
@@ -1340,19 +3213,22 @@
           ],
           "limits": "后来的迁葬不纳入生前路线；轩亭口仍需历史位置校准。",
           "coordinates": null,
-          "checkedAt": "2026-11-03"
+          "checkedAt": "2026-11-03",
+          "recordType": "行迹或人生事件",
+          "mapReady": false,
+          "withinYearOrder": 99
         }
       ],
       "pending": [
         {
           "item": "1875出生地",
-          "known": "1875为本轮资料采用的生年；福建出生有多处记载。",
-          "missing": "闽侯、云霄童年经历、绍兴籍贯在转述中混用；旧样本厦门未获可靠支持。",
+          "known": "QJ-2记福建闽侯；本轮新查QJ-8纪念馆资料记福建厦门。1875仍为本底稿采用生年。",
+          "missing": "出生地在机构资料之间已有明确分歧；不能认定厦门毫无资料支持，也不能用一页简介排除闽侯说。",
           "nextCheck": "核出生地考证、父亲任官档案与校注年谱；暂不建立出生点。"
         },
         {
           "item": "1896婚姻与早年湖南居处",
-          "known": "辞典支持1896成婚。",
+          "known": "1896婚姻已录为人生事件；具体婚地仍未确定。",
           "missing": "具体婚地、迁居路径、停留起止未核。",
           "nextCheck": "先核家谱、婚姻与王廷钧任官材料，不由丈夫籍贯推她的住址。"
         },
@@ -1364,13 +3240,13 @@
         },
         {
           "item": "1905回国和第二次赴日",
-          "known": "人物介绍可见归国与革命组织活动线索。",
+          "known": "本轮新增1905东京活动与同盟会经历，仍未确定回国、再赴日的逐次启抵日期。",
           "missing": "本轮未完成返国停留城市、再赴东京日期与入学记录的原始材料核对。",
           "nextCheck": "核日本学校档案、同期书信和年谱；不把入会日自动当所在地。"
         },
         {
           "item": "1907上海—绍兴往返",
-          "known": "筹报、主持学堂及遇害已有记录。",
+          "known": "筹报、大通学堂、金华兰溪联络与被捕的事件已列；多数具体往返仍缺日期。",
           "missing": "期间来往、各次离沪和抵绍日尚未逐一确认。",
           "nextCheck": "核报刊原件、书信和同时代回忆，创刊日另作活动事件。"
         },
@@ -1382,10 +3258,49 @@
         }
       ],
       "oldNodeReview": [
-        "旧出生点厦门移出候选地图；不改填籍贯绍兴。",
+        "旧出生点厦门继续悬置：新见纪念馆资料确有厦门说，与档案辞典闽侯说冲突，需原始材料裁定；不改填籍贯绍兴。",
         "1904留日保留年级，具体出海日与入学日分开。",
         "1907办报活动和实际所在位置分开；安葬、迁葬均不作生前行迹。"
+      ],
+      "episodes": [
+        {
+          "id": "qiujin-E001",
+          "year": null,
+          "periodLabel": "少年时期",
+          "place": "家庭居处，具体地点待核",
+          "title": "在家塾读书",
+          "narrative": "秋瑾少年时在家塾读书，学习文史和诗词。",
+          "evidence": [
+            {
+              "source": "QJ-2",
+              "locator": "人物辞典少年段",
+              "supports": "秋瑾少年时在家塾读书，学习文史和诗词。"
+            }
+          ],
+          "limits": "福建各处居住与迁移时间尚未核定，不能画成固定出生点到绍兴的直线。",
+          "checkedAt": "2026-11-04",
+          "mapReady": false
+        }
+      ],
+      "overview": [
+        "补入早年读书与1896婚姻；出生地点仍有资料分歧，不能因为网站列了籍贯就改作出生地。",
+        "留日时期的学习、办报、妇女组织与革命组织活动分别记录，新增1905东京经历；出入日本的确切日期仍待核。",
+        "归国后补嘉兴线索、南浔任教、会党联络与被捕档案入口；组织活动的城市不自动等于亲身到访。"
       ]
+    }
+  ],
+  "updatedAt": "2026-11-04",
+  "history": [
+    {
+      "date": "2026-11-03",
+      "records": 54,
+      "note": "主要行迹首轮底稿"
+    },
+    {
+      "date": "2026-11-04",
+      "records": 110,
+      "episodes": 17,
+      "note": "补入求学、家庭、创作、任教、译经、军中处境与未定年旅程；补核关键日期冲突。"
     }
   ]
 }
