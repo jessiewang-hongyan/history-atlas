@@ -50,7 +50,7 @@ function drawWestwardMap() {
  if (!active) return;
  const stops = mappedWestwardStops();
  const selected = stops.find(stop => stop.id === westwardSelection);
- $('westward-map-text').textContent = selected ? selected.place + ' · ' + selected.geography.modern : '长安至高昌 · 地名总览';
+ $('westward-map-text').textContent = selected ? selected.place + ' · ' + selected.geography.modern : '长安至素叶 · 地名总览';
  const labelBoxes = [];
  for (const stop of stops) {
   const geo = stop.geography, highlighted = stop.id === westwardSelection;
@@ -69,7 +69,7 @@ function drawWestwardMap() {
    group.append(svg('ellipse', {cx:x,cy:y,rx:Math.max(9,(x2-x1)/2),ry:Math.max(9,(y2-y1)/2),fill:'#a9633f','fill-opacity':highlighted ? .23 : .06,stroke:'#8a4930','stroke-width':highlighted ? 2.5 : 1,'stroke-dasharray':'5 4'}));
   }
   group.append(svg('title', {}, stop.place + ' · ' + geo.modern));
-  if (highlighted || westwardSelection === 'overview' && ['west-01','west-02','west-03','west-04','west-05','west-10','west-12'].includes(stop.id)) {
+  if (highlighted || westwardSelection === 'overview' && ['west-01','west-02','west-03','west-04','west-05','west-10','west-12','west-15','west-16','west-17','west-19','west-20'].includes(stop.id)) {
    const width = stop.place.length * 14;
    const labelX = Math.max(width / 2 + 6, Math.min(mapWidth - width / 2 - 6, x));
    const labelY = [y - 17, y + 26, y - 40, y + 48].find(candidate => {
@@ -128,7 +128,7 @@ function renderWestwardRoute(life) {
   const source = LIVES_RESEARCH.sources[entry.source];
   return `<p>${lifeEscape(entry.note)} <a href="${lifeEscape(source.url)}" target="_blank" rel="noopener">${lifeEscape(source.title)} ↗</a></p>`;
  }).join('');
- panel.innerHTML = `<h3>西行 · 长安至那烂陀寺</h3><p>沿《慈恩传》的先后读这段路。途中各站的抵达年份，几份年表记得不同。</p><button type="button" data-westward-year>回到时间轴上的出发年</button><button type="button" data-westward-overview>地图上看长安至高昌</button><details><summary>出发与抵达的年份</summary>${dating}</details>${groups}`;
+ panel.innerHTML = `<h3>西行 · 长安至那烂陀寺</h3><p>沿《慈恩传》的先后读这段路。途中各站的抵达年份，几份年表记得不同。</p><button type="button" data-westward-year>回到时间轴上的出发年</button><button type="button" data-westward-overview>地图上看长安至素叶</button><details><summary>出发与抵达的年份</summary>${dating}</details>${groups}`;
  panel.querySelector('[data-westward-overview]').onclick = showWestwardOverview;
  panel.querySelectorAll('[data-westward-stop]').forEach(button => button.onclick = () => selectWestwardStop(button.dataset.westwardStop, true));
  panel.querySelector('[data-westward-year]').onclick = () => { closeWestwardMap(); jumpNode(life.records.findIndex(record => record.id === route.departureRecord)); };
