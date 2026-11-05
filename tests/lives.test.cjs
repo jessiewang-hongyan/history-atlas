@@ -74,8 +74,8 @@ for(const life of data.people){
 // Spatial itinerary references carry their own citations and must not acquire inferred years.
 const route = data.people.find(p => p.id === 'xuanzang').westwardRoute;
 const mapped = route.groups.flatMap(g => g.stops).filter(stop => stop.geography);
-assert.equal(mapped.length, 20);
-assert.equal(new Set(mapped.map(stop => stop.id)).size, 20);
+assert.equal(mapped.length, 28);
+assert.equal(new Set(mapped.map(stop => stop.id)).size, 28);
 assert.equal(mapped.filter(stop => stop.geography.kind === 'point').length, 3);
 for (const stop of mapped) {
  const geo = stop.geography;
@@ -93,3 +93,11 @@ assert.deepEqual(Array.from(mapped.find(stop => stop.id === 'west-12').geography
 
 assert.deepEqual(Array.from(mapped.find(stop => stop.id === "west-20").geography.xy), [75.2033,42.8019]);
 assert.ok(mapped.find(stop => stop.id === "west-18").geography.note.includes("争论"));
+
+for (let i=21;i<=28;i++) {
+ const stop=mapped.find(s=>s.id===`west-${i}`);
+ assert.equal(stop.geography.kind,"area");
+ assert.ok(stop.geography.sources.length);
+}
+assert.ok(mapped.find(s=>s.id==="west-24").geography.note.includes("候选"));
+assert.ok(mapped.find(s=>s.id==="west-25").geography.note.includes("候选"));

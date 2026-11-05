@@ -1,1 +1,1 @@
-const LIFE_FILES={"xuanzang":"people/xuanzang.json?v=4808d2e01e","xuxiake":"people/xuxiake.json?v=7409dfbd82","liqingzhao":"people/liqingzhao.json?v=a8f1cc33b1","qinliangyu":"people/qinliangyu.json?v=b6be74162f","qiujin":"people/qiujin.json?v=76214ac2e6"};
+const LIFE_FILES={"xuanzang":"people/xuanzang.json?v=6f64f942ba","xuxiake":"people/xuxiake.json?v=7409dfbd82","liqingzhao":"people/liqingzhao.json?v=a8f1cc33b1","qinliangyu":"people/qinliangyu.json?v=b6be74162f","qiujin":"people/qiujin.json?v=76214ac2e6"};
