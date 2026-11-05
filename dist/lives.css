@@ -10,3 +10,8 @@
 
 #history-ticks{padding-inline:4px 12px}.history-lane{height:30px}.event-tick{position:absolute;top:50%;transform:translate(-50%,-50%);width:26px;height:28px;padding:0;display:grid;place-items:center;background:transparent}.event-tick span{min-width:7px;min-height:10px;border-radius:3px;color:white;background:#546b49;font:600 10px/15px system-ui}.event-tick.military span{background:#876440}.event-tick span:not(:empty){padding:0 4px}.event-tick:hover span,.event-tick:focus-visible span{outline:2px solid #36483c;outline-offset:2px}.tick-choice{display:block;width:100%;padding:12px 6px;border-bottom:1px solid #c7cdbd;text-align:left}.tick-choice:hover{background:#e9edde}#event-navigation-status{font-size:13px;color:#465d49}#event-navigation-status:empty{display:none}
 .event-tick{z-index:1}.history-lane [data-event-ids]{cursor:pointer}
+
+#map .history-map-event.is-selected text{font-weight:750;fill:#743813;stroke:#fff4ce;stroke-width:4px}
+.history-card.is-selected{border:2px solid #925427;box-shadow:inset 4px 0 #925427;background:#fff7df}
+.event-badge{display:inline-block;margin-right:.65em;padding:2px 7px;border-radius:3px;background:#794219;color:#fff;font:600 12px/1.6 system-ui}
+.event-tick.is-selected span{outline:2px solid #85431e;outline-offset:3px}

@@ -1,5 +1,5 @@
 const $=id=>document.getElementById(id),NS='http://www.w3.org/2000/svg';
-let selectedNode=null,historyFilter='all';
+let selectedNode=null,historyFilter='all',selectedHistoryId=null,selectedHistoryPerson=null;
 let person=PEOPLE[1],year=1080,full=false,timer=null,landData=null,view=[98,18,124,43];
 const labelYear=y=>y<0?`公元前 ${-y} 年`:`${y} 年`;
 function svg(tag,attrs={},text){const el=document.createElementNS(NS,tag);for(const [k,v]of Object.entries(attrs))el.setAttribute(k,v);if(text!==undefined)el.textContent=text;return el;}
@@ -21,17 +21,19 @@ for(const [name,points,center]of shapes){g.append(svg('path',{d:path(points,true
 }
 function historyWindow(){return Number($('history-window').value);}
 function drawHistoryMarkers(){
- const layer=$('war-layer');layer.replaceChildren();const labels=[];
+ const layer=$('war-layer');layer.replaceChildren();const selectedLayer=$('selected-history-layer');selectedLayer.replaceChildren();const labels=[];
  for(const e of historyVisible(year,historyWindow()).filter(e=>e.xy&&$(e.type==='political'?'politics':'wars').checked).sort((a,b)=>b.end-a.end)){
   const [x,y]=project(e.xy),past=year>e.end,political=e.type==='political',color=political?'#4d7058':'#86532f';
-  const title=(past?'回看 · ':'')+eventYears(e)+' '+e.name;
-  const group=svg('g',{role:'button',tabindex:0,'aria-label':title+'，查看出处',class:'history-map-event'});
+  const selected=e.id===selectedHistoryId;
+  const title=(selected?'已选 · ':'')+(past?'回看 · ':'')+eventYears(e)+' '+e.name;
+  const group=svg('g',{role:'button',tabindex:0,'aria-label':title+'，查看出处',class:'history-map-event'+(selected?' is-selected':'')});
+  if(selected)group.append(svg('circle',{cx:x,cy:y,r:12,fill:'#fff4ce',stroke:'#85431e','stroke-width':2.5}));
   group.append(political?svg('circle',{cx:x,cy:y,r:5,fill:past?'#f7f5ea':color,stroke:color}):svg('path',{d:`M${x} ${y-6}l6 6-6 6-6-6Z`,fill:past?'#f7f5ea':color,stroke:color}));
   let ty=y-9,tx=x+9;
   while(labels.some(b=>Math.abs(b.y-ty)<15&&tx<b.right&&tx+title.length*11>b.left))ty+=16;
   labels.push({left:tx,right:tx+title.length*11,y:ty});
   group.append(svg('text',{x:tx,y:ty,class:past?'recent-event':'current-event'},title));
-  group.append(svg('title',{},title+' · '+e.place));group.onclick=()=>historyDetail(e.id);group.onkeydown=key=>{if(key.key==='Enter'||key.key===' '){key.preventDefault();historyDetail(e.id);}};layer.append(group);
+  group.append(svg('title',{},title+' · '+e.place));group.onclick=()=>historyDetail(e.id);group.onkeydown=key=>{if(key.key==='Enter'||key.key===' '){key.preventDefault();historyDetail(e.id);}};(selected?selectedLayer:layer).append(group);
  }
 }
 function draw(){drawLand();drawPolitics();const labels=$('geo-labels');labels.replaceChildren();for(const [name,point]of [['东 海',[126,28]],['南 海',[116,17]],['喜 马 拉 雅',[85,29]]]){const [x,y]=project(point);labels.append(svg('text',{x,y,class:'ocean-label'},name));}
@@ -47,15 +49,18 @@ const eventYears=e=>e.start===e.end?labelYear(e.start):`${e.start}—${e.end} �
 const eventType=e=>e.type==='political'?'政治':'军事';
 function renderHistory(){
  const min=Number($('time').min),max=Number($('time').max),entries=historyInRange(min,max,historyFilter),current=historyAt(year,historyFilter);
+ if(person.id!==selectedHistoryPerson||!current.some(e=>e.id===selectedHistoryId))selectedHistoryId=null;
+ const selected=current.find(e=>e.id===selectedHistoryId);
  $('history-summary').textContent=`${labelYear(year)} · ${current.length} 条记录 · 当前时间范围共 ${entries.length} 条`;
- $('history-events').innerHTML=current.length?current.map(e=>`<article class="history-card ${e.type}"><small>${eventType(e)} · ${eventYears(e)} · ${e.start===e.end?'当年事件':'跨年战事'}</small><h3>${e.name}</h3><p>${e.text}</p><p class="history-date">${e.date} · ${e.place}</p><button data-history-detail="${e.id}">查看出处与时间说明 ↗</button></article>`).join(''):`<p class="history-empty">${historyAt(year).length?'这一年收录的事件在另一分类里，可以切换看看。':'关于这一年，我们还没找到合适的史料，暂且留白。'}也可以在下方看看其他年份。</p>`;
+ $('history-events').innerHTML=current.length?current.map(e=>`<article data-event-card="${e.id}" class="history-card ${e.type}${e.id===selectedHistoryId?' is-selected':''}">${e.id===selectedHistoryId?'<strong class="event-badge">已选事件</strong>':''}<small>${eventType(e)} · ${eventYears(e)} · ${e.start===e.end?'当年事件':'跨年战事'}</small><h3>${e.name}</h3><p>${e.text}</p><p class="history-date">${e.date} · ${e.place}</p><button data-history-detail="${e.id}">查看出处与时间说明 ↗</button></article>`).join(''):`<p class="history-empty">${historyAt(year).length?'这一年收录的事件在另一分类里，可以切换看看。':'关于这一年，我们还没找到合适的史料，暂且留白。'}也可以在下方看看其他年份。</p>`;
  const recent=historyVisible(year,historyWindow(),historyFilter).filter(e=>e.end<year);
  $('recent-history').innerHTML=recent.length?'<strong>回看前几年</strong> '+recent.map(e=>`<button data-history-detail="${e.id}">${eventYears(e)} · ${e.name} ↗</button>`).join(''):'';
  $('recent-history').hidden=!recent.length;
  $('history-jump').innerHTML='<option value="">选择事件并跳转年份…</option>'+entries.map(e=>`<option value="${e.id}">${eventYears(e)} · ${eventType(e)} · ${e.name}</option>`).join('');
  $('history-jump').disabled=!entries.length;
  renderEventTicks(entries,min,max);
- $('event-navigation-status').textContent='';
+ $('history-jump').value=selectedHistoryId||'';
+ $('event-navigation-status').textContent=selected?eventYears(selected)+' · '+selected.name+'　'+(selected.xy?'地点：'+selected.place:'地点尚未确定，地图保留原视野。'):'';
  document.querySelectorAll('[data-history-detail]').forEach(b=>b.onclick=()=>historyDetail(b.dataset.historyDetail));
 }
 function renderEventTicks(entries,min,max){
@@ -70,7 +75,7 @@ function renderEventTicks(entries,min,max){
   return `<div class="history-lane"><span>${type==='political'?'政治':'军事'}</span><div>${groups.map(({left,items})=>{
    const title=items.map(e=>eventYears(e)+' · '+e.name).join('；');
    const right=Math.max(...items.map(e=>(Math.min(max,e.end)-min)/(max-min)));
-   return `<i aria-hidden="true" data-event-ids="${items.map(e=>e.id).join(' ')}" class="${type}" style="left:${left*100}%;width:max(3px,${(right-left)*100}%)"></i><button type="button" class="event-tick ${type}" style="left:${left*100}%" data-event-ids="${items.map(e=>e.id).join(' ')}" aria-label="${title}" title="${title}"><span>${items.length>1?items.length:''}</span></button>`;
+   return `<i aria-hidden="true" data-event-ids="${items.map(e=>e.id).join(' ')}" class="${type}" style="left:${left*100}%;width:max(3px,${(right-left)*100}%)"></i><button type="button" class="event-tick ${type}${items.some(e=>e.id===selectedHistoryId)?' is-selected':''}" style="left:${left*100}%" data-event-ids="${items.map(e=>e.id).join(' ')}" aria-label="${title}" title="${title}"><span>${items.length>1?items.length:''}</span></button>`;
   }).join('')}</div></div>`;
  }).join('');
 }
@@ -78,10 +83,10 @@ function focusHistoryEvent(id){
  const e=HISTORY_EVENTS.find(e=>e.id===id);if(!e)return;
  if(e.start<Number($('time').min)||e.start>Number($('time').max)){full=true;setRange();}
  $(e.type==='political'?'politics':'wars').checked=true;
+ selectedHistoryId=id;selectedHistoryPerson=person.id;
  jump(e.start);
  if(e.xy)changeMapView(...e.xy,8);
- $('history-jump').value=id;
- $('event-navigation-status').textContent=eventYears(e)+' · '+e.name+'　'+(e.xy?'地图已定位：'+e.place:'这条记录还没有可靠的位置，地图保留原视野。');
+
 }
 $('history-ticks').onclick=ev=>{
  const btn=ev.target.closest('[data-event-ids]');if(!btn)return;
@@ -97,7 +102,7 @@ function historyDetail(id){
  modal(`<h2>${e.name}</h2><p>${eventType(e)} · ${eventYears(e)} · ${e.place}</p><p><strong>时间依据：</strong>${e.date}</p><p>${e.text}</p><p><strong>记录边界：</strong>${e.note}</p><h3>信息源</h3><p><a href="${s.url}" target="_blank" rel="noopener">${s.name} ↗</a><br>${e.locator}<br><small>${s.type} · 核验日期 ${e.checkedAt}</small></p>${e.quote?`<blockquote>${e.quote}</blockquote>`:'<p>以上为来源内容概述；未附逐字引文。</p>'}<p>古籍月日沿用原历法；事件按年份显示，不表示全年持续。坐标为现代区域近似，未核战线。人物与事件同年不等于人物在场。</p><p><a href="history-audit.html" target="_blank" rel="noopener">查看全部政治、军事记录及来源 ↗</a></p>`);
 }
 $('history-window').onchange=()=>{renderHistory();draw();};
-$('history-filter').onchange=e=>{historyFilter=e.target.value;renderHistory();};
+$('history-filter').onchange=e=>{historyFilter=e.target.value;renderHistory();draw();};
 $('history-jump').onchange=e=>{focusHistoryEvent(e.target.value);};
 
 function jump(y){stop();selectedNode=null;year=y;render();}
