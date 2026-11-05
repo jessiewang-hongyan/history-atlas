@@ -34,6 +34,8 @@ jobs:
           node tests/history.test.cjs
           node --check dist/lives-data.js
           node --check dist/lives-ui.js
+          node --check dist/westward-comparison.js
+          node tests/route-comparison.test.cjs
           python3 scripts/build_lives.py --check
           node tests/lives.test.cjs
       - uses: actions/upload-pages-artifact@v3

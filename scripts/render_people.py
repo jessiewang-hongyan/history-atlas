@@ -67,6 +67,16 @@ def render(data, person):
                         citation = data['sources'][ref]
                         lines.append(f"  - 定位出处：[{citation['title']}]({citation['url']})。{citation['limits']}")
             lines.append('')
+        if variants := route.get('alternatives'):
+            lines += ['### 地图上的候选方案', '', '按作者分别展示；相邻且均可定位的站点以虚线示意先后，不跨越未定位站，不代表复原古道。圈示范围均为编辑绘制。', '']
+            for variant in variants:
+                lines += [f"#### {variant['code']} · {variant['title']}", '', variant['note'], '']
+                for index, node in enumerate(variant['nodes'], 1):
+                    lines.append(f"- {variant['code']}{index} · {node['place']}：{node['modern']}。{node['note']} 范围：{node['bounds'] or '未定位'}")
+                for ref in variant['sources']:
+                    source = data['sources'][ref]
+                    lines.append(f"- 出处：[{source['title']}]({source['url']})。{source['limits']}")
+                lines.append('')
         for entry in route['dating']:
             source = data['sources'][entry['source']]
             lines.append(f"- {entry['note']} [{entry['locator']}]({source['url']})")

@@ -6,6 +6,7 @@ function mappedWestwardStops() {
 }
 function closeWestwardMap() {
  westwardSelection = null;
+ $('route-comparison').hidden = true;
  document.querySelector('.map-panel').classList.remove('westward-map');
  $('westward-map-caption').hidden = true;
  $('westward-layer').replaceChildren();
@@ -47,7 +48,9 @@ function drawWestwardMap() {
  const active = !!westwardSelection && person.id === 'xuanzang';
  panel.classList.toggle('westward-map', active);
  $('westward-map-caption').hidden = !active;
+ $('route-comparison').hidden = !(active && westwardSelection === 'comparison');
  if (!active) return;
+ if (westwardSelection === 'comparison') { drawRouteComparison(layer); return; }
  const stops = mappedWestwardStops();
  const selected = stops.find(stop => stop.id === westwardSelection);
  $('westward-map-text').textContent = selected ? selected.place + ' · ' + selected.geography.modern : '长安至飒秣建 · 地名总览';
@@ -105,6 +108,8 @@ function renderWestwardRoute(life) {
  const panel = $('westward-route');
  const route = life?.westwardRoute;
  panel.hidden = !route;
+ $('route-comparison').replaceChildren();
+ $('route-comparison').hidden = true;
  if (!route) {
   panel.replaceChildren();
   return;
@@ -128,7 +133,8 @@ function renderWestwardRoute(life) {
   const source = LIVES_RESEARCH.sources[entry.source];
   return `<p>${lifeEscape(entry.note)} <a href="${lifeEscape(source.url)}" target="_blank" rel="noopener">${lifeEscape(source.title)} ↗</a></p>`;
  }).join('');
- panel.innerHTML = `<h3>西行 · 长安至那烂陀寺</h3><p>沿《慈恩传》的先后读这段路。途中各站的抵达年份，几份年表记得不同。</p><button type="button" data-westward-year>回到时间轴上的出发年</button><button type="button" data-westward-overview>地图上看长安至飒秣建</button><details><summary>出发与抵达的年份</summary>${dating}</details>${groups}`;
+ panel.innerHTML = `<h3>西行 · 长安至那烂陀寺</h3><p>沿《慈恩传》的先后读这段路。途中各站的抵达年份，几份年表记得不同。</p><button type="button" data-westward-year>回到时间轴上的出发年</button><button type="button" data-westward-overview>地图上看长安至飒秣建</button><button type="button" data-westward-compare>对照恭御、笯赤建的不同路线 ↗</button><details><summary>出发与抵达的年份</summary>${dating}</details>${groups}`;
+ panel.querySelector('[data-westward-compare]').onclick = () => showRouteComparison();
  panel.querySelector('[data-westward-overview]').onclick = showWestwardOverview;
  panel.querySelectorAll('[data-westward-stop]').forEach(button => button.onclick = () => selectWestwardStop(button.dataset.westwardStop, true));
  panel.querySelector('[data-westward-year]').onclick = () => { closeWestwardMap(); jumpNode(life.records.findIndex(record => record.id === route.departureRecord)); };
@@ -164,7 +170,8 @@ const sourcesBeforeLives=$('source-open').onclick;
 $('source-open').onclick=()=>{if(!person.lifeResearch){sourcesBeforeLives();return;}const i=currentIndex();if(i<0||year>person.end){modal(`<h2>${lifeEscape(person.name)} · 人生资料</h2><p>请从人生记录中选择一条经历，查看对应的材料。年份尚未钉定的经历也在下方附有出处。</p>`);return;}showLifeSource(person.nodes[i]);};
 const locateBeforeWestward = $('map-locate').onclick;
 $('map-locate').onclick = () => {
- if (westwardSelection === 'overview') showWestwardOverview();
+ if (westwardSelection === 'comparison') showRouteComparison(false);
+ else if (westwardSelection === 'overview') showWestwardOverview();
  else if (westwardSelection) selectWestwardStop(westwardSelection);
  else locateBeforeWestward();
 };
@@ -172,9 +179,10 @@ $('westward-map-return').onclick = () => { closeWestwardMap(); fit(); render(); 
 $('time').addEventListener('input', closeWestwardMap);
 const fitBeforeWestward = fit;
 fit = function() {
- if (westwardSelection === 'overview') showWestwardOverview();
+ if (westwardSelection === 'comparison') showRouteComparison(false);
+ else if (westwardSelection === 'overview') showWestwardOverview();
  else if (westwardSelection) selectWestwardStop(westwardSelection);
  else fitBeforeWestward();
 };
-$('fit').onclick = () => { if (westwardSelection) showWestwardOverview(); else fit(); };
+$('fit').onclick = () => { if (westwardSelection === 'comparison') showRouteComparison(false); else if (westwardSelection) showWestwardOverview(); else fit(); };
 render();
