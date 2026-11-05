@@ -53,6 +53,22 @@ if '--check' in sys.argv:
  assert target.read_text()==output, 'Run python3 scripts/build_lives.py to update website data'
 else:
  target.write_text(output)
+# Ship only the selected biography and the references it actually cites.
+import hashlib
+out_dir=ROOT/'dist'/'people'
+if '--check' not in sys.argv:out_dir.mkdir(exist_ok=True)
+manifest={}
+def asset(path,content):
+ if '--check' in sys.argv:assert path.read_text()==content, f'Stale asset: {path}'
+ else:path.write_text(content)
+for life in d['people']:
+ refs={e['source'] for r in life['records']+life['episodes'] for e in r['evidence']}
+ geography={sid for r in life['records'] if r['locationReview'] for sid in r['locationReview']['sources']}
+ payload=json.dumps({'life':life,'sources':{k:d['sources'][k] for k in sorted(refs)},'geoSources':{k:geo['sources'][k] for k in sorted(geography)}},ensure_ascii=False,separators=(',',':'))
+ name=life['id']+'.json'
+ asset(out_dir/name,payload)
+ manifest[life['id']]='people/'+name+'?v='+hashlib.sha256(payload.encode()).hexdigest()[:10]
+asset(ROOT/'dist'/'life-files.js','const LIFE_FILES='+json.dumps(manifest,separators=(',',':'))+';\n')
 print('Published',sum(len(p['records']) for p in d['people']),'records and',sum(len(p['episodes']) for p in d['people']),'episodes;',sum(bool(r['displayXY']) for p in d['people'] for r in p['records']),'regional markers')
 
 total=sum(len(p['records']) for p in d['people'])

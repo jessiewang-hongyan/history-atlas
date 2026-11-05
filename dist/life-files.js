@@ -1,0 +1,1 @@
+const LIFE_FILES={"xuanzang":"people/xuanzang.json?v=383855751f","xuxiake":"people/xuxiake.json?v=0e750b9ae7","liqingzhao":"people/liqingzhao.json?v=d6760f44b7","qinliangyu":"people/qinliangyu.json?v=4ed5be62b9","qiujin":"people/qiujin.json?v=93a325b5e0"};

@@ -5,10 +5,10 @@ project=function(p){return [(p[0]-view[0])/(view[2]-view[0])*mapWidth,mapHeight-
 function sizeMap(){const r=$('map').getBoundingClientRect();mapWidth=Math.max(1,r.width);mapHeight=Math.max(1,r.height);$('map').setAttribute('viewBox',`0 0 ${mapWidth} ${mapHeight}`);$('map').querySelectorAll(':scope > rect').forEach(r=>{r.setAttribute('width',mapWidth);r.setAttribute('height',mapHeight);});}
 function mapRatio(lat){return mapWidth/mapHeight/Math.cos(lat*Math.PI/180);}
 fit=function(){sizeMap();const coords=person.nodes.flatMap(n=>n.area?[[n.area.bounds[0],n.area.bounds[1]],[n.area.bounds[2],n.area.bounds[3]]]:n.xy?[n.xy]:[]),xs=coords.map(n=>n[0]),ys=coords.map(n=>n[1]),cx=(Math.min(...xs)+Math.max(...xs))/2,cy=(Math.min(...ys)+Math.max(...ys))/2;let w=Math.max(8,(Math.max(...xs)-Math.min(...xs))*1.45),h=Math.max(8,(Math.max(...ys)-Math.min(...ys))*1.55);const ratio=mapRatio(cy);if(w/h<ratio)w=h*ratio;else h=w/ratio;view=[cx-w/2,cy-h/2,cx+w/2,cy+h/2];draw();};
-function changeMapView(cx,cy,w){cy=Math.max(-55,Math.min(65,cy));w=Math.max(.15,Math.min(120,120*mapRatio(cy),w));const h=w/mapRatio(cy);cy=Math.max(-65+h/2,Math.min(80-h/2,cy));view=[cx-w/2,cy-h/2,cx+w/2,cy+h/2];draw();}
+function changeMapView(cx,cy,w){if(w<=12)loadDetailedLand();cy=Math.max(-55,Math.min(65,cy));w=Math.max(.15,Math.min(120,120*mapRatio(cy),w));const h=w/mapRatio(cy);cy=Math.max(-65+h/2,Math.min(80-h/2,cy));view=[cx-w/2,cy-h/2,cx+w/2,cy+h/2];draw();}
 function zoomMap(factor){changeMapView((view[0]+view[2])/2,(view[1]+view[3])/2,(view[2]-view[0])*factor);}
 drawLand=function(){
- const key=JSON.stringify([view,mapWidth,mapHeight,!!landData,!!mapWater,$('water-reference').checked]);if(key===mapGeometryKey)return;mapGeometryKey=key;
+ const key=JSON.stringify([view,mapWidth,mapHeight,landIsDetailed,!!landData,!!mapWater,$('water-reference').checked]);if(key===mapGeometryKey)return;mapGeometryKey=key;
  const target=$('land');target.replaceChildren();if(!landData)return;
  for(const f of landData.features){const polys=f.geometry.type==='MultiPolygon'?f.geometry.coordinates:[f.geometry.coordinates];for(const p of polys)target.append(svg('path',{d:p.map(r=>path(r,true)).join(' '),fill:'#f1f0df',stroke:'#a9bba7','stroke-width':.8,'fill-rule':'evenodd'}));}
  if(mapWater&&$('water-reference').checked)for(const f of mapWater.features){const g=f.geometry,isLine=g.type.includes('LineString'),parts=g.type==='MultiLineString'||g.type==='MultiPolygon'?g.coordinates:[g.coordinates];for(const p of parts){const d=isLine?path(p):p.map(r=>path(r,true)).join(' ');const el=svg('path',{d,fill:isLine?'none':'#c4d9d8',stroke:'#8fb7bc','stroke-width':isLine?1.1:.6,'fill-rule':'evenodd','stroke-linejoin':'round',opacity:.85});el.append(svg('title',{},`${f.properties.name||'水系'} · 现代地理参照`));target.append(el);}}
@@ -37,9 +37,9 @@ function detailedRoute(){
  }if(marks.current)target.append(marks.current);
 }
 draw=function(){basicDraw();detailedRoute();$('map-view-status').textContent=`视野约 ${Math.round((view[2]-view[0])*111*Math.cos((view[1]+view[3])/2*Math.PI/180))} 公里宽`;};
-const waterLabel=document.createElement('label');waterLabel.innerHTML='<input id="water-reference" type="checkbox" checked> 现代水系参照';document.querySelector('.layers').append(waterLabel);$('water-reference').onchange=draw;
+const waterLabel=document.createElement('label');waterLabel.innerHTML='<input id="water-reference" type="checkbox"> 现代水系参照';document.querySelector('.layers').append(waterLabel);$('water-reference').onchange=()=>{if($('water-reference').checked)loadWater();else $('water-status').textContent='';draw();};
 const mapControls=document.createElement('div');mapControls.className='map-controls';mapControls.innerHTML='<button id="map-zoom-in" aria-label="放大地图" title="放大地图">＋</button><button id="map-zoom-out" aria-label="缩小地图" title="缩小地图">−</button><button id="map-locate" aria-label="定位最近人生记录" title="定位最近人生记录">◎</button>';document.querySelector('.map-panel').append(mapControls);
-const mapStatus=document.createElement('div');mapStatus.className='map-view-hint';mapStatus.innerHTML='<span id="map-view-status" aria-live="polite"></span><span>拖动平移 · ＋／− 缩放</span><span id="water-status">水系加载中…</span>';document.querySelector('.map-panel').append(mapStatus);
+const mapStatus=document.createElement('div');mapStatus.className='map-view-hint';mapStatus.innerHTML='<span id="map-view-status" aria-live="polite"></span><span>拖动平移 · ＋／− 缩放</span><span id="water-status"></span>';document.querySelector('.map-panel').append(mapStatus);
 $('map-zoom-in').onclick=()=>zoomMap(.65);$('map-zoom-out').onclick=()=>zoomMap(1/.65);$('map-locate').onclick=()=>{const i=currentIndex();if(i<0||year>person.end){fit();return;}const n=person.nodes[i];if(n.area){const [w,s,e,north]=n.area.bounds;const lat=(s+north)/2;changeMapView((w+e)/2,lat,Math.max((e-w)*1.7,(north-s)*mapRatio(lat)*1.7));return;}if(!n.xy){fit();return;}changeMapView(n.xy[0],n.xy[1],Math.min(n.locationReview&&/寺|山峰|岩洞|景观|废址/.test(n.locationReview.precision)?.6:8,view[2]-view[0]));};$('fit').onclick=fit;
 const mapElement=$('map');mapElement.addEventListener('pointerdown',e=>{if(e.button!==0||mapDrag)return;mapMoved=false;mapDrag={id:e.pointerId,x:e.clientX,y:e.clientY,view:[...view]};});
 mapElement.addEventListener('pointermove',e=>{if(!mapDrag||mapDrag.id!==e.pointerId)return;const dx=e.clientX-mapDrag.x,dy=e.clientY-mapDrag.y;if(Math.hypot(dx,dy)<5&&!mapMoved)return;mapMoved=true;mapElement.setPointerCapture(e.pointerId);const v=mapDrag.view,lon=dx/mapWidth*(v[2]-v[0]),lat=dy/mapHeight*(v[3]-v[1]);changeMapView((v[0]+v[2])/2-lon,(v[1]+v[3])/2+lat,v[2]-v[0]);});
@@ -49,5 +49,17 @@ mapElement.addEventListener('pointerup',endMapDrag);mapElement.addEventListener(
 mapElement.addEventListener('click',e=>{if(mapMoved){e.stopImmediatePropagation();mapMoved=false;}},true);
 mapElement.addEventListener('keydown',e=>{if(e.target!==mapElement)return;const moves={ArrowLeft:[-.15,0],ArrowRight:[.15,0],ArrowUp:[0,.15],ArrowDown:[0,-.15]};if(moves[e.key]){e.preventDefault();const [x,y]=moves[e.key];changeMapView((view[0]+view[2])/2+x*(view[2]-view[0]),(view[1]+view[3])/2+y*(view[3]-view[1]),view[2]-view[0]);}});
 mapElement.setAttribute('tabindex','0');mapElement.setAttribute('aria-label','历史人物足迹地图，可拖动平移；聚焦地图后可用方向键平移');
-fetch('water.json?v=map-2').then(r=>{if(!r.ok)throw Error('water');return r.json();}).then(d=>{mapWater=d;$('water-status').textContent='现代水系，不代表历史河道';draw();}).catch(()=>{$('water-status').textContent='水系暂不可用，其他图层仍可使用';});
+let landIsDetailed=false,landPending=false,waterPending=false;
+async function loadDetailedLand(){
+ if(landIsDetailed||landPending)return;landPending=true;
+ try{const r=await fetch('land.json?v=map-2');if(!r.ok)throw Error();landData=await r.json();landIsDetailed=true;draw();}
+ catch{$('era-sub').textContent+=' · 细图未能加载，保留概览';}finally{landPending=false;}
+}
+async function loadWater(){
+ const status=$('water-status');if(mapWater){status.textContent='现代水系，不代表历史河道';return;}
+ status.textContent='水系加载中…';if(waterPending)return;waterPending=true;
+ try{const r=await fetch('water.json?v=map-2');if(!r.ok)throw Error();mapWater=await r.json();
+ status.textContent=$('water-reference').checked?'现代水系，不代表历史河道':'';draw();}
+ catch{$('water-reference').checked=false;status.textContent='水系未能加载，可重新勾选';}finally{waterPending=false;}
+}
 new ResizeObserver(()=>fit()).observe(document.querySelector('.map-panel'));fit();

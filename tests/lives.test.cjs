@@ -60,3 +60,13 @@ console.log('PASS: 70 regional displays, including a province-only record withou
 for(const [id,a] of Object.entries(review.areas)){const n=records.get(id);assert.equal(n.xy,null,id);assert.ok(n.area,id);assert.ok(a.sources.every(s=>review.sources[s]?.url),id);}
 assert.equal(records.get('qinliangyu-002').area.name,'邓坎（今凤冈南部）一带');
 assert.equal(records.get('qinliangyu-021').area,null);
+// Every lazily published biography must retain the same events and working citations.
+const files=vm.runInContext(fs.readFileSync('dist/life-files.js','utf8')+';LIFE_FILES',ctx);
+for(const life of data.people){
+ const part=JSON.parse(fs.readFileSync('dist/'+files[life.id].split('?')[0],'utf8'));
+ assert.deepEqual(part.life,JSON.parse(JSON.stringify(life)));
+ for(const item of [...part.life.records,...part.life.episodes]){
+  for(const e of item.evidence)assert.ok(part.sources[e.source]?.url);
+  for(const id of item.locationReview?.sources||[])assert.ok(part.geoSources[id]?.url);
+ }
+}
