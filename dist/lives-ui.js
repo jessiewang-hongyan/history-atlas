@@ -7,9 +7,34 @@ function locationEvidence(item){
 }
 function showLifeSource(item){stop();modal(`<h2>${lifeEscape(person.name)} · ${lifeEscape(item.title)}</h2><p>${lifeEscape(item.dateLabel||item.periodLabel)} · ${lifeEscape(item.place)}</p>${item.narrative?`<p>${lifeEscape(item.narrative)}</p>`:''}${item.limits?`<p>${lifeEscape(item.limits)}</p>`:''}${lifeEvidence(item)}${locationEvidence(item)}<p class="life-meta">查阅日期：${lifeEscape(item.checkedAt)}。${lifeEscape(item.mapNote||'这段经历保留为文字，不推定某一年的位置。')}</p>`);}
 const LIFE_INTROS={"xuanzang": ["从洛阳出家，到长安、成都访师，玄奘的求学之路渐渐走向更远的西方。河西、西域、中亚与印度，留下了他问学的足迹。", "645年携经归来后，他把往后的岁月交给译场。从长安到玉华寺，直至六百卷《大般若经》译成，求法与译经贯穿了他的一生。"], "xuxiake": ["天台、雁荡、黄山，嵩山、华山与太和山……徐霞客把山路上的见闻写进日记。1623年远游归来，他还带着榔梅，为母亲祝寿。", "1633年，他从北京走向五台与恒山；1636年又启程西南远游。日记里还有许多山川与村落，等待我们沿着文字继续寻访。"], "liqingzhao": ["与赵明诚一起购书、校书、收藏金石，是李清照婚后生活中的乐事。南渡以后，丈夫去世，藏书与器物接连散失，熟悉的生活渐渐远去。", "她在避乱中辗转，也继续写词、作诗、整理书籍。晚年的文献留下了一些交往与写作的片段，她最后的居处与卒年却仍难说定。"], "qinliangyu": ["从随马千乘出征，到接掌石砫事务，秦良玉的生活与军务、乡土相连。她曾远赴榆关、入京勤王，也一次次回到四川作战。", "经历救援、追击和败战后，她回守石砫。晚年的征召与任命仍接踵而来，其中有些出行最终没有成行。"], "qiujin": ["少年读书，随家人迁居，成婚后又到北京生活。1904年，秋瑾赴日本求学，也开始参与办报、妇女组织和革命组织的活动。", "归国后，她走进女校课堂，筹办《中国女报》，主持大通学堂，并联络会党筹备起义。1907年，她在绍兴被捕，生命止于轩亭口。"]};
+function renderWestwardRoute(life) {
+ const panel = $('westward-route');
+ const route = life?.westwardRoute;
+ panel.hidden = !route;
+ if (!route) {
+  panel.replaceChildren();
+  return;
+ }
+ const source = LIVES_RESEARCH.sources[route.source];
+ const groups = route.groups.map((group, index) => {
+  const rows = group.stops.map(stop => {
+   const phrase = stop.locator.split(' · ')[1];
+   const url = source.url + '#:~:text=' + encodeURIComponent(phrase);
+   return `<li><strong>${lifeEscape(stop.place)}</strong><p>${lifeEscape(stop.note)}</p><a href="${lifeEscape(url)}" target="_blank" rel="noopener">《慈恩传》${lifeEscape(stop.locator)} ↗</a></li>`;
+  }).join('');
+  return `<details ${index === 0 ? 'open' : ''}><summary>${lifeEscape(group.title)}</summary><ol>${rows}</ol></details>`;
+ }).join('');
+ const dating = route.dating.map(entry => {
+  const source = LIVES_RESEARCH.sources[entry.source];
+  return `<p>${lifeEscape(entry.note)} <a href="${lifeEscape(source.url)}" target="_blank" rel="noopener">${lifeEscape(source.title)} ↗</a></p>`;
+ }).join('');
+ panel.innerHTML = `<h3>西行 · 长安至那烂陀寺</h3><p>沿《慈恩传》的先后读这段路。途中各站的抵达年份，几份年表记得不同。</p><button type="button">回到时间轴上的出发年</button><details><summary>出发与抵达的年份</summary>${dating}</details>${groups}`;
+ panel.querySelector('button').onclick = () => jumpNode(life.records.findIndex(record => record.id === route.departureRecord));
+}
 let readingPerson=null;
 function renderLifeReading(){
  const target=$('life-reading'),life=person.lifeResearch;
+ if (readingPerson !== (life ? person.id : null)) renderWestwardRoute(life);
  target.hidden=!life;if(!life){readingPerson=null;return;}
  if(readingPerson===person.id)return;readingPerson=person.id;
  target.innerHTML=`<div class="life-reading-head"><div><span class="eyebrow">走过的路 · 经历的事</span><h2>${lifeEscape(person.name)}的人生</h2></div><span>${life.records.length} 条记录${life.episodes.length?` · ${life.episodes.length} 段未定年经历`:''}</span></div><div class="life-overview">${LIFE_INTROS[person.id].map(p=>`<p>${lifeEscape(p)}</p>`).join('')}</div><p class="life-meta">记下的除了远行，还有读书、家庭与工作。地图上的点只是其中一部分。</p><label class="life-select-label" for="life-record-select">翻到一段经历</label><select id="life-record-select"><option value="">选择年份与经历</option>${life.records.map((r,i)=>`<option value="${i}">${r.year} · ${lifeEscape(r.dateLabel)} · ${lifeEscape(r.title)}</option>`).join('')}</select><details class="life-all"><summary>展开全部 ${life.records.length} 条人生记录</summary><div class="life-records">${life.records.map((r,i)=>`<article><span class="life-date">${lifeEscape(r.dateLabel)}</span><h3>${lifeEscape(r.title)}</h3><p>${lifeEscape(r.narrative||r.evidence[0].supports)}</p><small>${lifeEscape(r.place)}</small><div class="life-actions"><button data-life-jump="${i}">在时间轴查看</button><button data-life-source="${i}">阅读出处 ↗</button></div></article>`).join('')}</div></details>${life.episodes.length?`<h3 class="life-episode-heading">还有这些经历</h3><p class="life-meta">史料留下了这些故事，具体年份还不能说准。先在这里读，不把它们安放到某一年的地图上。</p><div class="life-episodes">${life.episodes.map((e,i)=>`<details><summary>${lifeEscape(e.title)}<small>${lifeEscape(e.periodLabel)}</small></summary><p>${lifeEscape(e.narrative)}</p><p class="life-meta">${lifeEscape(e.limits)}</p><button data-life-episode="${i}">阅读出处 ↗</button></details>`).join('')}</div>`:''}`;

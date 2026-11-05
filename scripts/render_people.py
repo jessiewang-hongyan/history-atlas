@@ -51,6 +51,18 @@ def render(data, person):
                 if ev.get('quote'):
                     lines += ['', f"> {ev['quote']}", '']
             lines += ['', f"限制：{item['limits']}", '', f"核验日期：{item['checkedAt']}。不上图。", '']
+    if route := person.get('westwardRoute'):
+        lines += ['## 西行逐站记录', '']
+        source = data['sources'][route['source']]
+        for group in route['groups']:
+            lines += ['### ' + group['title'], '']
+            for stop in group['stops']:
+                lines.append(f"- **{stop['place']}**　{stop['note']} [{stop['locator']}]({source['url']})")
+            lines.append('')
+        for entry in route['dating']:
+            source = data['sources'][entry['source']]
+            lines.append(f"- {entry['note']} [{entry['locator']}]({source['url']})")
+        lines.append('')
     lines += ['## 待核、缺口与排除项', '']
     for item in person['pending']:
         lines += [f"### {item['item']}", '', f"已知：{item['known']}", '',

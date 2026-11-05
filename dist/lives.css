@@ -19,3 +19,12 @@
 .map-and-age{display:flex;flex-direction:column;min-width:0}.map-and-age>.map-panel{flex:1}
 .map-age{display:flex;align-items:baseline;justify-content:center;gap:.7em;padding:9px 12px;border-top:1px solid var(--line);background:#f9f8f2;color:#344e40;font-size:14px}.map-age strong{font-size:16px}
 @media(max-width:900px){.map-and-age{grid-row:3}.map-and-age>.map-panel{flex:none}.map-age{border:1px solid var(--line);border-top:0}}
+
+.westward-route{margin:16px 0;padding:12px 0;border-block:1px solid var(--line);grid-column:1/-1}
+.westward-route h3{margin:0;font-size:17px}
+.westward-route p{margin:.4em 0;color:#465d49;font-size:13px;line-height:1.6}
+.westward-route details{margin-top:8px}
+.westward-route summary,.westward-route button{cursor:pointer;color:#314f40;font-size:14px}
+.westward-route button{padding:6px 0;text-decoration:underline}
+.westward-route ol{max-height:15rem;overflow:auto;padding:0 8px 0 2em;scrollbar-width:thin}
+.westward-route li{margin-bottom:12px}.westward-route a{font-size:12px;color:#75432f;overflow-wrap:anywhere}
