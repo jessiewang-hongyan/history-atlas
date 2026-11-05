@@ -61,6 +61,8 @@ def render(data, person):
                 if geo := stop.get('geography'):
                     lines.append(f"  - 今地与地图显示：{geo['modern']}。{geo['note']}")
                     lines.append(f"  - 制图方法：{geo['method']} 数据：{geo.get('xy', geo.get('bounds'))}。")
+                    for paragraph in geo.get('comparison', []):
+                        lines.append(f"  - 方向与里程对读：{paragraph}")
                     for ref in geo['sources']:
                         citation = data['sources'][ref]
                         lines.append(f"  - 定位出处：[{citation['title']}]({citation['url']})。{citation['limits']}")

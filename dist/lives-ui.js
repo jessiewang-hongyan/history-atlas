@@ -114,7 +114,7 @@ function renderWestwardRoute(life) {
   const rows = group.stops.map(stop => {
    const geo = stop.geography;
    const name = geo ? `<button type="button" data-westward-stop="${lifeEscape(stop.id)}" aria-pressed="false">${lifeEscape(stop.place)} ↗</button>` : `<strong>${lifeEscape(stop.place)}</strong>`;
-   const geography = geo ? `<p>${lifeEscape(geo.modern)} · ${geo.kind === 'point' ? '遗址标记' : '大致区域'}</p><details><summary>定位依据</summary><p>${lifeEscape(geo.note)}</p><p>${lifeEscape(geo.method)}</p>${geo.sources.map(id => {
+   const geography = geo ? `<p>${lifeEscape(geo.modern)} · ${geo.kind === 'point' ? '遗址标记' : '大致区域'}</p><details><summary>定位依据</summary><p>${lifeEscape(geo.note)}</p><p>${lifeEscape(geo.method)}</p>${(geo.comparison || []).map(text => `<p>${lifeEscape(text)}</p>`).join('')}${geo.sources.map(id => {
     const source = LIVES_RESEARCH.sources[id];
     return `<p><a href="${lifeEscape(source.url)}" target="_blank" rel="noopener">${lifeEscape(source.title)} ↗</a> ${lifeEscape(source.limits)}</p>`;
    }).join('')}</details>` : '';
