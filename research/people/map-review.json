@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-11-04",
-  "scope": "48条区域参照位置与1条仅知省域的经历；示意范围与历史边界分开。",
+  "checkedAt": "2026-11-05",
+  "scope": "70条经历以区域展示；区域参照与历史边界分开。",
   "coordinatePolicy": "保留来源坐标体系说明。DILA提示旧Z码使用GRS67，本轮未做米级基准转换；统一取到0.01度且只按区域示意使用，不声称WGS84精密定位。区域点不是活动范围边界。",
   "sources": {
     "G01": {
@@ -219,6 +219,102 @@
       "url": "https://www.hunan.gov.cn/hnszf/jxxx/hngk/hngk.html",
       "checkedAt": "2026-11-04",
       "notes": "现代地理参照：东经108°47′—114°15′、北纬24°38′—30°08′。只用于湖南地区的示意范围，不当作1894年省界。"
+    },
+    "DILA-PL000000023582": {
+      "title": "DILA 地名规范资料库：洛陽縣（PL000000023582）",
+      "url": "https://authority.dila.edu.tw/place/search.php?code=PL000000023582",
+      "checkedAt": "2026-11-05",
+      "notes": "法鼓文理学院 XML 快照 9dd2d95，CC BY-SA 3.0。地名条目仅作地域参照。"
+    },
+    "DILA-PL000000012384": {
+      "title": "DILA 地名规范资料库：寧海（PL000000012384）",
+      "url": "https://authority.dila.edu.tw/place/search.php?code=PL000000012384",
+      "checkedAt": "2026-11-05",
+      "notes": "法鼓文理学院 XML 快照 9dd2d95，CC BY-SA 3.0。地名条目仅作地域参照。"
+    },
+    "DILA-PL000000012620": {
+      "title": "DILA 地名规范资料库：雁蕩山（PL000000012620）",
+      "url": "https://authority.dila.edu.tw/place/search.php?code=PL000000012620",
+      "checkedAt": "2026-11-05",
+      "notes": "法鼓文理学院 XML 快照 9dd2d95，CC BY-SA 3.0。地名条目仅作地域参照。"
+    },
+    "DILA-PL000000015601": {
+      "title": "DILA 地名规范资料库：黃山（PL000000015601）",
+      "url": "https://authority.dila.edu.tw/place/search.php?code=PL000000015601",
+      "checkedAt": "2026-11-05",
+      "notes": "法鼓文理学院 XML 快照 9dd2d95，CC BY-SA 3.0。地名条目仅作地域参照。"
+    },
+    "DILA-PL000000043539": {
+      "title": "DILA 地名规范资料库：華山（PL000000043539）",
+      "url": "https://authority.dila.edu.tw/place/search.php?code=PL000000043539",
+      "checkedAt": "2026-11-05",
+      "notes": "法鼓文理学院 XML 快照 9dd2d95，CC BY-SA 3.0。地名条目仅作地域参照。"
+    },
+    "DILA-PL000000026781": {
+      "title": "DILA 地名规范资料库：武當山（PL000000026781）",
+      "url": "https://authority.dila.edu.tw/place/search.php?code=PL000000026781",
+      "checkedAt": "2026-11-05",
+      "notes": "法鼓文理学院 XML 快照 9dd2d95，CC BY-SA 3.0。地名条目仅作地域参照。"
+    },
+    "DILA-PL000000058268": {
+      "title": "DILA 地名规范资料库：懸空寺（PL000000058268）",
+      "url": "https://authority.dila.edu.tw/place/search.php?code=PL000000058268",
+      "checkedAt": "2026-11-05",
+      "notes": "法鼓文理学院 XML 快照 9dd2d95，CC BY-SA 3.0。地名条目仅作地域参照。"
+    },
+    "DILA-PL000000010007": {
+      "title": "DILA 地名规范资料库：虎丘山（PL000000010007）",
+      "url": "https://authority.dila.edu.tw/place/search.php?code=PL000000010007",
+      "checkedAt": "2026-11-05",
+      "notes": "法鼓文理学院 XML 快照 9dd2d95，CC BY-SA 3.0。地名条目仅作地域参照。"
+    },
+    "DILA-PL000000032234": {
+      "title": "DILA 地名规范资料库：桂林府（PL000000032234）",
+      "url": "https://authority.dila.edu.tw/place/search.php?code=PL000000032234",
+      "checkedAt": "2026-11-05",
+      "notes": "法鼓文理学院 XML 快照 9dd2d95，CC BY-SA 3.0。地名条目仅作地域参照。"
+    },
+    "DILA-PL000000021108": {
+      "title": "DILA 地名规范资料库：青州（PL000000021108）",
+      "url": "https://authority.dila.edu.tw/place/search.php?code=PL000000021108",
+      "checkedAt": "2026-11-05",
+      "notes": "法鼓文理学院 XML 快照 9dd2d95，CC BY-SA 3.0。地名条目仅作地域参照。"
+    },
+    "DILA-PL000000020928": {
+      "title": "DILA 地名规范资料库：萊州（PL000000020928）",
+      "url": "https://authority.dila.edu.tw/place/search.php?code=PL000000020928",
+      "checkedAt": "2026-11-05",
+      "notes": "法鼓文理学院 XML 快照 9dd2d95，CC BY-SA 3.0。地名条目仅作地域参照。"
+    },
+    "DILA-PL000000008977": {
+      "title": "DILA 地名规范资料库：建康府（PL000000008977）",
+      "url": "https://authority.dila.edu.tw/place/search.php?code=PL000000008977",
+      "checkedAt": "2026-11-05",
+      "notes": "法鼓文理学院 XML 快照 9dd2d95，CC BY-SA 3.0。地名条目仅作地域参照。"
+    },
+    "DILA-PL000000034523": {
+      "title": "DILA 地名规范资料库：夔州府（PL000000034523）",
+      "url": "https://authority.dila.edu.tw/place/search.php?code=PL000000034523",
+      "checkedAt": "2026-11-05",
+      "notes": "法鼓文理学院 XML 快照 9dd2d95，CC BY-SA 3.0。地名条目仅作地域参照。"
+    },
+    "DILA-PL000000013252": {
+      "title": "DILA 地名规范资料库：紹興府（PL000000013252）",
+      "url": "https://authority.dila.edu.tw/place/search.php?code=PL000000013252",
+      "checkedAt": "2026-11-05",
+      "notes": "法鼓文理学院 XML 快照 9dd2d95，CC BY-SA 3.0。地名条目仅作地域参照。"
+    },
+    "CQ-DENGKAN": {
+      "title": "重庆市地方志办公室：重庆历史政德人物——秦良玉",
+      "url": "https://dfz.cq.gov.cn/zqlswh/rwby_417819/202311/t20231102_12511084.html",
+      "checkedAt": "2026-11-05",
+      "notes": "文中将邓坎对应到今贵州凤冈南部；没有给出寨址四至。"
+    },
+    "FG-GEO": {
+      "title": "凤冈县概况 · 地理位置",
+      "url": "https://m.cyw.com/mudidi/gaikuang/532",
+      "checkedAt": "2026-11-05",
+      "notes": "仅用于现代县域经纬的大致范围；邓坎的历史对应另据重庆市地方志办公室。"
     }
   },
   "places": {
@@ -939,12 +1035,9 @@
     "xuanzang-013": "筹建佛塔是活动记录，不能据奏请时间确定人物在塔址。",
     "xuxiake-016": "白岳至江村的合并行程尚未拆解，江村存在同名问题。",
     "xuxiake-022": "均州旧城与现代丹江口的关系需核对，不直接用现代市中心代替。",
-    "xuxiake-007": "桂林府范围大，进入全州不能视为抵桂林府城。",
     "liqingzhao-026": "藏书毁于青州时，她已南渡。",
     "liqingzhao-027": "洪州是运送藏品的目的地，未证明本人抵达。",
     "liqingzhao-025": "1149／1150有分歧，见面地点也未明确。",
-    "qinliangyu-002": "只有播州战区，不能用遵义城代替本人驻营处。",
-    "qinliangyu-003": "关寨旧址未定，继续保留文字。",
     "qinliangyu-006": "南坪关不能直接按现代南坪街道同名定位。",
     "qinliangyu-008": "太平古地望尚未核准，不按现代同名地点落点。",
     "qinliangyu-016": "马家寨、留马垭旧址尚未核准。",
@@ -973,6 +1066,365 @@
       "notes": "阴影提示湖南的大致方位，借用现代经纬范围，不代表清代省界，也不表示她走遍了全省。",
       "coordinateMethod": "使用现代省域经纬极值绘制示意椭圆，中心仅用于排版，不作为人物位置。",
       "checkedAt": "2026-11-04"
+    },
+    "xuanzang-004": {
+      "name": "唐洛阳一带",
+      "bounds": [
+        112.264,
+        34.51,
+        112.702,
+        34.871
+      ],
+      "precision": "地域示意",
+      "sources": [
+        "DILA-PL000000023582"
+      ],
+      "presenceBasis": "支持本人到洛阳并受召见。",
+      "notes": "传记记赴洛阳见唐太宗；圈出唐洛阳县所在地域，未确定受召的殿址。",
+      "coordinateMethod": "地名参照周围约20公里为示意尺度；圈的中心不是人物位置。",
+      "checkedAt": "2026-11-05"
+    },
+    "xuxiake-002": {
+      "name": "宁海一带",
+      "bounds": [
+        121.228,
+        29.102,
+        121.641,
+        29.462
+      ],
+      "precision": "地域示意",
+      "sources": [
+        "DILA-PL000000012384"
+      ],
+      "presenceBasis": "支持从宁海出发，宿梁隍山。",
+      "notes": "两次日记都从宁海起笔，圈出的是出发地；当晚的住处另见日条。",
+      "coordinateMethod": "地名参照周围约20公里为示意尺度；圈的中心不是人物位置。",
+      "checkedAt": "2026-11-05"
+    },
+    "xuxiake-041": {
+      "name": "宁海一带",
+      "bounds": [
+        121.228,
+        29.102,
+        121.641,
+        29.462
+      ],
+      "precision": "地域示意",
+      "sources": [
+        "DILA-PL000000012384"
+      ],
+      "presenceBasis": "从宁海骑马出发，四十五里后在岔路口住宿。",
+      "notes": "两次日记都从宁海起笔，圈出的是出发地；当晚的住处另见日条。",
+      "coordinateMethod": "地名参照周围约20公里为示意尺度；圈的中心不是人物位置。",
+      "checkedAt": "2026-11-05"
+    },
+    "xuxiake-014": {
+      "name": "雁荡山一带",
+      "bounds": [
+        120.682,
+        27.995,
+        121.501,
+        28.715
+      ],
+      "precision": "地域示意",
+      "sources": [
+        "DILA-PL000000012620"
+      ],
+      "presenceBasis": "他经大荆、石梁洞进入灵峰，游洞后回寺住宿。",
+      "notes": "灵峰之游可以放回乐清雁荡山的山域，夜宿的寺院还没有落实到旧址。",
+      "coordinateMethod": "地名参照周围约40公里为示意尺度；圈的中心不是人物位置。",
+      "checkedAt": "2026-11-05"
+    },
+    "xuxiake-015": {
+      "name": "安徽黄山一带",
+      "bounds": [
+        117.741,
+        29.764,
+        118.574,
+        30.485
+      ],
+      "precision": "地域示意",
+      "sources": [
+        "DILA-PL000000015601"
+      ],
+      "presenceBasis": "他从汤口入山，经过积雪，游温泉并宿祥符寺。",
+      "notes": "按日记所游的安徽黄山标示山域。同游一座山的几段经历，各自保留日条和去处。",
+      "coordinateMethod": "地名参照周围约40公里为示意尺度；圈的中心不是人物位置。",
+      "checkedAt": "2026-11-05"
+    },
+    "xuxiake-017": {
+      "name": "安徽黄山一带",
+      "bounds": [
+        117.741,
+        29.764,
+        118.574,
+        30.485
+      ],
+      "precision": "地域示意",
+      "sources": [
+        "DILA-PL000000015601"
+      ],
+      "presenceBasis": "徐霞客与僧人澄源等攀登天都峰，当晚回文殊院。",
+      "notes": "按日记所游的安徽黄山标示山域。同游一座山的几段经历，各自保留日条和去处。",
+      "coordinateMethod": "地名参照周围约40公里为示意尺度；圈的中心不是人物位置。",
+      "checkedAt": "2026-11-05"
+    },
+    "xuxiake-018": {
+      "name": "安徽黄山一带",
+      "bounds": [
+        117.741,
+        29.764,
+        118.574,
+        30.485
+      ],
+      "precision": "地域示意",
+      "sources": [
+        "DILA-PL000000015601"
+      ],
+      "presenceBasis": "他登上莲花峰，从高处观察诸峰，随后转往后海和狮子林。",
+      "notes": "按日记所游的安徽黄山标示山域。同游一座山的几段经历，各自保留日条和去处。",
+      "coordinateMethod": "地名参照周围约40公里为示意尺度；圈的中心不是人物位置。",
+      "checkedAt": "2026-11-05"
+    },
+    "xuxiake-021": {
+      "name": "华阴华山一带",
+      "bounds": [
+        109.644,
+        34.103,
+        110.518,
+        34.824
+      ],
+      "precision": "地域示意",
+      "sources": [
+        "DILA-PL000000043539"
+      ],
+      "presenceBasis": "沿山路、铁索登华山，在迎阳洞留宿，次日再游南峰、西峰等处。",
+      "notes": "日记记登临华山诸峰；这里选用陕西华阴的华山，未复原沿途栈道。",
+      "coordinateMethod": "地名参照周围约40公里为示意尺度；圈的中心不是人物位置。",
+      "checkedAt": "2026-11-05"
+    },
+    "xuxiake-023": {
+      "name": "武当山一带",
+      "bounds": [
+        110.578,
+        32.04,
+        111.431,
+        32.761
+      ],
+      "precision": "地域示意",
+      "sources": [
+        "DILA-PL000000026781"
+      ],
+      "presenceBasis": "他登天柱峰金顶，又访南岩、五龙宫等处，记下沿途地形与植物。",
+      "notes": "日记中的太和山对应武当山；金顶、南岩等处的先后仍见原条。",
+      "coordinateMethod": "地名参照周围约40公里为示意尺度；圈的中心不是人物位置。",
+      "checkedAt": "2026-11-05"
+    },
+    "xuxiake-028": {
+      "name": "浑源悬空寺一带",
+      "bounds": [
+        113.688,
+        39.64,
+        113.735,
+        39.676
+      ],
+      "precision": "地域示意",
+      "sources": [
+        "DILA-PL000000058268"
+      ],
+      "presenceBasis": "沿峡谷到悬空寺，游寺后继续向恒山山门走，准备第二天登顶。",
+      "notes": "圈出日记所记的悬空寺附近；此条之后才向恒山山门走。",
+      "coordinateMethod": "地名参照周围约2公里为示意尺度；圈的中心不是人物位置。",
+      "checkedAt": "2026-11-05"
+    },
+    "xuxiake-006": {
+      "name": "苏州虎丘一带",
+      "bounds": [
+        120.557,
+        31.319,
+        120.599,
+        31.355
+      ],
+      "precision": "地域示意",
+      "sources": [
+        "DILA-PL000000010007"
+      ],
+      "presenceBasis": "支持本人经过虎丘、停泊半塘。",
+      "notes": "这里标的是途中经过的虎丘，当晚泊舟的半塘另有其地。",
+      "coordinateMethod": "地名参照周围约2公里为示意尺度；圈的中心不是人物位置。",
+      "checkedAt": "2026-11-05"
+    },
+    "xuxiake-007": {
+      "name": "桂林城周边山水",
+      "bounds": [
+        110.095,
+        25.099,
+        110.494,
+        25.459
+      ],
+      "precision": "地域示意",
+      "sources": [
+        "DILA-PL000000032234"
+      ],
+      "presenceBasis": "支持1637年桂林府地区考察。",
+      "notes": "《桂林与我太有缘》列有伏波山、象鼻山等游处。这里只圈出府城附近的一段；闰四月初八所到的是全州，不能作到城之日。",
+      "coordinateMethod": "地名参照周围约20公里为示意尺度；圈的中心不是人物位置。",
+      "checkedAt": "2026-11-05"
+    },
+    "liqingzhao-003": {
+      "name": "宋青州一带",
+      "bounds": [
+        118.263,
+        36.507,
+        118.712,
+        36.867
+      ],
+      "precision": "地域示意",
+      "sources": [
+        "DILA-PL000000021108"
+      ],
+      "presenceBasis": "年表支持这一阶段移居、生活于青州。",
+      "notes": "按年表所记的屏居地域，选用京东东路的青州，不细定宅址。",
+      "coordinateMethod": "地名参照周围约20公里为示意尺度；圈的中心不是人物位置。",
+      "checkedAt": "2026-11-05"
+    },
+    "liqingzhao-004": {
+      "name": "宋莱州一带",
+      "bounds": [
+        119.721,
+        36.994,
+        120.174,
+        37.354
+      ],
+      "precision": "地域示意",
+      "sources": [
+        "DILA-PL000000020928"
+      ],
+      "presenceBasis": "支持赴莱州。",
+      "notes": "圈出年表所记的团聚地，不推测她进城的日子或居住的街巷。",
+      "coordinateMethod": "地名参照周围约20公里为示意尺度；圈的中心不是人物位置。",
+      "checkedAt": "2026-11-05"
+    },
+    "liqingzhao-005": {
+      "name": "江宁、建康一带",
+      "bounds": [
+        118.565,
+        31.871,
+        118.991,
+        32.232
+      ],
+      "precision": "地域示意",
+      "sources": [
+        "DILA-PL000000008977"
+      ],
+      "presenceBasis": "年表将到江宁系于1128春。",
+      "notes": "两次经历分别保留各自的系年依据。江宁与建康是这一带不同时间的称呼，图上不细定居所。",
+      "coordinateMethod": "地名参照周围约20公里为示意尺度；圈的中心不是人物位置。",
+      "checkedAt": "2026-11-05"
+    },
+    "liqingzhao-009": {
+      "name": "江宁、建康一带",
+      "bounds": [
+        118.565,
+        31.871,
+        118.991,
+        32.232
+      ],
+      "precision": "地域示意",
+      "sources": [
+        "DILA-PL000000008977"
+      ],
+      "presenceBasis": "年表明确建康；后序记七月末得书后解舟下行及八月十八丧夫。",
+      "notes": "两次经历分别保留各自的系年依据。江宁与建康是这一带不同时间的称呼，图上不细定居所。",
+      "coordinateMethod": "地名参照周围约20公里为示意尺度；圈的中心不是人物位置。",
+      "checkedAt": "2026-11-05"
+    },
+    "qinliangyu-015": {
+      "name": "夔州一带",
+      "bounds": [
+        109.323,
+        30.874,
+        109.744,
+        31.234
+      ],
+      "precision": "地域示意",
+      "sources": [
+        "DILA-PL000000034523"
+      ],
+      "presenceBasis": "罗汝才军进入夔州后，她率军赶到，敌军撤离。",
+      "notes": "本传记驰援夔州。圈出奉节一带的历史地域，不能据此确定交战地点。",
+      "coordinateMethod": "地名参照周围约20公里为示意尺度；圈的中心不是人物位置。",
+      "checkedAt": "2026-11-05"
+    },
+    "qinliangyu-010": {
+      "name": "夔州一带",
+      "bounds": [
+        109.323,
+        30.874,
+        109.744,
+        31.234
+      ],
+      "precision": "地域示意",
+      "sources": [
+        "DILA-PL000000034523"
+      ],
+      "presenceBasis": "支持本人驰援与战败。",
+      "notes": "本传记驰援夔州。圈出奉节一带的历史地域，不能据此确定交战地点。",
+      "coordinateMethod": "地名参照周围约20公里为示意尺度；圈的中心不是人物位置。",
+      "checkedAt": "2026-11-05"
+    },
+    "qiujin-016": {
+      "name": "绍兴城内",
+      "bounds": [
+        120.379,
+        29.823,
+        120.795,
+        30.183
+      ],
+      "precision": "地域示意",
+      "sources": [
+        "DILA-PL000000013252"
+      ],
+      "presenceBasis": "她在大通学堂事件中被捕。上海博物馆保存的相关案卷包含署有她指印的堂讯供状。；明确记7月13日学堂被围，秋瑾被捕；地图只标被捕处，不代指受审处。",
+      "notes": "文物部门记她在大通学堂被捕。先圈出绍兴城一带，不把城中的参照位置当作校舍或堂讯地点。",
+      "coordinateMethod": "地名参照周围约20公里为示意尺度；圈的中心不是人物位置。",
+      "checkedAt": "2026-11-05"
+    },
+    "qinliangyu-002": {
+      "name": "邓坎（今凤冈南部）一带",
+      "bounds": [
+        107.5,
+        27.52,
+        107.96,
+        27.96
+      ],
+      "precision": "县域南部示意",
+      "sources": [
+        "CQ-DENGKAN",
+        "FG-GEO"
+      ],
+      "presenceBasis": "随马千乘出征时，她另统精兵五百。部队与周国柱合守邓坎。",
+      "notes": "方志把邓坎放在今凤冈南部。两次战事沿用这一地域，圈内没有标营寨，也没有标追击的终点。",
+      "coordinateMethod": "取现代凤冈经纬范围的南部作粗略阅读框，不重建寨界。",
+      "checkedAt": "2026-11-05"
+    },
+    "qinliangyu-003": {
+      "name": "邓坎（今凤冈南部）一带",
+      "bounds": [
+        107.5,
+        27.52,
+        107.96,
+        27.96
+      ],
+      "precision": "县域南部示意",
+      "sources": [
+        "CQ-DENGKAN",
+        "FG-GEO"
+      ],
+      "presenceBasis": "趁官军过年，对方发起夜袭；秦良玉夫妇迎击并追逐来军。",
+      "notes": "方志把邓坎放在今凤冈南部。两次战事沿用这一地域，圈内没有标营寨，也没有标追击的终点。",
+      "coordinateMethod": "取现代凤冈经纬范围的南部作粗略阅读框，不重建寨界。",
+      "checkedAt": "2026-11-05"
     }
   }
 }

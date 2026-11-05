@@ -1,6 +1,6 @@
-# 五人地图位置核验 · 2026-11-04
+# 五人地图位置核验 · 2026-11-05
 
-目前共136条年度索引经历、20段未定年经历；64条年度记录带地图位置。其中48条附独立地理核验，16条仍沿用原型城市或区域近似点。另有1条仅知地区的经历用区域阴影展示；其余71条年度经历只展示文字。
+目前共136条年度索引经历、20段未定年经历；64条年度记录带地图位置。其中48条附独立地理核验，16条仍沿用原型城市或区域近似点。另有22条仅知地区的经历用区域阴影展示；其余50条年度经历只展示文字。
 
 保留来源坐标体系说明。DILA提示旧Z码使用GRS67，本轮未做米级基准转换；统一取到0.01度且只按区域示意使用，不声称WGS84精密定位。区域点不是活动范围边界。
 
@@ -19,6 +19,12 @@ DILA新增地名的摘录、版本与许可见 [geography-extract.json](geograph
   受戒发生在成都；现有材料未确定具体寺院。
   到访依据：[慧立、彦悰《大唐大慈恩寺三藏法师传》](https://buddhism.lib.ntu.edu.tw/FULLTEXT/sutra/chi_pdf/sutra20/T50n2053.pdf) · 卷一，成都受具段，电子本第5页
   地理依据：[DILA 地名规范资料库：唐成都](https://authority.dila.edu.tw/place/search.php?code=PL34785)
+
+- **xuanzang-004 · 645 · 赴洛阳见唐太宗**：唐洛阳一带（地域示意；经度、纬度 仅示意范围）。
+  支持本人到洛阳并受召见。
+  传记记赴洛阳见唐太宗；圈出唐洛阳县所在地域，未确定受召的殿址。
+  到访依据：[慧立、彦悰《大唐大慈恩寺三藏法师传》](https://buddhism.lib.ntu.edu.tw/FULLTEXT/sutra/chi_pdf/sutra20/T50n2053.pdf) · 洛阳宫、仪鸾殿段
+  地理依据：[DILA 地名规范资料库：洛陽縣（PL000000023582）](https://authority.dila.edu.tw/place/search.php?code=PL000000023582)
 
 - **xuanzang-005 · 645 · 回长安译经**：唐长安弘福寺旧址一带（历史寺址区域；经度、纬度 [108.91, 34.28]）。
   《三藏法师传》明确自洛阳回长安后居弘福寺；依唐旧址定位。
@@ -69,6 +75,12 @@ DILA新增地名的摘录、版本与许可见 [geography-extract.json](geograph
   地理依据：[DILA 地名规范资料库：玉华宫／玉华寺](https://authority.dila.edu.tw/place/search.php?code=PL000000042745)；[陕西省文物局：玉华宫遗址保护规划（2021）](https://wwj.shaanxi.gov.cn/zfxxgk/fdzdgknr/ghxx/202210/P020221008671709181971.pdf)
 
 ### 徐霞客
+
+- **xuxiake-002 · 1613 · 从宁海出西门**：宁海一带（地域示意；经度、纬度 仅示意范围）。
+  支持从宁海出发，宿梁隍山。
+  两次日记都从宁海起笔，圈出的是出发地；当晚的住处另见日条。
+  到访依据：[徐霞客《游天台山日记》](https://zh.wikisource.org/wiki/徐霞客遊記/遊天台山日記) · 日记开篇
+  地理依据：[DILA 地名规范资料库：寧海（PL000000012384）](https://authority.dila.edu.tw/place/search.php?code=PL000000012384)
 
 - **xuxiake-003 · 1613 · 山路入天台，夜宿弥陀庵**：天台弥陀庵废址一带（废址区域；经度、纬度 [121.16, 29.2]）。
   日记四月初一明确暮抵弥陀庵；与去国清寺的同行者分开记录。
@@ -135,6 +147,48 @@ DILA新增地名的摘录、版本与许可见 [geography-extract.json](geograph
   依据到黄岩、出南门的日条，采用地区参照；南门和八岙仍未定位。
   到访依据：[徐霞客《遊雁宕山日記》](https://zh.wikisource.org/wiki/徐霞客遊記/遊雁宕山日記) · 开篇初九、初十日条；承接XX-2癸丑年
   地理依据：[DILA 地名规范资料库：黄岩](https://authority.dila.edu.tw/place/search.php?code=PL14347)
+
+- **xuxiake-014 · 1613 · 游灵峰、宿寺**：雁荡山一带（地域示意；经度、纬度 仅示意范围）。
+  他经大荆、石梁洞进入灵峰，游洞后回寺住宿。
+  灵峰之游可以放回乐清雁荡山的山域，夜宿的寺院还没有落实到旧址。
+  到访依据：[徐霞客《遊雁宕山日記》](https://zh.wikisource.org/wiki/徐霞客遊記/遊雁宕山日記) · 十一日条
+  地理依据：[DILA 地名规范资料库：雁蕩山（PL000000012620）](https://authority.dila.edu.tw/place/search.php?code=PL000000012620)
+
+- **xuxiake-015 · 1616 · 第一次黄山之游**：安徽黄山一带（地域示意；经度、纬度 仅示意范围）。
+  他从汤口入山，经过积雪，游温泉并宿祥符寺。
+  按日记所游的安徽黄山标示山域。同游一座山的几段经历，各自保留日条和去处。
+  到访依据：[徐霞客《遊黃山日記》](https://zh.wikisource.org/wiki/徐霞客遊記/遊黃山日記) · 初三日汤口、温泉、祥符寺段
+  地理依据：[DILA 地名规范资料库：黃山（PL000000015601）](https://authority.dila.edu.tw/place/search.php?code=PL000000015601)
+
+- **xuxiake-017 · 1618 · 攀登天都峰**：安徽黄山一带（地域示意；经度、纬度 仅示意范围）。
+  徐霞客与僧人澄源等攀登天都峰，当晚回文殊院。
+  按日记所游的安徽黄山标示山域。同游一座山的几段经历，各自保留日条和去处。
+  到访依据：[徐霞客《後遊黃山日記》](https://zh.wikisource.org/wiki/徐霞客遊記/後遊黃山日記) · 初四日条
+  地理依据：[DILA 地名规范资料库：黃山（PL000000015601）](https://authority.dila.edu.tw/place/search.php?code=PL000000015601)
+
+- **xuxiake-018 · 1618 · 登莲花峰，比较群峰**：安徽黄山一带（地域示意；经度、纬度 仅示意范围）。
+  他登上莲花峰，从高处观察诸峰，随后转往后海和狮子林。
+  按日记所游的安徽黄山标示山域。同游一座山的几段经历，各自保留日条和去处。
+  到访依据：[徐霞客《後遊黃山日記》](https://zh.wikisource.org/wiki/徐霞客遊記/後遊黃山日記) · 初五日条
+  地理依据：[DILA 地名规范资料库：黃山（PL000000015601）](https://authority.dila.edu.tw/place/search.php?code=PL000000015601)
+
+- **xuxiake-021 · 1623 · 登临华山诸峰**：华阴华山一带（地域示意；经度、纬度 仅示意范围）。
+  沿山路、铁索登华山，在迎阳洞留宿，次日再游南峰、西峰等处。
+  日记记登临华山诸峰；这里选用陕西华阴的华山，未复原沿途栈道。
+  到访依据：[徐霞客《遊太華山日記》](https://zh.wikisource.org/wiki/徐霞客遊記/遊太華山日記) · 初一、初二日条
+  地理依据：[DILA 地名规范资料库：華山（PL000000043539）](https://authority.dila.edu.tw/place/search.php?code=PL000000043539)
+
+- **xuxiake-023 · 1623 · 登金顶，访山中宫观**：武当山一带（地域示意；经度、纬度 仅示意范围）。
+  他登天柱峰金顶，又访南岩、五龙宫等处，记下沿途地形与植物。
+  日记中的太和山对应武当山；金顶、南岩等处的先后仍见原条。
+  到访依据：[徐霞客《遊太和山日記》](https://zh.wikisource.org/wiki/徐霞客遊記/遊太和山日記) · 十三至十五日条
+  地理依据：[DILA 地名规范资料库：武當山（PL000000026781）](https://authority.dila.edu.tw/place/search.php?code=PL000000026781)
+
+- **xuxiake-041 · 1632 · 再游天台，从宁海启程**：宁海一带（地域示意；经度、纬度 仅示意范围）。
+  从宁海骑马出发，四十五里后在岔路口住宿。
+  两次日记都从宁海起笔，圈出的是出发地；当晚的住处另见日条。
+  到访依据：[徐霞客《后游天台山日记》](https://zh.wikisource.org/zh-hans/徐霞客遊記/後遊天台山日記) · 壬申三月十四日条
+  地理依据：[DILA 地名规范资料库：寧海（PL000000012384）](https://authority.dila.edu.tw/place/search.php?code=PL000000012384)
 
 - **xuxiake-042 · 1632 · 重过旧路，来到天封寺**：天台天封寺一带（寺院区域；经度、纬度 [121.1, 29.24]）。
   《后游天台山日记》壬申三月十五日条：经松门岭、箸竹岭庵，见到昔日弥陀庵已经荒废；继续翻岭，来到天封寺。
@@ -208,6 +262,12 @@ DILA新增地名的摘录、版本与许可见 [geography-extract.json](geograph
   到访依据：[徐霞客《遊五台山日記》](https://zh.wikisource.org/wiki/徐霞客遊記/遊五台山日記) · 初六至初八日条
   地理依据：[DILA 地名规范资料库：五台山](https://authority.dila.edu.tw/place/search.php?code=PL000000005250)
 
+- **xuxiake-028 · 1633 · 进入恒山峡谷**：浑源悬空寺一带（地域示意；经度、纬度 仅示意范围）。
+  沿峡谷到悬空寺，游寺后继续向恒山山门走，准备第二天登顶。
+  圈出日记所记的悬空寺附近；此条之后才向恒山山门走。
+  到访依据：[徐霞客《遊恒山日記》](https://zh.wikisource.org/wiki/徐霞客遊記/遊恒山日記) · 初十日条
+  地理依据：[DILA 地名规范资料库：懸空寺（PL000000058268）](https://authority.dila.edu.tw/place/search.php?code=PL000000058268)
+
 - **xuxiake-029 · 1633 · 登顶后下山**：恒山—浑源一带（山域与邻近城镇；经度、纬度 [113.73, 39.67]）。
   《游恒山日记》记登绝顶、下山至浑源州西关；用区域点表示这一合并经历。
   依日记登恒山后至浑源西关的顺序标注整个阶段，不把参考点当西关城门。
@@ -220,7 +280,37 @@ DILA新增地名的摘录、版本与许可见 [geography-extract.json](geograph
   到访依据：[徐霞客《浙游日记》](https://zh.wikisource.org/wiki/徐霞客遊記/浙遊日記) · 九月二十日条
   地理依据：[DILA 地名规范资料库：明无锡](https://authority.dila.edu.tw/place/search.php?code=PL000000009358)
 
+- **xuxiake-006 · 1636 · 经过虎丘，泊舟半塘**：苏州虎丘一带（地域示意；经度、纬度 仅示意范围）。
+  支持本人经过虎丘、停泊半塘。
+  这里标的是途中经过的虎丘，当晚泊舟的半塘另有其地。
+  到访依据：[徐霞客《浙游日记》](https://zh.wikisource.org/wiki/徐霞客遊記/浙遊日記) · 九月二十一日条；二十二日苏州城门段
+  地理依据：[DILA 地名规范资料库：虎丘山（PL000000010007）](https://authority.dila.edu.tw/place/search.php?code=PL000000010007)
+
+- **xuxiake-007 · 1637 · 考察桂林山水**：桂林城周边山水（地域示意；经度、纬度 仅示意范围）。
+  支持1637年桂林府地区考察。
+  《桂林与我太有缘》列有伏波山、象鼻山等游处。这里只圈出府城附近的一段；闰四月初八所到的是全州，不能作到城之日。
+  到访依据：[中国旅游报：徐霞客的桂林足迹](https://www.ctnews.com.cn/paper/content/202205/24/content_71395.html) · 桂林游踪介绍
+  地理依据：[DILA 地名规范资料库：桂林府（PL000000032234）](https://authority.dila.edu.tw/place/search.php?code=PL000000032234)
+
 ### 李清照
+
+- **liqingzhao-003 · 1108 · 屏居乡里的岁月**：宋青州一带（地域示意；经度、纬度 仅示意范围）。
+  年表支持这一阶段移居、生活于青州。
+  按年表所记的屏居地域，选用京东东路的青州，不细定宅址。
+  到访依据：[《李清照志》年表，山东地方志在线存档](https://shandong-chorography.org/database/c1a/section/3/article/9/) · 1107—1108年条
+  地理依据：[DILA 地名规范资料库：青州（PL000000021108）](https://authority.dila.edu.tw/place/search.php?code=PL000000021108)
+
+- **liqingzhao-004 · 1121 · 赴莱州与丈夫团聚**：宋莱州一带（地域示意；经度、纬度 仅示意范围）。
+  支持赴莱州。
+  圈出年表所记的团聚地，不推测她进城的日子或居住的街巷。
+  到访依据：[《李清照志》年表，山东地方志在线存档](https://shandong-chorography.org/database/c1a/section/3/article/9/) · 1121年条
+  地理依据：[DILA 地名规范资料库：萊州（PL000000020928）](https://authority.dila.edu.tw/place/search.php?code=PL000000020928)
+
+- **liqingzhao-005 · 1128 · 南渡后的居处**：江宁、建康一带（地域示意；经度、纬度 仅示意范围）。
+  年表将到江宁系于1128春。
+  两次经历分别保留各自的系年依据。江宁与建康是这一带不同时间的称呼，图上不细定居所。
+  到访依据：[《李清照志》年表，山东地方志在线存档](https://shandong-chorography.org/database/c1a/section/3/article/9/) · 1127—1128年条
+  地理依据：[DILA 地名规范资料库：建康府（PL000000008977）](https://authority.dila.edu.tw/place/search.php?code=PL000000008977)
 
 - **liqingzhao-006 · 1129 · 乘舟上行**：芜湖城镇一带（城市区域；经度、纬度 [118.37, 31.33]）。
   到访依据见本条《金石录后序》或《李清照志》年表；地点只采用城镇区域，不推定具体宅址。
@@ -239,6 +329,12 @@ DILA新增地名的摘录、版本与许可见 [geography-extract.json](geograph
   池阳对应池州一带；未找到当年居所位置。
   到访依据：[李清照《金石录后序》](https://zh.wikisource.org/zh-hant/金石錄後序_(李清照)) · “既驻家池阳”前后
   地理依据：[DILA 地名规范资料库：池阳（今池州）一带（PL000000016629）](https://authority.dila.edu.tw/place/search.php?code=PL000000016629)
+
+- **liqingzhao-009 · 1129 · 赴病中的赵明诚身边**：江宁、建康一带（地域示意；经度、纬度 仅示意范围）。
+  年表明确建康；后序记七月末得书后解舟下行及八月十八丧夫。
+  两次经历分别保留各自的系年依据。江宁与建康是这一带不同时间的称呼，图上不细定居所。
+  到访依据：[《李清照志》年表，山东地方志在线存档](https://shandong-chorography.org/database/c1a/section/3/article/9/) · 1129年条
+  地理依据：[DILA 地名规范资料库：建康府（PL000000008977）](https://authority.dila.edu.tw/place/search.php?code=PL000000008977)
 
 - **liqingzhao-010 · 1130 · 海路避乱中的一站**：温州城镇一带（城市区域；经度、纬度 [120.66, 28.02]）。
   到访依据见本条《金石录后序》或《李清照志》年表；地点只采用城镇区域，不推定具体宅址。
@@ -278,6 +374,18 @@ DILA新增地名的摘录、版本与许可见 [geography-extract.json](geograph
 
 ### 秦良玉
 
+- **qinliangyu-002 · 1599 · 统五百人，参与扼守邓坎**：邓坎（今凤冈南部）一带（县域南部示意；经度、纬度 仅示意范围）。
+  随马千乘出征时，她另统精兵五百。部队与周国柱合守邓坎。
+  方志把邓坎放在今凤冈南部。两次战事沿用这一地域，圈内没有标营寨，也没有标追击的终点。
+  到访依据：[《明史》卷二百七十·秦良玉传](https://zh.wikisource.org/wiki/明史/卷270) · “良玉别统精卒五百”至“与副将周国柱扼贼邓坎”
+  地理依据：[重庆市地方志办公室：重庆历史政德人物——秦良玉](https://dfz.cq.gov.cn/zqlswh/rwby_417819/202311/t20231102_12511084.html)；[凤冈县概况 · 地理位置](https://m.cyw.com/mudidi/gaikuang/532)
+
+- **qinliangyu-003 · 1600 · 正月初二，迎击来袭**：邓坎（今凤冈南部）一带（县域南部示意；经度、纬度 仅示意范围）。
+  趁官军过年，对方发起夜袭；秦良玉夫妇迎击并追逐来军。
+  方志把邓坎放在今凤冈南部。两次战事沿用这一地域，圈内没有标营寨，也没有标追击的终点。
+  到访依据：[《明史》卷二百七十·秦良玉传](https://zh.wikisource.org/wiki/明史/卷270) · “明年正月二日”至“追入贼境”
+  地理依据：[重庆市地方志办公室：重庆历史政德人物——秦良玉](https://dfz.cq.gov.cn/zqlswh/rwby_417819/202311/t20231102_12511084.html)；[凤冈县概况 · 地理位置](https://m.cyw.com/mudidi/gaikuang/532)
+
 - **qinliangyu-005 · 1621 · 亲自率兵至榆关**：榆关（今山海关）一带（关城区域；经度、纬度 [119.75, 40.01]）。
   《明史》秦良玉传明确本人身督精兵抵榆关；地方志说明古今对应。
   可确认本人抵榆关；未核驻营处，也不把兄弟的浑河战场并入。
@@ -289,6 +397,18 @@ DILA新增地名的摘录、版本与许可见 [geography-extract.json](geograph
   采用明代石砫司治参照；不采用元代水车坝旧治，也不认作秦良玉府宅或军营。
   到访依据：[《明史》卷二百七十·秦良玉传](https://zh.wikisource.org/wiki/明史/卷270) · “部议再征兵二千。良玉与民屏驰还”段
   地理依据：[DILA 地名规范资料库：石砫司治一带（PL000000034596）](https://authority.dila.edu.tw/place/search.php?code=PL000000034596)
+
+- **qinliangyu-015 · 1640 · 从巫山转援夔州**：夔州一带（地域示意；经度、纬度 仅示意范围）。
+  罗汝才军进入夔州后，她率军赶到，敌军撤离。
+  本传记驰援夔州。圈出奉节一带的历史地域，不能据此确定交战地点。
+  到访依据：[《明史》卷二百七十·秦良玉传](https://zh.wikisource.org/wiki/明史/卷270) · 秦良玉传，“汝才犯夔州，良玉师至乃去”
+  地理依据：[DILA 地名规范资料库：夔州府（PL000000034523）](https://authority.dila.edu.tw/place/search.php?code=PL000000034523)
+
+- **qinliangyu-010 · 1644 · 驰援夔州**：夔州一带（地域示意；经度、纬度 仅示意范围）。
+  支持本人驰援与战败。
+  本传记驰援夔州。圈出奉节一带的历史地域，不能据此确定交战地点。
+  到访依据：[《明史》卷二百七十·秦良玉传](https://zh.wikisource.org/wiki/明史/卷270) · “驰援…夔州”战败段
+  地理依据：[DILA 地名规范资料库：夔州府（PL000000034523）](https://authority.dila.edu.tw/place/search.php?code=PL000000034523)
 
 - **qinliangyu-011 · 1644 · 回守石砫**：石砫司治一带（城镇区域；经度、纬度 [108.13, 29.99]）。
   《明史》秦良玉传明确返家或回守石砫；只标司治地域，不据任命推定驻地。
@@ -316,6 +436,12 @@ DILA新增地名的摘录、版本与许可见 [geography-extract.json](geograph
   到访依据：[湖州市档案馆：清代大事记](https://daj.huzhou.gov.cn/dawh/ldds/20080422/i3926625.html) · 光绪三十二年条
   地理依据：[UNESCO：大运河遗产组成部分地图](https://whc.unesco.org/en/list/1443/maps/)；[《南浔志》卷三：浔溪女学](https://www.shidianguji.com/book/LG2NXZ/chapter/1lxui6kbg8mk2)
 
+- **qiujin-016 · 1907 · 在大通学堂被捕**：绍兴城内（地域示意；经度、纬度 仅示意范围）。
+  她在大通学堂事件中被捕。上海博物馆保存的相关案卷包含署有她指印的堂讯供状。；明确记7月13日学堂被围，秋瑾被捕；地图只标被捕处，不代指受审处。
+  文物部门记她在大通学堂被捕。先圈出绍兴城一带，不把城中的参照位置当作校舍或堂讯地点。
+  到访依据：[上海博物馆：秋瑾供词](https://www.shanghaimuseum.net/mu/frontend/pg/m/article/id/CI00005081) · 藏品“秋瑾供词”说明；[大通学堂：市文广旅游局（市文物局）介绍](https://lib.zjsru.edu.cn/info/1767/44676.htm) · 1907年7月13日段
+  地理依据：[DILA 地名规范资料库：紹興府（PL000000013252）](https://authority.dila.edu.tw/place/search.php?code=PL000000013252)
+
 ## 继续保留文字的记录
 
 这里只列本轮重点检查的限制；其余未列入本轮定位清单的经历沿用原有待核状态。
@@ -326,12 +452,9 @@ DILA新增地名的摘录、版本与许可见 [geography-extract.json](geograph
 - xuanzang-013：筹建佛塔是活动记录，不能据奏请时间确定人物在塔址。
 - xuxiake-016：白岳至江村的合并行程尚未拆解，江村存在同名问题。
 - xuxiake-022：均州旧城与现代丹江口的关系需核对，不直接用现代市中心代替。
-- xuxiake-007：桂林府范围大，进入全州不能视为抵桂林府城。
 - liqingzhao-026：藏书毁于青州时，她已南渡。
 - liqingzhao-027：洪州是运送藏品的目的地，未证明本人抵达。
 - liqingzhao-025：1149／1150有分歧，见面地点也未明确。
-- qinliangyu-002：只有播州战区，不能用遵义城代替本人驻营处。
-- qinliangyu-003：关寨旧址未定，继续保留文字。
 - qinliangyu-006：南坪关不能直接按现代南坪街道同名定位。
 - qinliangyu-008：太平古地望尚未核准，不按现代同名地点落点。
 - qinliangyu-016：马家寨、留马垭旧址尚未核准。
@@ -380,6 +503,22 @@ DILA新增地名的摘录、版本与许可见 [geography-extract.json](geograph
 - DILA-PL000000034596 · [DILA 地名规范资料库：石砫司治一带（PL000000034596）](https://authority.dila.edu.tw/place/search.php?code=PL000000034596)：核对官方XML快照 9dd2d95 中的地名、地理注记与参照坐标；CC BY-SA 3.0。只作区域参照。 查阅：2026-11-04。
 - DILA-PL000000012737 · [DILA 地名规范资料库：嘉兴城镇一带（PL000000012737）](https://authority.dila.edu.tw/place/search.php?code=PL000000012737)：核对官方XML快照 9dd2d95 中的地名、地理注记与参照坐标；CC BY-SA 3.0。只作区域参照。 查阅：2026-11-04。
 - AREA-HUNAN · [湖南省人民政府：湖南概况](https://www.hunan.gov.cn/hnszf/jxxx/hngk/hngk.html)：现代地理参照：东经108°47′—114°15′、北纬24°38′—30°08′。只用于湖南地区的示意范围，不当作1894年省界。 查阅：2026-11-04。
+- DILA-PL000000023582 · [DILA 地名规范资料库：洛陽縣（PL000000023582）](https://authority.dila.edu.tw/place/search.php?code=PL000000023582)：法鼓文理学院 XML 快照 9dd2d95，CC BY-SA 3.0。地名条目仅作地域参照。 查阅：2026-11-05。
+- DILA-PL000000012384 · [DILA 地名规范资料库：寧海（PL000000012384）](https://authority.dila.edu.tw/place/search.php?code=PL000000012384)：法鼓文理学院 XML 快照 9dd2d95，CC BY-SA 3.0。地名条目仅作地域参照。 查阅：2026-11-05。
+- DILA-PL000000012620 · [DILA 地名规范资料库：雁蕩山（PL000000012620）](https://authority.dila.edu.tw/place/search.php?code=PL000000012620)：法鼓文理学院 XML 快照 9dd2d95，CC BY-SA 3.0。地名条目仅作地域参照。 查阅：2026-11-05。
+- DILA-PL000000015601 · [DILA 地名规范资料库：黃山（PL000000015601）](https://authority.dila.edu.tw/place/search.php?code=PL000000015601)：法鼓文理学院 XML 快照 9dd2d95，CC BY-SA 3.0。地名条目仅作地域参照。 查阅：2026-11-05。
+- DILA-PL000000043539 · [DILA 地名规范资料库：華山（PL000000043539）](https://authority.dila.edu.tw/place/search.php?code=PL000000043539)：法鼓文理学院 XML 快照 9dd2d95，CC BY-SA 3.0。地名条目仅作地域参照。 查阅：2026-11-05。
+- DILA-PL000000026781 · [DILA 地名规范资料库：武當山（PL000000026781）](https://authority.dila.edu.tw/place/search.php?code=PL000000026781)：法鼓文理学院 XML 快照 9dd2d95，CC BY-SA 3.0。地名条目仅作地域参照。 查阅：2026-11-05。
+- DILA-PL000000058268 · [DILA 地名规范资料库：懸空寺（PL000000058268）](https://authority.dila.edu.tw/place/search.php?code=PL000000058268)：法鼓文理学院 XML 快照 9dd2d95，CC BY-SA 3.0。地名条目仅作地域参照。 查阅：2026-11-05。
+- DILA-PL000000010007 · [DILA 地名规范资料库：虎丘山（PL000000010007）](https://authority.dila.edu.tw/place/search.php?code=PL000000010007)：法鼓文理学院 XML 快照 9dd2d95，CC BY-SA 3.0。地名条目仅作地域参照。 查阅：2026-11-05。
+- DILA-PL000000032234 · [DILA 地名规范资料库：桂林府（PL000000032234）](https://authority.dila.edu.tw/place/search.php?code=PL000000032234)：法鼓文理学院 XML 快照 9dd2d95，CC BY-SA 3.0。地名条目仅作地域参照。 查阅：2026-11-05。
+- DILA-PL000000021108 · [DILA 地名规范资料库：青州（PL000000021108）](https://authority.dila.edu.tw/place/search.php?code=PL000000021108)：法鼓文理学院 XML 快照 9dd2d95，CC BY-SA 3.0。地名条目仅作地域参照。 查阅：2026-11-05。
+- DILA-PL000000020928 · [DILA 地名规范资料库：萊州（PL000000020928）](https://authority.dila.edu.tw/place/search.php?code=PL000000020928)：法鼓文理学院 XML 快照 9dd2d95，CC BY-SA 3.0。地名条目仅作地域参照。 查阅：2026-11-05。
+- DILA-PL000000008977 · [DILA 地名规范资料库：建康府（PL000000008977）](https://authority.dila.edu.tw/place/search.php?code=PL000000008977)：法鼓文理学院 XML 快照 9dd2d95，CC BY-SA 3.0。地名条目仅作地域参照。 查阅：2026-11-05。
+- DILA-PL000000034523 · [DILA 地名规范资料库：夔州府（PL000000034523）](https://authority.dila.edu.tw/place/search.php?code=PL000000034523)：法鼓文理学院 XML 快照 9dd2d95，CC BY-SA 3.0。地名条目仅作地域参照。 查阅：2026-11-05。
+- DILA-PL000000013252 · [DILA 地名规范资料库：紹興府（PL000000013252）](https://authority.dila.edu.tw/place/search.php?code=PL000000013252)：法鼓文理学院 XML 快照 9dd2d95，CC BY-SA 3.0。地名条目仅作地域参照。 查阅：2026-11-05。
+- CQ-DENGKAN · [重庆市地方志办公室：重庆历史政德人物——秦良玉](https://dfz.cq.gov.cn/zqlswh/rwby_417819/202311/t20231102_12511084.html)：文中将邓坎对应到今贵州凤冈南部；没有给出寨址四至。 查阅：2026-11-05。
+- FG-GEO · [凤冈县概况 · 地理位置](https://m.cyw.com/mudidi/gaikuang/532)：仅用于现代县域经纬的大致范围；邓坎的历史对应另据重庆市地方志办公室。 查阅：2026-11-05。
 
 ## 后续优先项
 

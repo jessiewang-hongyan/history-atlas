@@ -3,7 +3,7 @@
   "license": "CC BY-SA 3.0",
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
   "snapshotUrl": "https://github.com/DILA-edu/Authority-Databases/blob/9dd2d959255caf7c2406e4b68b961af0246c046d/authority_place/Buddhist_Studies_Place_Authority.xml",
-  "checkedAt": "2026-11-04",
+  "checkedAt": "2026-11-05",
   "entries": [
     {
       "code": "PL000000056974",
@@ -354,6 +354,250 @@
         30.77
       ],
       "interpretation": "地名可定位到嘉兴；到访时间仍依据后人回忆，保留附条件说明。"
+    },
+    {
+      "code": "PL000000023582",
+      "names": [
+        "洛陽縣",
+        "永昌縣"
+      ],
+      "referenceCoordinates": [
+        112.483,
+        34.6904
+      ],
+      "usedCoordinates": [
+        112.48,
+        34.69
+      ],
+      "interpretation": "传记记赴洛阳见唐太宗；圈出唐洛阳县所在地域，未确定受召的殿址。"
+    },
+    {
+      "code": "PL000000012384",
+      "names": [
+        "寧海",
+        "緱城",
+        "猴城"
+      ],
+      "referenceCoordinates": [
+        121.4343,
+        29.2822
+      ],
+      "usedCoordinates": [
+        121.43,
+        29.28
+      ],
+      "interpretation": "两次日记都从宁海起笔，圈出的是出发地；当晚的住处另见日条。"
+    },
+    {
+      "code": "PL000000012620",
+      "names": [
+        "雁蕩山",
+        "雁宕",
+        "雁山",
+        "鴈山"
+      ],
+      "referenceCoordinates": [
+        121.091516,
+        28.354898
+      ],
+      "usedCoordinates": [
+        121.09,
+        28.35
+      ],
+      "interpretation": "灵峰之游可以放回乐清雁荡山的山域，夜宿的寺院还没有落实到旧址。"
+    },
+    {
+      "code": "PL000000015601",
+      "names": [
+        "黃山",
+        "黔山",
+        "華山",
+        "小華山"
+      ],
+      "referenceCoordinates": [
+        118.157306,
+        30.124349
+      ],
+      "usedCoordinates": [
+        118.16,
+        30.12
+      ],
+      "interpretation": "按日记所游的安徽黄山标示山域。同游一座山的几段经历，各自保留日条和去处。"
+    },
+    {
+      "code": "PL000000043539",
+      "names": [
+        "華山",
+        "西嶽",
+        "太華",
+        "華嶽",
+        "泰華",
+        "華岳",
+        "蓮嶽",
+        "華陰山"
+      ],
+      "referenceCoordinates": [
+        110.081023,
+        34.463345
+      ],
+      "usedCoordinates": [
+        110.08,
+        34.46
+      ],
+      "interpretation": "日记记登临华山诸峰；这里选用陕西华阴的华山，未复原沿途栈道。"
+    },
+    {
+      "code": "PL000000026781",
+      "names": [
+        "武當山",
+        "太和山",
+        "仙室山",
+        "太嶽山",
+        "太山",
+        "大嶽",
+        "耑山",
+        "大嶽太和山",
+        "太岳",
+        "太嶽",
+        "謝羅山"
+      ],
+      "referenceCoordinates": [
+        111.004508,
+        32.400756
+      ],
+      "usedCoordinates": [
+        111.0,
+        32.4
+      ],
+      "interpretation": "日记中的太和山对应武当山；金顶、南岩等处的先后仍见原条。"
+    },
+    {
+      "code": "PL000000058268",
+      "names": [
+        "懸空寺"
+      ],
+      "referenceCoordinates": [
+        113.711875,
+        39.65812
+      ],
+      "usedCoordinates": [
+        113.71,
+        39.66
+      ],
+      "interpretation": "圈出日记所记的悬空寺附近；此条之后才向恒山山门走。"
+    },
+    {
+      "code": "PL000000010007",
+      "names": [
+        "虎丘山",
+        "海湧山",
+        "虎邱山",
+        "虎阜山",
+        "海湧峰",
+        "武丘山"
+      ],
+      "referenceCoordinates": [
+        120.577709,
+        31.337283
+      ],
+      "usedCoordinates": [
+        120.58,
+        31.34
+      ],
+      "interpretation": "这里标的是途中经过的虎丘，当晚泊舟的半塘另有其地。"
+    },
+    {
+      "code": "PL000000032234",
+      "names": [
+        "桂林府"
+      ],
+      "referenceCoordinates": [
+        110.2945,
+        25.2792
+      ],
+      "usedCoordinates": [
+        110.29,
+        25.28
+      ],
+      "interpretation": "《桂林与我太有缘》列有伏波山、象鼻山等游处。这里只圈出府城附近的一段；闰四月初八所到的是全州，不能作到城之日。"
+    },
+    {
+      "code": "PL000000021108",
+      "names": [
+        "青州",
+        "青社"
+      ],
+      "referenceCoordinates": [
+        118.4878,
+        36.6869
+      ],
+      "usedCoordinates": [
+        118.49,
+        36.69
+      ],
+      "interpretation": "按年表所记的屏居地域，选用京东东路的青州，不细定宅址。"
+    },
+    {
+      "code": "PL000000020928",
+      "names": [
+        "萊州"
+      ],
+      "referenceCoordinates": [
+        119.9476,
+        37.1743
+      ],
+      "usedCoordinates": [
+        119.95,
+        37.17
+      ],
+      "interpretation": "圈出年表所记的团聚地，不推测她进城的日子或居住的街巷。"
+    },
+    {
+      "code": "PL000000008977",
+      "names": [
+        "建康府",
+        "金陵"
+      ],
+      "referenceCoordinates": [
+        118.778,
+        32.0514
+      ],
+      "usedCoordinates": [
+        118.78,
+        32.05
+      ],
+      "interpretation": "两次经历分别保留各自的系年依据。江宁与建康是这一带不同时间的称呼，图上不细定居所。"
+    },
+    {
+      "code": "PL000000034523",
+      "names": [
+        "夔州府"
+      ],
+      "referenceCoordinates": [
+        109.5334,
+        31.0541
+      ],
+      "usedCoordinates": [
+        109.53,
+        31.05
+      ],
+      "interpretation": "本传记驰援夔州。圈出奉节一带的历史地域，不能据此确定交战地点。"
+    },
+    {
+      "code": "PL000000013252",
+      "names": [
+        "紹興府",
+        "越州"
+      ],
+      "referenceCoordinates": [
+        120.5871,
+        30.0031
+      ],
+      "usedCoordinates": [
+        120.59,
+        30.0
+      ],
+      "interpretation": "文物部门记她在大通学堂被捕。先圈出绍兴城一带，不把城中的参照位置当作校舍或堂讯地点。"
     }
   ]
 }

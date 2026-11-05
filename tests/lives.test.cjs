@@ -53,6 +53,10 @@ assert.equal(records.get('liqingzhao-027').area,null); // shipment is not a pers
 assert.equal(records.get('qinliangyu-019').area,null); // unfulfilled journey
 let areas=0;
 for(const n of records.values())if(n.area){areas++;const [w,s,e,north]=n.area.bounds;assert.ok([w,s,e,north].every(Number.isFinite));assert.ok(w<e&&s<north);assert.ok(n.area.note);}
-assert.equal(areas,49);
+assert.equal(areas,70);
 for(const id of Object.keys(review.withheld))assert.equal(records.get(id).area,null,id);
-console.log('PASS: 49 regional displays, including a province-only record without a point; unvisited places excluded');
+console.log('PASS: 70 regional displays, including a province-only record without a point; unvisited places excluded');
+
+for(const [id,a] of Object.entries(review.areas)){const n=records.get(id);assert.equal(n.xy,null,id);assert.ok(n.area,id);assert.ok(a.sources.every(s=>review.sources[s]?.url),id);}
+assert.equal(records.get('qinliangyu-002').area.name,'邓坎（今凤冈南部）一带');
+assert.equal(records.get('qinliangyu-021').area,null);

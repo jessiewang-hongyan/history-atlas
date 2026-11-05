@@ -60,7 +60,7 @@ episodes=sum(len(p['episodes']) for p in d['people'])
 markers=sum(bool(r['displayXY']) for p in d['people'] for r in p['records'])
 reviewed=len(geo['records'])
 area_only=len(geo.get('areas',{}))
-lines=['# 五人地图位置核验 · 2026-11-04','',f'目前共{total}条年度索引经历、{episodes}段未定年经历；{markers}条年度记录带地图位置。其中{reviewed}条附独立地理核验，{markers-reviewed}条仍沿用原型城市或区域近似点。另有{area_only}条仅知地区的经历用区域阴影展示；其余{total-markers-area_only}条年度经历只展示文字。','',geo['coordinatePolicy'],'',geo['areaPolicy'],'','同一地点多次到访，仍分别算作人生记录。地名能定位不等于人物到访日期已经确定；来源与条件逐条保留。','', 'DILA新增地名的摘录、版本与许可见 [geography-extract.json](geography-extract.json)。摘录及其改编按 CC BY-SA 3.0 提供；来源数据库为法鼓文理学院。', '', '## 已核区域记录','']
+lines=['# 五人地图位置核验 · '+geo['checkedAt'],'',f'目前共{total}条年度索引经历、{episodes}段未定年经历；{markers}条年度记录带地图位置。其中{reviewed}条附独立地理核验，{markers-reviewed}条仍沿用原型城市或区域近似点。另有{area_only}条仅知地区的经历用区域阴影展示；其余{total-markers-area_only}条年度经历只展示文字。','',geo['coordinatePolicy'],'',geo['areaPolicy'],'','同一地点多次到访，仍分别算作人生记录。地名能定位不等于人物到访日期已经确定；来源与条件逐条保留。','', 'DILA新增地名的摘录、版本与许可见 [geography-extract.json](geography-extract.json)。摘录及其改编按 CC BY-SA 3.0 提供；来源数据库为法鼓文理学院。', '', '## 已核区域记录','']
 for person in d['people']:
  lines += ['### '+person['name'],'']
  for r in person['records']:
