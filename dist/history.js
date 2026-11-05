@@ -702,3 +702,6 @@ const HISTORY_EVENTS = [
 ];
 const historyAt = (y, type="all") => HISTORY_EVENTS.filter(e => e.start <= y && y <= e.end && (type === "all" || e.type === type));
 const historyInRange = (min,max,type="all") => HISTORY_EVENTS.filter(e=>e.end>=min&&e.start<=max&&(type==="all"||e.type===type));
+
+// Map memory is a viewing preference; it never changes the historical dates.
+const historyVisible=(year,years=3,type='all')=>HISTORY_EVENTS.filter(e=>e.start<=year && year<=e.end+years && (type==='all'||e.type===type));

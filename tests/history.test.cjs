@@ -11,3 +11,8 @@ assert(range(1630,1630).some(e=>e.id==='ming-1629'));assert(!at(1648).some(e=>e.
 assert(at(1895).some(e=>e.id==='qing-1894'));assert(!at(1896).some(e=>e.id==='qing-1894'));
 const report=fs.readFileSync('dist/history-audit.html','utf8');for(const e of events)assert(report.includes('id="'+e.id+'"'));
 console.log('PASS: '+events.length+' sourced events, inclusive endpoints, filters, overlaps, empty years, report coverage');
+const visible=vm.runInContext('historyVisible',context);
+for(const e of events)for(const span of [0,3,10]){
+ assert(!visible(e.start-1,span).includes(e));assert(visible(e.start,span).includes(e));assert(visible(e.end+span,span).includes(e));assert(!visible(e.end+span+1,span).includes(e));
+}
+assert(visible(1083,3,'political').some(e=>e.start===1082));assert(!at(1083).some(e=>e.start===1082));

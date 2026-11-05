@@ -5,3 +5,5 @@
 .events .event .event-date{display:block;font-size:10px;font-weight:400;line-height:1.6;color:#77766a;margin-top:3px}
 
 #map .area-caption{font-size:11px;stroke-width:3px}
+
+#map .history-map-event text{font-size:11px;stroke-width:3px;cursor:pointer}#map .history-map-event .current-event{font-weight:650;fill:#503e2c}#map .history-map-event .recent-event{fill:#62655a}#recent-history{margin:12px 0;line-height:1.8}#recent-history button,#history-window{font:inherit;color:#455b48;background:#f7f7ed;border:1px solid #ccd3c6;border-radius:3px;padding:4px 8px}#recent-history button{margin:3px}

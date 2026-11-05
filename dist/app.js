@@ -19,8 +19,23 @@ else if(y>=1644&&y<1912)shapes=[['清',[[98,36],[110,44],[124,45],[130,41],[122,
 shapes=shapes.filter(([name])=>!(name==='西夏'&&y<1038)&&!(name==='辽'&&y>=1125));
 for(const [name,points,center]of shapes){g.append(svg('path',{d:path(points,true),fill:'#a5b491','fill-opacity':'.19',stroke:'#94a284','stroke-width':1.2,'stroke-dasharray':'5 7'}));const [x,y]=project(center);g.append(svg('text',{x,y,class:'region-label','text-anchor':'middle'},name));}
 }
+function historyWindow(){return Number($('history-window').value);}
+function drawHistoryMarkers(){
+ const layer=$('war-layer');layer.replaceChildren();const labels=[];
+ for(const e of historyVisible(year,historyWindow()).filter(e=>e.xy&&$(e.type==='political'?'politics':'wars').checked).sort((a,b)=>b.end-a.end)){
+  const [x,y]=project(e.xy),past=year>e.end,political=e.type==='political',color=political?'#4d7058':'#86532f';
+  const title=(past?'回看 · ':'')+eventYears(e)+' '+e.name;
+  const group=svg('g',{role:'button',tabindex:0,'aria-label':title+'，查看出处',class:'history-map-event'});
+  group.append(political?svg('circle',{cx:x,cy:y,r:5,fill:past?'#f7f5ea':color,stroke:color}):svg('path',{d:`M${x} ${y-6}l6 6-6 6-6-6Z`,fill:past?'#f7f5ea':color,stroke:color}));
+  let ty=y-9,tx=x+9;
+  while(labels.some(b=>Math.abs(b.y-ty)<15&&tx<b.right&&tx+title.length*11>b.left))ty+=16;
+  labels.push({left:tx,right:tx+title.length*11,y:ty});
+  group.append(svg('text',{x:tx,y:ty,class:past?'recent-event':'current-event'},title));
+  group.append(svg('title',{},title+' · '+e.place));group.onclick=()=>historyDetail(e.id);group.onkeydown=key=>{if(key.key==='Enter'||key.key===' '){key.preventDefault();historyDetail(e.id);}};layer.append(group);
+ }
+}
 function draw(){drawLand();drawPolitics();const labels=$('geo-labels');labels.replaceChildren();for(const [name,point]of [['东 海',[126,28]],['南 海',[116,17]],['喜 马 拉 雅',[85,29]]]){const [x,y]=project(point);labels.append(svg('text',{x,y,class:'ocean-label'},name));}
-const wars=$('war-layer');wars.replaceChildren();if($('wars').checked)for(const w of historyAt(year,'military')){if(!w.xy)continue;const [x,y]=project(w.xy),g=svg('g',{role:'button',tabindex:0,'aria-label':w.name+'，查看事件出处',style:'cursor:pointer'});g.append(svg('path',{d:`M${x} ${y-9}l9 9-9 9-9-9Z`,fill:'#9c7b54',opacity:.8}));g.append(svg('text',{x:x+14,y:y-14,'font-size':11},w.name));g.append(svg('title',{},w.text));g.addEventListener('click',()=>historyDetail(w.id));g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();historyDetail(w.id);}});wars.append(g);}
+drawHistoryMarkers();
 const g=$('route-layer');g.replaceChildren();if(!$('route').checked)return;const i=currentIndex();if(i<0||year>person.end)return;const nodes=person.nodes.slice(0,i+1);if(person.lifeResearch)return;if(nodes.length>1)g.append(svg('path',{d:path(nodes.map(n=>n.xy)),fill:'none',stroke:person.color,'stroke-width':2.4,'stroke-dasharray':'6 5','stroke-linejoin':'round'}));nodes.forEach((n,j)=>{const [x,y]=project(n.xy),group=svg('g',{'data-node':j,role:'button',tabindex:0,'aria-label':`${n.year}年 ${n.place}，跳转此节点`,style:'cursor:pointer'});group.append(svg('circle',{cx:x,cy:y,r:j===i?8:4,fill:j===i?person.color:'#f8f4e7',stroke:person.color,'stroke-width':2}));if(j===i){group.append(svg('circle',{cx:x,cy:y,r:16,fill:'none',stroke:person.color,'stroke-opacity':.3,'stroke-width':1.5}));}if(j===i||!nodes.slice(j+1).some(later=>later.place===n.place))group.append(svg('text',{x:x+13,y:y+(j%2?-13:20),'font-size':12},n.place));group.append(svg('title',{},`${n.year} · ${n.title}`));group.addEventListener('click',()=>jumpNode(j));group.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();jumpNode(j);}});g.append(group);});}
 function renderPeople(){$('people').innerHTML=PEOPLE.map(p=>`<button class="person ${p.id===person.id?'active':''}" data-person="${p.id}" aria-pressed="${p.id===person.id}"><span class="monogram">${p.name[0]}</span><span><strong>${p.name}</strong><small>${p.tag}</small></span></button>`).join('');document.querySelectorAll('[data-person]').forEach(b=>b.onclick=()=>{stop();person=PEOPLE.find(p=>p.id===b.dataset.person);full=false;selectedNode=null;year=person.nodes[Math.min(3,person.nodes.length-1)].year;renderPeople();setRange();fit();render();});}
 function setRange(){const min=full?-221:person.birth,max=full?1949:person.end;$('time').min=min;$('time').max=max;$('range-start').textContent=labelYear(min);$('range-end').textContent=labelYear(max);$('scope').textContent=full?'聚焦人物一生':'切换至完整历史';$('life-range').textContent=`${person.name} · ${person.birth}—${person.end}`;$('ticks').innerHTML=person.nodes.map(n=>`<i class="tick" style="left:${(n.year-min)/(max-min)*100}%"></i>`).join('');}
@@ -34,6 +49,9 @@ function renderHistory(){
  const min=Number($('time').min),max=Number($('time').max),entries=historyInRange(min,max,historyFilter),current=historyAt(year,historyFilter);
  $('history-summary').textContent=`${labelYear(year)} · ${current.length} 条记录 · 当前时间范围共 ${entries.length} 条`;
  $('history-events').innerHTML=current.length?current.map(e=>`<article class="history-card ${e.type}"><small>${eventType(e)} · ${eventYears(e)} · ${e.start===e.end?'当年事件':'跨年战事'}</small><h3>${e.name}</h3><p>${e.text}</p><p class="history-date">${e.date} · ${e.place}</p><button data-history-detail="${e.id}">查看出处与时间说明 ↗</button></article>`).join(''):`<p class="history-empty">${historyAt(year).length?'这一年收录的事件在另一分类里，可以切换看看。':'关于这一年，我们还没找到合适的史料，暂且留白。'}也可以在下方看看其他年份。</p>`;
+ const recent=historyVisible(year,historyWindow(),historyFilter).filter(e=>e.end<year);
+ $('recent-history').innerHTML=recent.length?'<strong>回看前几年</strong> '+recent.map(e=>`<button data-history-detail="${e.id}">${eventYears(e)} · ${e.name} ↗</button>`).join(''):'';
+ $('recent-history').hidden=!recent.length;
  $('history-jump').innerHTML='<option value="">选择事件并跳转年份…</option>'+entries.map(e=>`<option value="${e.id}">${eventYears(e)} · ${eventType(e)} · ${e.name}</option>`).join('');
  $('history-jump').disabled=!entries.length;
  $('history-ticks').innerHTML=['political','military'].map(type=>`<div class="history-lane"><span>${type==='political'?'政治':'军事'}</span><div>${entries.filter(e=>e.type===type).map(e=>`<i class="${type}" title="${eventYears(e)} · ${e.name}" style="left:${(Math.max(min,e.start)-min)/(max-min)*100}%;width:max(3px,${(Math.min(max,e.end)-Math.max(min,e.start))/(max-min)*100}%)"></i>`).join('')}</div></div>`).join('');
@@ -43,6 +61,7 @@ function historyDetail(id){
  const e=HISTORY_EVENTS.find(x=>x.id===id),s=HISTORY_SOURCES[e.source];stop();
  modal(`<h2>${e.name}</h2><p>${eventType(e)} · ${eventYears(e)} · ${e.place}</p><p><strong>时间依据：</strong>${e.date}</p><p>${e.text}</p><p><strong>记录边界：</strong>${e.note}</p><h3>信息源</h3><p><a href="${s.url}" target="_blank" rel="noopener">${s.name} ↗</a><br>${e.locator}<br><small>${s.type} · 核验日期 ${e.checkedAt}</small></p>${e.quote?`<blockquote>${e.quote}</blockquote>`:'<p>以上为来源内容概述；未附逐字引文。</p>'}<p>古籍月日沿用原历法；事件按年份显示，不表示全年持续。坐标为现代区域近似，未核战线。人物与事件同年不等于人物在场。</p><p><a href="history-audit.html" target="_blank" rel="noopener">查看全部政治、军事记录及来源 ↗</a></p>`);
 }
+$('history-window').onchange=()=>{renderHistory();draw();};
 $('history-filter').onchange=e=>{historyFilter=e.target.value;renderHistory();};
 $('history-jump').onchange=e=>{const item=HISTORY_EVENTS.find(x=>x.id===e.target.value);if(item)jump(Math.max(Number($('time').min),item.start));};
 
