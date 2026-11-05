@@ -65,6 +65,7 @@ for life in d['people']:
  refs={e['source'] for r in life['records']+life['episodes'] for e in r['evidence']}
  if route:=life.get('westwardRoute'):
   refs.add(route['source'])
+  refs.update(ref for group in route['groups'] for stop in group['stops'] for ref in stop.get('geography',{}).get('sources',[]))
   refs.update(note['source'] for note in route['dating'])
  geography={sid for r in life['records'] if r['locationReview'] for sid in r['locationReview']['sources']}
  payload=json.dumps({'life':life,'sources':{k:d['sources'][k] for k in sorted(refs)},'geoSources':{k:geo['sources'][k] for k in sorted(geography)}},ensure_ascii=False,separators=(',',':'))

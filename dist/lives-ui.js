@@ -1,3 +1,97 @@
+let westwardSelection = null;
+let westwardYear = null;
+let westwardNode = null;
+function mappedWestwardStops() {
+ return person.lifeResearch?.westwardRoute?.groups.flatMap(group => group.stops).filter(stop => stop.geography) || [];
+}
+function closeWestwardMap() {
+ westwardSelection = null;
+ document.querySelector('.map-panel').classList.remove('westward-map');
+ $('westward-map-caption').hidden = true;
+ $('westward-layer').replaceChildren();
+ document.querySelectorAll('[data-westward-stop]').forEach(button => button.setAttribute('aria-pressed', 'false'));
+}
+function selectWestwardStop(id, scrollToMap = false) {
+ const entry = mappedWestwardStops().find(stop => stop.id === id);
+ if (!entry) return;
+ stop();
+ westwardSelection = id;
+ westwardYear = year;
+ westwardNode = selectedNode;
+ document.querySelectorAll('[data-westward-stop]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.westwardStop === id)));
+ const geo = entry.geography;
+ const bounds = geo.bounds || [geo.xy[0] - .15, geo.xy[1] - .12, geo.xy[0] + .15, geo.xy[1] + .12];
+ const [west, south, east, north] = bounds;
+ const latitude = (south + north) / 2;
+ changeMapView((west + east) / 2, latitude, Math.max((east - west) * 1.8, (north - south) * mapRatio(latitude) * 1.8));
+ if (scrollToMap && matchMedia('(max-width:900px)').matches) $('map').scrollIntoView({block:'center', behavior:'smooth'});
+}
+function showWestwardOverview() {
+ const stops = mappedWestwardStops();
+ if (!stops.length) return;
+ stop();
+ westwardSelection = 'overview';
+ westwardYear = year;
+ westwardNode = selectedNode;
+ const bounds = stops.map(stop => stop.geography.bounds || [...stop.geography.xy, ...stop.geography.xy]);
+ const west = Math.min(...bounds.map(b => b[0])), south = Math.min(...bounds.map(b => b[1]));
+ const east = Math.max(...bounds.map(b => b[2])), north = Math.max(...bounds.map(b => b[3]));
+ const latitude = (south + north) / 2;
+ document.querySelectorAll('[data-westward-stop]').forEach(button => button.setAttribute('aria-pressed', 'false'));
+ changeMapView((west + east) / 2, latitude, Math.max((east - west) * 1.2, (north - south) * mapRatio(latitude) * 1.3));
+}
+function drawWestwardMap() {
+ const panel = document.querySelector('.map-panel');
+ const layer = $('westward-layer');
+ layer.replaceChildren();
+ const active = !!westwardSelection && person.id === 'xuanzang';
+ panel.classList.toggle('westward-map', active);
+ $('westward-map-caption').hidden = !active;
+ if (!active) return;
+ const stops = mappedWestwardStops();
+ const selected = stops.find(stop => stop.id === westwardSelection);
+ $('westward-map-text').textContent = selected ? selected.place + ' · ' + selected.geography.modern : '长安至高昌 · 地名总览';
+ const labelBoxes = [];
+ for (const stop of stops) {
+  const geo = stop.geography, highlighted = stop.id === westwardSelection;
+  const group = svg('g', {class:'westward-mark', role:'button', tabindex:0, 'aria-label':stop.place + '，' + geo.modern, 'data-westward-mark':stop.id});
+  let x, y;
+  if (geo.kind === 'point') {
+   [x, y] = project(geo.xy);
+   if (x < 0 || y < 0 || x > mapWidth || y > mapHeight) continue;
+   group.append(svg('circle', {cx:x,cy:y,r:12,fill:'transparent'}));
+   group.append(svg('circle', {cx:x,cy:y,r:highlighted ? 7 : 4,fill:'#8a4930',stroke:'#fff8e5','stroke-width':2}));
+  } else {
+   const [w,s,e,n] = geo.bounds;
+   const [x1,y1] = project([w,n]), [x2,y2] = project([e,s]);
+   if (x2 < 0 || y2 < 0 || x1 > mapWidth || y1 > mapHeight) continue;
+   x = (x1+x2)/2; y = (y1+y2)/2;
+   group.append(svg('ellipse', {cx:x,cy:y,rx:Math.max(9,(x2-x1)/2),ry:Math.max(9,(y2-y1)/2),fill:'#a9633f','fill-opacity':highlighted ? .23 : .06,stroke:'#8a4930','stroke-width':highlighted ? 2.5 : 1,'stroke-dasharray':'5 4'}));
+  }
+  group.append(svg('title', {}, stop.place + ' · ' + geo.modern));
+  if (highlighted || westwardSelection === 'overview' && ['west-01','west-02','west-03','west-04','west-05','west-10','west-12'].includes(stop.id)) {
+   const width = stop.place.length * 14;
+   const labelX = Math.max(width / 2 + 6, Math.min(mapWidth - width / 2 - 6, x));
+   const labelY = [y - 17, y + 26, y - 40, y + 48].find(candidate => {
+    return candidate > 22 && candidate < mapHeight - 18 && !labelBoxes.some(box =>
+     labelX - width / 2 < box[2] + 5 && labelX + width / 2 > box[0] - 5 &&
+     candidate - 14 < box[3] + 4 && candidate > box[1] - 4);
+   });
+   if (labelY !== undefined) {
+    labelBoxes.push([labelX - width / 2, labelY - 14, labelX + width / 2, labelY]);
+    group.append(svg('text', {x:labelX,y:labelY,class:'active-place','text-anchor':'middle'}, stop.place));
+   }
+  }
+  group.onclick = () => { if (!mapMoved) selectWestwardStop(stop.id); };
+  group.onkeydown = event => {
+   if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectWestwardStop(stop.id); }
+  };
+  if (highlighted) layer.append(group);
+  else layer.prepend(group);
+ }
+}
+const drawBeforeWestward = draw;
+draw = function() { drawBeforeWestward(); drawWestwardMap(); };
 // Life events and location evidence are intentionally separate.
 const lifeEscape=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function lifeEvidence(item){return item.evidence.map(e=>{const s=LIVES_RESEARCH.sources[e.source];return `<article class="life-source"><a href="${lifeEscape(s.url)}" target="_blank" rel="noopener">${lifeEscape(s.title)} ↗</a><p>${lifeEscape(s.kind)}</p><p>在这里查找：${lifeEscape(e.locator)}</p><p>${lifeEscape(e.supports)}</p>${e.quote?`<blockquote>${lifeEscape(e.quote)}</blockquote>`:''}<small>${lifeEscape(s.limits)}</small></article>`;}).join('');}
@@ -18,9 +112,15 @@ function renderWestwardRoute(life) {
  const source = LIVES_RESEARCH.sources[route.source];
  const groups = route.groups.map((group, index) => {
   const rows = group.stops.map(stop => {
+   const geo = stop.geography;
+   const name = geo ? `<button type="button" data-westward-stop="${lifeEscape(stop.id)}" aria-pressed="false">${lifeEscape(stop.place)} ↗</button>` : `<strong>${lifeEscape(stop.place)}</strong>`;
+   const geography = geo ? `<p>${lifeEscape(geo.modern)} · ${geo.kind === 'point' ? '遗址标记' : '大致区域'}</p><details><summary>定位依据</summary><p>${lifeEscape(geo.note)}</p><p>${lifeEscape(geo.method)}</p>${geo.sources.map(id => {
+    const source = LIVES_RESEARCH.sources[id];
+    return `<p><a href="${lifeEscape(source.url)}" target="_blank" rel="noopener">${lifeEscape(source.title)} ↗</a> ${lifeEscape(source.limits)}</p>`;
+   }).join('')}</details>` : '';
    const phrase = stop.locator.split(' · ')[1];
    const url = source.url + '#:~:text=' + encodeURIComponent(phrase);
-   return `<li><strong>${lifeEscape(stop.place)}</strong><p>${lifeEscape(stop.note)}</p><a href="${lifeEscape(url)}" target="_blank" rel="noopener">《慈恩传》${lifeEscape(stop.locator)} ↗</a></li>`;
+   return `<li>${name}${geography}<p>${lifeEscape(stop.note)}</p><a href="${lifeEscape(url)}" target="_blank" rel="noopener">《慈恩传》${lifeEscape(stop.locator)} ↗</a></li>`;
   }).join('');
   return `<details ${index === 0 ? 'open' : ''}><summary>${lifeEscape(group.title)}</summary><ol>${rows}</ol></details>`;
  }).join('');
@@ -28,8 +128,10 @@ function renderWestwardRoute(life) {
   const source = LIVES_RESEARCH.sources[entry.source];
   return `<p>${lifeEscape(entry.note)} <a href="${lifeEscape(source.url)}" target="_blank" rel="noopener">${lifeEscape(source.title)} ↗</a></p>`;
  }).join('');
- panel.innerHTML = `<h3>西行 · 长安至那烂陀寺</h3><p>沿《慈恩传》的先后读这段路。途中各站的抵达年份，几份年表记得不同。</p><button type="button">回到时间轴上的出发年</button><details><summary>出发与抵达的年份</summary>${dating}</details>${groups}`;
- panel.querySelector('button').onclick = () => jumpNode(life.records.findIndex(record => record.id === route.departureRecord));
+ panel.innerHTML = `<h3>西行 · 长安至那烂陀寺</h3><p>沿《慈恩传》的先后读这段路。途中各站的抵达年份，几份年表记得不同。</p><button type="button" data-westward-year>回到时间轴上的出发年</button><button type="button" data-westward-overview>地图上看长安至高昌</button><details><summary>出发与抵达的年份</summary>${dating}</details>${groups}`;
+ panel.querySelector('[data-westward-overview]').onclick = showWestwardOverview;
+ panel.querySelectorAll('[data-westward-stop]').forEach(button => button.onclick = () => selectWestwardStop(button.dataset.westwardStop, true));
+ panel.querySelector('[data-westward-year]').onclick = () => { closeWestwardMap(); jumpNode(life.records.findIndex(record => record.id === route.departureRecord)); };
 }
 let readingPerson=null;
 function renderLifeReading(){
@@ -45,6 +147,7 @@ function renderLifeReading(){
 }
 const renderBeforeLives=render;
 render=function(){
+ if (westwardSelection && (person.id !== 'xuanzang' || year !== westwardYear || selectedNode !== westwardNode)) closeWestwardMap();
  renderBeforeLives();renderLifeReading();document.querySelector('.map-legend>span').hidden=!!person.lifeResearch;if(!person.lifeResearch)return;
  const i=currentIndex(),n=person.nodes[i],active=year<=person.end&&year>=person.birth;
  $('node-count').textContent=`${person.nodes.length} 条经历`;
@@ -59,4 +162,19 @@ render=function(){
 };
 const sourcesBeforeLives=$('source-open').onclick;
 $('source-open').onclick=()=>{if(!person.lifeResearch){sourcesBeforeLives();return;}const i=currentIndex();if(i<0||year>person.end){modal(`<h2>${lifeEscape(person.name)} · 人生资料</h2><p>请从人生记录中选择一条经历，查看对应的材料。年份尚未钉定的经历也在下方附有出处。</p>`);return;}showLifeSource(person.nodes[i]);};
+const locateBeforeWestward = $('map-locate').onclick;
+$('map-locate').onclick = () => {
+ if (westwardSelection === 'overview') showWestwardOverview();
+ else if (westwardSelection) selectWestwardStop(westwardSelection);
+ else locateBeforeWestward();
+};
+$('westward-map-return').onclick = () => { closeWestwardMap(); fit(); render(); };
+$('time').addEventListener('input', closeWestwardMap);
+const fitBeforeWestward = fit;
+fit = function() {
+ if (westwardSelection === 'overview') showWestwardOverview();
+ else if (westwardSelection) selectWestwardStop(westwardSelection);
+ else fitBeforeWestward();
+};
+$('fit').onclick = () => { if (westwardSelection) showWestwardOverview(); else fit(); };
 render();

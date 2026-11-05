@@ -6,7 +6,7 @@
 
 - [工作记录](research/WORK_LOG.md)：苏轼核验、北归补查、信息源、地图和文案工作的回顾，以及五人准备进度。
 - [人物整理流程](research/PERSON_WORKFLOW.md)：日期、来源、本人行迹、古今地名和发布检查的统一做法。
-- 五人人生底稿（2026-11-05行程细化）：[玄奘](research/people/xuanzang.md)、[徐霞客](research/people/xuxiake.md)、[李清照](research/people/liqingzhao.md)、[秦良玉](research/people/qinliangyu.md)、[秋瑾](research/people/qiujin.md)。共157条年度索引记录、24条未定年阶段、44个来源入口。新增求学、家庭、创作、教学、译经与军中处境，并保留异说和待核线索；数量包含活动事件，并非181个确定地图位置。
+- 五人人生底稿（2026-11-05行程细化）：[玄奘](research/people/xuanzang.md)、[徐霞客](research/people/xuxiake.md)、[李清照](research/people/liqingzhao.md)、[秦良玉](research/people/qinliangyu.md)、[秋瑾](research/people/qiujin.md)。共157条年度索引记录、24条未定年阶段、54个来源入口。新增求学、家庭、创作、教学、译经与军中处境，并保留异说和待核线索；数量包含活动事件，并非181个确定地图位置。
 - [结构化研究底稿](research/people/initial-review.json)是上述五份报告的数据来源；运行 `python3 scripts/render_people.py` 生成报告，`python3 scripts/render_people.py --check` 检查一致性、排序和来源关联。
 
 五人的157条年度经历已替换原先29个样本节点；24段未定年经历在“人生全览”中阅读，每条均可查看出处。地图现有64条带位置的记录，其中48条附独立区域定位与地理依据，16条沿用原型近似标记；另有24条只画大致区域，69条只展示文字。这些标记不连成推定路线。苏轼97条记录保持原样。运行 `python3 scripts/build_lives.py` 更新网站数据，使用 `--check` 检查同步。
@@ -80,3 +80,5 @@
 首屏数据：默认苏轼与 Natural Earth 1:110m 陆地概览。地图视野放大到经度跨度不超过12度时加载1:50m细图；现代水系勾选后加载。其余五人按选择读取 `dist/people/` 下的单人资料，同一页面内复用。运行 `scripts/build_lives.py` 会同时更新资料文件和含内容版本的 `life-files.js` 清单；发布新的清单时更新首页清单版本。
 
 玄奘西行的逐站次序与系年异说见[玄奘人生记录](research/people/xuanzang.md#西行逐站记录)，选中玄奘即可在地图旁分段阅读。
+
+长安至高昌的十二站可点站名定位。锁阳城、高昌故城用遗址参考点，其余按证据圈出区域，各站附古今对应及定位来源。

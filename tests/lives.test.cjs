@@ -70,3 +70,23 @@ for(const life of data.people){
   for(const id of item.locationReview?.sources||[])assert.ok(part.geoSources[id]?.url);
  }
 }
+
+// Spatial itinerary references carry their own citations and must not acquire inferred years.
+const route = data.people.find(p => p.id === 'xuanzang').westwardRoute;
+const mapped = route.groups.flatMap(g => g.stops).filter(stop => stop.geography);
+assert.equal(mapped.length, 12);
+assert.equal(new Set(mapped.map(stop => stop.id)).size, 12);
+assert.equal(mapped.filter(stop => stop.geography.kind === 'point').length, 2);
+for (const stop of mapped) {
+ const geo = stop.geography;
+ assert.equal(stop.year, undefined);
+ assert.ok(geo.sources.every(id => data.sources[id]?.url));
+ const numbers = geo.xy || geo.bounds;
+ assert.ok(numbers.every(Number.isFinite));
+ if (geo.kind === 'area') {
+  assert.equal(geo.xy, undefined);
+  assert.ok(geo.bounds[0] < geo.bounds[2] && geo.bounds[1] < geo.bounds[3]);
+ }
+}
+assert.deepEqual(Array.from(mapped.find(stop => stop.id === 'west-05').geography.xy), [96.2031,40.2467]);
+assert.deepEqual(Array.from(mapped.find(stop => stop.id === 'west-12').geography.xy), [89.5278,42.8525]);
