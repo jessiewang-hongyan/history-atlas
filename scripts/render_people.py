@@ -73,6 +73,11 @@ def render(data, person):
                 lines += [f"#### {variant['code']} · {variant['title']}", '', variant['note'], '']
                 for index, node in enumerate(variant['nodes'], 1):
                     lines.append(f"- {variant['code']}{index} · {node['place']}：{node['modern']}。{node['note']} 范围：{node['bounds'] or '未定位'}")
+                for leg in variant.get('legs', []):
+                    a, b = variant['nodes'][leg['fromIndex']], variant['nodes'][leg['toIndex']]
+                    source = data['sources'][leg['source']]
+                    lines += [f"- 行段 {a['place']} → {b['place']}：原文 {leg['original']}。[{leg['locator']}]({source['url']}) {leg['parallel']}", f"  - 对读：{leg['verdict']}。{leg['assessment']} {leg['mileage']}"]
+                lines.append('地图数值由候选范围中心实时计算：球半径6371公里，haversine直线距离、起点初始方位角（正北0°，顺时针）。显示整数公里和角度，不代表城址定位精度。')
                 for ref in variant['sources']:
                     source = data['sources'][ref]
                     lines.append(f"- 出处：[{source['title']}]({source['url']})。{source['limits']}")
