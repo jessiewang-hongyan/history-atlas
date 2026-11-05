@@ -2,7 +2,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('nod
 const ctx=vm.createContext({});
 for(const file of ['data','sushi','lives-data'])vm.runInContext(fs.readFileSync(`dist/${file}.js`,'utf8'),ctx);
 const people=vm.runInContext('PEOPLE',ctx),data=vm.runInContext('LIVES_RESEARCH',ctx);
-assert.equal(data.people.length,5);assert.equal(data.people.reduce((n,p)=>n+p.records.length,0),136);assert.equal(data.people.reduce((n,p)=>n+p.episodes.length,0),20);
+assert.equal(data.people.length,5);assert.equal(data.people.reduce((n,p)=>n+p.records.length,0),157);assert.equal(data.people.reduce((n,p)=>n+p.episodes.length,0),24);
 assert.equal(people.find(p=>p.id==='sushi').nodes.length,97);
 let markers=0;
 for(const life of data.people){
@@ -44,7 +44,7 @@ assert.equal(records.get('qinliangyu-021').xy,null);
 const xu=people.find(p=>p.id==='xuxiake');
 assert.deepEqual(Array.from(xu.nodes.filter(n=>n.year===1613),n=>n.id),['xuxiake-002','xuxiake-003',...Array.from({length:11},(_,i)=>`xuxiake-${String(i+30).padStart(3,'0')}`),'xuxiake-013','xuxiake-014']);
 assert.equal(xu.nodes.filter(n=>n.year===1632).length,13);
-console.log('PASS: 136 annual records, 20 undated episodes, 64 regional markers, 48 geography reviews; diary chronology and withheld locations preserved');
+console.log('PASS: 157 annual records, 24 undated episodes, 64 regional markers, 48 geography reviews; diary chronology and withheld locations preserved');
 // Region-only evidence must remain usable without inventing a person coordinate.
 const hunan=records.get('qiujin-001');
 assert.equal(hunan.xy,null);assert.equal(hunan.area.name,'湖南一带');
@@ -53,9 +53,9 @@ assert.equal(records.get('liqingzhao-027').area,null); // shipment is not a pers
 assert.equal(records.get('qinliangyu-019').area,null); // unfulfilled journey
 let areas=0;
 for(const n of records.values())if(n.area){areas++;const [w,s,e,north]=n.area.bounds;assert.ok([w,s,e,north].every(Number.isFinite));assert.ok(w<e&&s<north);assert.ok(n.area.note);}
-assert.equal(areas,70);
+assert.equal(areas,72);
 for(const id of Object.keys(review.withheld))assert.equal(records.get(id).area,null,id);
-console.log('PASS: 70 regional displays, including a province-only record without a point; unvisited places excluded');
+console.log('PASS: 72 regional displays, including a province-only record without a point; unvisited places excluded');
 
 for(const [id,a] of Object.entries(review.areas)){const n=records.get(id);assert.equal(n.xy,null,id);assert.ok(n.area,id);assert.ok(a.sources.every(s=>review.sources[s]?.url),id);}
 assert.equal(records.get('qinliangyu-002').area.name,'邓坎（今凤冈南部）一带');

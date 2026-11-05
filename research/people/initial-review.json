@@ -281,6 +281,13 @@
       "kind": "文物部门介绍；浙江树人学院图书馆转载",
       "limits": "用于校址、1907年2月下半月接任及7月13日被捕；不据此复述受审对白。",
       "checkedAt": "2026-11-04"
+    },
+    "XX-18": {
+      "title": "徐霞客《湘江遇盗》日记节录",
+      "url": "https://m.gushiwen.cn/shiwenv_1f3edc8635c0.aspx",
+      "kind": "游记原文转录",
+      "limits": "使用日记中初十至十三日的自述，月日沿原历。",
+      "checkedAt": "2026-11-05"
     }
   },
   "people": [
@@ -447,6 +454,75 @@
           "recordType": "行迹或人生事件",
           "mapReady": false,
           "withinYearOrder": 30
+        },
+        {
+          "id": "xuanzang-018",
+          "year": 646,
+          "place": "长安",
+          "title": "交出十二卷《大唐西域记》",
+          "narrative": "太宗在洛阳问起西域见闻。回到长安后，玄奘把沿路所知讲述出来，由辩机编录成十二卷，随表进呈。",
+          "evidence": [
+            {
+              "source": "XZ-1",
+              "locator": "贞观二十年秋七月，进新译经论及《西域记》表",
+              "supports": "太宗在洛阳问起西域见闻。回到长安后，玄奘把沿路所知讲述出来，由辩机编录成十二卷，随表进呈。"
+            }
+          ],
+          "checkedAt": "2026-11-05",
+          "mapReady": false,
+          "limits": "",
+          "dateLabel": "贞观二十年七月",
+          "withinYearOrder": 50,
+          "coordinates": null,
+          "calendar": "月日沿用出处的历法。",
+          "status": "可采用",
+          "recordType": "人生经历"
+        },
+        {
+          "id": "xuanzang-019",
+          "year": 648,
+          "place": "长安弘福寺",
+          "title": "译完百卷《瑜伽师地论》",
+          "narrative": "当年在那烂陀寺随戒贤听讲的论书，如今在长安有了完整汉译。译场将一百卷书缮写成册。",
+          "evidence": [
+            {
+              "source": "XZ-1",
+              "locator": "卷三那烂陀听讲、贞观二十二年夏五月译讫《瑜伽师地论》",
+              "supports": "当年在那烂陀寺随戒贤听讲的论书，如今在长安有了完整汉译。译场将一百卷书缮写成册。"
+            }
+          ],
+          "checkedAt": "2026-11-05",
+          "mapReady": false,
+          "limits": "",
+          "dateLabel": "贞观二十二年五月",
+          "withinYearOrder": 10,
+          "coordinates": null,
+          "calendar": "月日沿用出处的历法。",
+          "status": "可采用",
+          "recordType": "人生经历"
+        },
+        {
+          "id": "xuanzang-020",
+          "year": 648,
+          "place": "玉华宫",
+          "title": "在玉华宫婉辞还俗入仕",
+          "narrative": "太宗在玉华宫召见玄奘，再次劝他还俗参与朝政。玄奘当面陈说自己的心愿，想继续做僧人，专心传译佛法。太宗应允了他。",
+          "evidence": [
+            {
+              "source": "XZ-1",
+              "locator": "贞观二十二年，六月赴玉华宫与问答",
+              "supports": "太宗在玉华宫召见玄奘，再次劝他还俗参与朝政。玄奘当面陈说自己的心愿，想继续做僧人，专心传译佛法。太宗应允了他。"
+            }
+          ],
+          "checkedAt": "2026-11-05",
+          "mapReady": false,
+          "limits": "",
+          "dateLabel": "贞观二十二年六月",
+          "withinYearOrder": 20,
+          "coordinates": null,
+          "calendar": "月日沿用出处的历法。",
+          "status": "可采用",
+          "recordType": "人生经历"
         },
         {
           "id": "xuanzang-010",
@@ -882,6 +958,42 @@
           "limits": "本传明确记载到访，但本轮未核定具体到达年。此条不进入年度位置时间轴。",
           "checkedAt": "2026-11-04",
           "mapReady": false
+        },
+        {
+          "id": "xuanzang-E012",
+          "year": null,
+          "place": "曲女城",
+          "title": "在曲女城向各地学人立论",
+          "narrative": "戒日王召集各地僧人和婆罗门，玄奘在会上陈述自己的大乘见解，请在场的人提出异议。",
+          "evidence": [
+            {
+              "source": "XZ-1",
+              "locator": "卷五，戒日王设曲女城大会",
+              "supports": "戒日王召集各地僧人和婆罗门，玄奘在会上陈述自己的大乘见解，请在场的人提出异议。"
+            }
+          ],
+          "checkedAt": "2026-11-05",
+          "mapReady": false,
+          "limits": "传记交代了会前会后的顺序，此处保留相对时间。",
+          "periodLabel": "在印度求学后期，启程东归以前"
+        },
+        {
+          "id": "xuanzang-E013",
+          "year": null,
+          "place": "钵罗耶伽",
+          "title": "随戒日王到两河之间赴施会",
+          "narrative": "国王邀他再留一程，去看两河交汇处的布施大会。会后谈起归路，玄奘说，当年受过高昌王资助，答应回来时再走北路。",
+          "evidence": [
+            {
+              "source": "XZ-1",
+              "locator": "卷五，两河施会及商议归途",
+              "supports": "国王邀他再留一程，去看两河交汇处的布施大会。会后谈起归路，玄奘说，当年受过高昌王资助，答应回来时再走北路。"
+            }
+          ],
+          "checkedAt": "2026-11-05",
+          "mapReady": false,
+          "limits": "北路是他当时的打算，沿途实到之处须另查。",
+          "periodLabel": "曲女城大会之后、北返之前"
         },
         {
           "id": "xuanzang-E011",
@@ -1991,6 +2103,98 @@
           "withinYearOrder": 50
         },
         {
+          "id": "xuxiake-054",
+          "year": 1637,
+          "place": "湘江新塘站附近",
+          "title": "夜里遇盗，跳入湘江逃生",
+          "narrative": "船在新塘附近停泊，夜里有人持刀上船。徐霞客跳进江里逃生，与同行的静闻和仆人顾行一度失散。",
+          "evidence": [
+            {
+              "source": "XX-18",
+              "locator": "二月十一日夜遇盗段",
+              "supports": "船在新塘附近停泊，夜里有人持刀上船。徐霞客跳进江里逃生，与同行的静闻和仆人顾行一度失散。"
+            }
+          ],
+          "checkedAt": "2026-11-05",
+          "mapReady": false,
+          "limits": "",
+          "dateLabel": "崇祯十年二月十一日夜",
+          "withinYearOrder": 10,
+          "coordinates": null,
+          "calendar": "月日沿用出处的历法。",
+          "status": "可采用",
+          "recordType": "人生经历"
+        },
+        {
+          "id": "xuxiake-055",
+          "year": 1637,
+          "place": "湘江舟中",
+          "title": "把邻船送来的裤子分给顾行",
+          "narrative": "邻船一位姓戴的客人拿出自己的衣裤。顾行也冻得无衣可穿，徐霞客把裤子给了他，自己只披着短衣，后来又借到一块布才上岸。",
+          "evidence": [
+            {
+              "source": "XX-18",
+              "locator": "十二日，邻舟戴姓客赠衣段",
+              "supports": "邻船一位姓戴的客人拿出自己的衣裤。顾行也冻得无衣可穿，徐霞客把裤子给了他，自己只披着短衣，后来又借到一块布才上岸。"
+            }
+          ],
+          "checkedAt": "2026-11-05",
+          "mapReady": false,
+          "limits": "",
+          "dateLabel": "二月十二日",
+          "withinYearOrder": 20,
+          "coordinates": null,
+          "calendar": "月日沿用出处的历法。",
+          "status": "可采用",
+          "recordType": "人生经历"
+        },
+        {
+          "id": "xuxiake-056",
+          "year": 1637,
+          "place": "衡州",
+          "title": "向故人求助，仍要继续西行",
+          "narrative": "上岸后，他去找旧识金祥甫商量盘缠。友人愿意帮他筹衣装回乡，他却担心一旦回家，家人再也不会放心让他远行。",
+          "evidence": [
+            {
+              "source": "XX-18",
+              "locator": "十三日，入铁楼门访金祥甫",
+              "supports": "上岸后，他去找旧识金祥甫商量盘缠。友人愿意帮他筹衣装回乡，他却担心一旦回家，家人再也不会放心让他远行。"
+            }
+          ],
+          "checkedAt": "2026-11-05",
+          "mapReady": false,
+          "limits": "",
+          "dateLabel": "二月十三日清晨",
+          "withinYearOrder": 30,
+          "coordinates": null,
+          "calendar": "月日沿用出处的历法。",
+          "status": "可采用",
+          "recordType": "人生经历"
+        },
+        {
+          "id": "xuxiake-057",
+          "year": 1637,
+          "place": "全州",
+          "title": "从湖南跨入广西",
+          "narrative": "从东安县进入全州县，徐霞客踏进桂林府辖境。离他想看的桂林城山水，还有一段路。",
+          "evidence": [
+            {
+              "source": "XX-4",
+              "locator": "从东安县进入桂林府全州县段",
+              "supports": "从东安县进入全州县，徐霞客踏进桂林府辖境。离他想看的桂林城山水，还有一段路。"
+            }
+          ],
+          "checkedAt": "2026-11-05",
+          "mapReady": false,
+          "limits": "",
+          "dateLabel": "崇祯十年闰四月初八",
+          "withinYearOrder": 40,
+          "coordinates": null,
+          "calendar": "月日沿用出处的历法。",
+          "status": "可采用",
+          "recordType": "人生经历"
+        },
+        {
           "id": "xuxiake-007",
           "year": 1637,
           "place": "桂林府地区",
@@ -2013,6 +2217,29 @@
           "withinYearOrder": 50
         },
         {
+          "id": "xuxiake-058",
+          "year": 1637,
+          "place": "桂林",
+          "title": "两探七星岩，三上雉山",
+          "narrative": "在桂林住下的日子里，他两次进七星岩，三次登雉山。对感兴趣的一处山洞或山峰，他肯花上几趟工夫。",
+          "evidence": [
+            {
+              "source": "XX-4",
+              "locator": "桂林游踪综述，两探七星岩、三上雉山",
+              "supports": "在桂林住下的日子里，他两次进七星岩，三次登雉山。对感兴趣的一处山洞或山峰，他肯花上几趟工夫。"
+            }
+          ],
+          "checkedAt": "2026-11-05",
+          "mapReady": false,
+          "limits": "",
+          "dateLabel": "桂林府游历期间",
+          "withinYearOrder": 60,
+          "coordinates": null,
+          "calendar": "月日沿用出处的历法。",
+          "status": "可采用",
+          "recordType": "人生经历"
+        },
+        {
           "id": "xuxiake-008",
           "year": 1638,
           "place": "鸡足山",
@@ -2033,6 +2260,29 @@
           "recordType": "行迹或人生事件",
           "mapReady": false,
           "withinYearOrder": 50
+        },
+        {
+          "id": "xuxiake-059",
+          "year": 1639,
+          "place": "丽江",
+          "title": "应木增之邀，在丽江谈修山志",
+          "narrative": "木增邀他到丽江，又请他为鸡足山修志。徐霞客答应下来，后来重返山中，逐处走访寺庵，向僧人打听山里的事。",
+          "evidence": [
+            {
+              "source": "XX-5",
+              "locator": "正月赴丽江、木增邀修山志及二上鸡足山段",
+              "supports": "木增邀他到丽江，又请他为鸡足山修志。徐霞客答应下来，后来重返山中，逐处走访寺庵，向僧人打听山里的事。"
+            }
+          ],
+          "checkedAt": "2026-11-05",
+          "mapReady": false,
+          "limits": "",
+          "dateLabel": "崇祯十二年，重返鸡足山以前",
+          "withinYearOrder": 10,
+          "coordinates": null,
+          "calendar": "月日沿用出处的历法。",
+          "status": "可采用",
+          "recordType": "人生经历"
         },
         {
           "id": "xuxiake-009",
@@ -2229,6 +2479,29 @@
           "withinYearOrder": 50
         },
         {
+          "id": "liqingzhao-029",
+          "year": 1102,
+          "place": "地点未详",
+          "title": "写诗给公公，请他为父亲说话",
+          "narrative": "父亲李格非因列入党籍而罢官。李清照向公公赵挺之呈诗，为父求援。后人记下诗中写父女之情的一句，整首诗已难得见。",
+          "evidence": [
+            {
+              "source": "LQ-1",
+              "locator": "崇宁元年条及绍兴八年张序条",
+              "supports": "父亲李格非因列入党籍而罢官。李清照向公公赵挺之呈诗，为父求援。后人记下诗中写父女之情的一句，整首诗已难得见。"
+            }
+          ],
+          "checkedAt": "2026-11-05",
+          "mapReady": false,
+          "limits": "事迹见后人记述，呈诗的年份依地方志年表。",
+          "dateLabel": "崇宁元年，据《李清照志》系年",
+          "withinYearOrder": 50,
+          "coordinates": null,
+          "calendar": "月日沿用出处的历法。",
+          "status": "附条件采用",
+          "recordType": "人生经历"
+        },
+        {
           "id": "liqingzhao-017",
           "year": 1103,
           "place": "原籍（济南地区）",
@@ -2340,6 +2613,29 @@
           "recordType": "行迹或人生事件",
           "mapReady": false,
           "withinYearOrder": 30
+        },
+        {
+          "id": "liqingzhao-030",
+          "year": 1123,
+          "place": "莱州静治堂",
+          "title": "和赵明诚把《金石录》整理成卷",
+          "narrative": "在莱州静治堂，夫妇二人一起整理多年搜来的金石材料。《李清照志》把书稿初步装卷系在这一年。",
+          "evidence": [
+            {
+              "source": "LQ-1",
+              "locator": "宣和五年，莱州静治堂条",
+              "supports": "在莱州静治堂，夫妇二人一起整理多年搜来的金石材料。《李清照志》把书稿初步装卷系在这一年。"
+            }
+          ],
+          "checkedAt": "2026-11-05",
+          "mapReady": false,
+          "limits": "具体月份未见记载。",
+          "dateLabel": "宣和五年，据《李清照志》",
+          "withinYearOrder": 50,
+          "coordinates": null,
+          "calendar": "月日沿用出处的历法。",
+          "status": "附条件采用",
+          "recordType": "人生经历"
         },
         {
           "id": "liqingzhao-026",
@@ -2454,6 +2750,29 @@
           "withinYearOrder": 30
         },
         {
+          "id": "liqingzhao-031",
+          "year": 1129,
+          "place": "池阳",
+          "title": "在船边和赵明诚话别",
+          "narrative": "赵明诚独自赴召，李清照留守池阳。隔着船岸，她追问万一城里有急事，满船行李该怎么办。骑马临行的丈夫回头，一样样交代哪些可以先舍下。",
+          "evidence": [
+            {
+              "source": "LQ-2",
+              "locator": "己酉六月十三日，池阳舟中送别段",
+              "supports": "赵明诚独自赴召，李清照留守池阳。隔着船岸，她追问万一城里有急事，满船行李该怎么办。骑马临行的丈夫回头，一样样交代哪些可以先舍下。"
+            }
+          ],
+          "checkedAt": "2026-11-05",
+          "mapReady": false,
+          "limits": "",
+          "dateLabel": "建炎三年六月十三日",
+          "withinYearOrder": 35,
+          "coordinates": null,
+          "calendar": "月日沿用出处的历法。",
+          "status": "可采用",
+          "recordType": "人生经历"
+        },
+        {
           "id": "liqingzhao-009",
           "year": 1129,
           "place": "建康",
@@ -2564,6 +2883,34 @@
           "mapReady": false,
           "narrative": "她在越州卜居钟氏家，留下的部分文物又遭盗失。",
           "withinYearOrder": 50
+        },
+        {
+          "id": "liqingzhao-032",
+          "year": 1131,
+          "place": "会稽",
+          "title": "寄居钟家，悬赏寻回失窃书画",
+          "narrative": "一夜之间，有人穿墙搬走五筐藏品。李清照悬赏求赎，两天后有邻人送来十八轴领赏。余下的，她想了许多办法也没能取回。",
+          "evidence": [
+            {
+              "source": "LQ-2",
+              "locator": "会稽卜居钟氏舍、邻人出十八轴段",
+              "supports": "一夜之间，有人穿墙搬走五筐藏品。李清照悬赏求赎，两天后有邻人送来十八轴领赏。余下的，她想了许多办法也没能取回。"
+            },
+            {
+              "source": "LQ-1",
+              "locator": "绍兴元年条",
+              "supports": "将会稽钟宅失窃系于1131年。"
+            }
+          ],
+          "checkedAt": "2026-11-05",
+          "mapReady": false,
+          "limits": "《后序》写明经过，年份依《李清照志》绍兴元年条。",
+          "dateLabel": "绍兴元年，据《李清照志》系年",
+          "withinYearOrder": 80,
+          "coordinates": null,
+          "calendar": "月日沿用出处的历法。",
+          "status": "附条件采用",
+          "recordType": "人生经历"
         },
         {
           "id": "liqingzhao-013",
@@ -2923,6 +3270,24 @@
           "limits": "依本人后序保留叙述顺序；年表与后序的路线编排不完全相同，尚不能给每一站钉定抵达日期。",
           "checkedAt": "2026-11-04",
           "mapReady": false
+        },
+        {
+          "id": "liqingzhao-E006",
+          "year": null,
+          "place": "地点未详",
+          "title": "留了两晚的《牡丹图》",
+          "narrative": "有人拿来一幅徐熙《牡丹图》，开价二十万钱。夫妻俩把画留了两晚，怎么也凑不出钱，只好还回去。多年以后，她还记得两人怅惘相对的那几天。",
+          "evidence": [
+            {
+              "source": "LQ-2",
+              "locator": "回忆崇宁间徐熙《牡丹图》段",
+              "supports": "有人拿来一幅徐熙《牡丹图》，开价二十万钱。夫妻俩把画留了两晚，怎么也凑不出钱，只好还回去。多年以后，她还记得两人怅惘相对的那几天。"
+            }
+          ],
+          "checkedAt": "2026-11-05",
+          "mapReady": false,
+          "limits": "她只写了年号，没有留下买画的具体年份。",
+          "periodLabel": "崇宁年间（1102—1106）"
         }
       ],
       "overview": [
@@ -3074,6 +3439,52 @@
           "withinYearOrder": 50
         },
         {
+          "id": "qinliangyu-023",
+          "year": 1620,
+          "place": "石砫军中",
+          "title": "派兄弟带第一批援军赴辽",
+          "narrative": "朝廷征调石砫兵援辽。秦良玉先派兄长秦邦屏、弟弟秦民屏领数千人北上，自己随后才率兵前往。",
+          "evidence": [
+            {
+              "source": "QL-1",
+              "locator": "秦良玉传，泰昌时征兵援辽段",
+              "supports": "朝廷征调石砫兵援辽。秦良玉先派兄长秦邦屏、弟弟秦民屏领数千人北上，自己随后才率兵前往。"
+            }
+          ],
+          "checkedAt": "2026-11-05",
+          "mapReady": false,
+          "limits": "这一程出发的是她的兄弟。",
+          "dateLabel": "泰昌年间",
+          "withinYearOrder": 50,
+          "coordinates": null,
+          "calendar": "月日沿用出处的历法。",
+          "status": "附条件采用",
+          "recordType": "人生经历"
+        },
+        {
+          "id": "qinliangyu-024",
+          "year": 1621,
+          "place": "地点未详",
+          "title": "为浑河幸存的士兵置办冬衣",
+          "narrative": "兄长邦屏战死后，她派人进京，给战后的士兵置办一千五百件冬衣。兵部尚书张鹤鸣在奏报中记下了这件事。",
+          "evidence": [
+            {
+              "source": "QL-1",
+              "locator": "秦良玉传，张鹤鸣奏述制冬衣段",
+              "supports": "兄长邦屏战死后，她派人进京，给战后的士兵置办一千五百件冬衣。兵部尚书张鹤鸣在奏报中记下了这件事。"
+            }
+          ],
+          "checkedAt": "2026-11-05",
+          "mapReady": false,
+          "limits": "",
+          "dateLabel": "天启元年，浑河战后",
+          "withinYearOrder": 5,
+          "coordinates": null,
+          "calendar": "月日沿用出处的历法。",
+          "status": "可采用",
+          "recordType": "人生经历"
+        },
+        {
           "id": "qinliangyu-005",
           "year": 1621,
           "place": "榆关",
@@ -3162,6 +3573,29 @@
           "mapReady": false,
           "narrative": "她在奏疏中陈述作战经过，并批评将领在军中的推诿和排挤。",
           "withinYearOrder": 50
+        },
+        {
+          "id": "qinliangyu-025",
+          "year": 1624,
+          "place": "地点未详",
+          "title": "弟弟战死后，为他和两个侄子请恤",
+          "narrative": "秦民屏在撤军时战死，两个儿子负伤脱险。秦良玉向朝廷请求抚恤，朝廷追赠民屏官衔，并给他的两个儿子授官。",
+          "evidence": [
+            {
+              "source": "QL-1",
+              "locator": "天启三年条后，明年正月退师及良玉请恤段",
+              "supports": "秦民屏在撤军时战死，两个儿子负伤脱险。秦良玉向朝廷请求抚恤，朝廷追赠民屏官衔，并给他的两个儿子授官。"
+            }
+          ],
+          "checkedAt": "2026-11-05",
+          "mapReady": false,
+          "limits": "",
+          "dateLabel": "天启四年，正月战后",
+          "withinYearOrder": 50,
+          "coordinates": null,
+          "calendar": "月日沿用出处的历法。",
+          "status": "可采用",
+          "recordType": "人生经历"
         },
         {
           "id": "qinliangyu-007",
@@ -3320,6 +3754,29 @@
           "mapReady": false,
           "narrative": "十月战事中，她与张令扼守竹箘坪；张令战死后，她救援未成，转战又败。",
           "withinYearOrder": 50
+        },
+        {
+          "id": "qinliangyu-026",
+          "year": 1640,
+          "place": "四川军中",
+          "title": "请求再募兵，愿自筹一半军粮",
+          "narrative": "部队损失惨重，她独自骑马去见巡抚邵捷春，提出再征两万人，自己筹一半口粮。官仓拿不出余粮，这个办法最终没有实行。",
+          "evidence": [
+            {
+              "source": "QL-1",
+              "locator": "竹箘坪战败后，单骑见邵捷春段",
+              "supports": "部队损失惨重，她独自骑马去见巡抚邵捷春，提出再征两万人，自己筹一半口粮。官仓拿不出余粮，这个办法最终没有实行。"
+            }
+          ],
+          "checkedAt": "2026-11-05",
+          "mapReady": false,
+          "limits": "",
+          "dateLabel": "崇祯十三年，十月败后",
+          "withinYearOrder": 95,
+          "coordinates": null,
+          "calendar": "月日沿用出处的历法。",
+          "status": "可采用",
+          "recordType": "人生经历"
         },
         {
           "id": "qinliangyu-010",
@@ -3513,6 +3970,24 @@
           "limits": "本传没有婚姻年份；才学描述不是某日某地的事件。",
           "checkedAt": "2026-11-04",
           "mapReady": false
+        },
+        {
+          "id": "qinliangyu-E004",
+          "year": null,
+          "place": "四川",
+          "title": "画出全蜀地势，请求分守十三处关隘",
+          "narrative": "她画了一幅四川形势图，先呈给巡抚陈士奇，又递给巡按刘之勃。后一位同意她给十三处关隘增兵的主张，手里却无兵可派。",
+          "evidence": [
+            {
+              "source": "QL-1",
+              "locator": "秦良玉传末，图全蜀形势段",
+              "supports": "她画了一幅四川形势图，先呈给巡抚陈士奇，又递给巡按刘之勃。后一位同意她给十三处关隘增兵的主张，手里却无兵可派。"
+            }
+          ],
+          "checkedAt": "2026-11-05",
+          "mapReady": false,
+          "limits": "本传把献图写在驰援夔州之前，未单列年份。",
+          "periodLabel": "张献忠再次入蜀前，至迟在1644年春以前"
         }
       ],
       "overview": [
@@ -3595,6 +4070,29 @@
           "withinYearOrder": 50
         },
         {
+          "id": "qiujin-017",
+          "year": 1904,
+          "place": "北京陶然亭",
+          "title": "和朋友在陶然亭话别",
+          "narrative": "动身去日本前，秋瑾与吴芝瑛等朋友在陶然亭饯别。吴芝瑛赠她一副对联，她填了一阕《临江仙》告别。",
+          "evidence": [
+            {
+              "source": "QJ-3",
+              "locator": "1904年春陶然亭饯别段",
+              "supports": "动身去日本前，秋瑾与吴芝瑛等朋友在陶然亭饯别。吴芝瑛赠她一副对联，她填了一阕《临江仙》告别。"
+            }
+          ],
+          "checkedAt": "2026-11-05",
+          "mapReady": false,
+          "limits": "",
+          "dateLabel": "1904年春，赴日前",
+          "withinYearOrder": 5,
+          "coordinates": null,
+          "calendar": "日期依纪念馆或文史资料标注。",
+          "status": "可采用",
+          "recordType": "人生经历"
+        },
+        {
           "id": "qiujin-003",
           "year": 1904,
           "place": "东京",
@@ -3638,6 +4136,29 @@
           "mapReady": false,
           "narrative": "留日期间，她参与共爱会和《白话报》的活动，宣传革命与男女平权。",
           "withinYearOrder": 50
+        },
+        {
+          "id": "qiujin-018",
+          "year": 1905,
+          "place": "东京",
+          "title": "在留学生欢迎会上听孙中山演说",
+          "narrative": "孙中山抵达日本后，东京留学生举行欢迎会，秋瑾也在场。这时她坐在台下听讲，后来才经黄兴引见，与孙中山当面相识。",
+          "evidence": [
+            {
+              "source": "QJ-8",
+              "locator": "生平，七月十三日（8月13日）欢迎大会段",
+              "supports": "孙中山抵达日本后，东京留学生举行欢迎会，秋瑾也在场。这时她坐在台下听讲，后来才经黄兴引见，与孙中山当面相识。"
+            }
+          ],
+          "checkedAt": "2026-11-05",
+          "mapReady": false,
+          "limits": "",
+          "dateLabel": "1905年8月13日（公历）",
+          "withinYearOrder": 49,
+          "coordinates": null,
+          "calendar": "日期依纪念馆或文史资料标注。",
+          "status": "可采用",
+          "recordType": "人生经历"
         },
         {
           "id": "qiujin-011",
@@ -3684,6 +4205,52 @@
           "mapReady": false,
           "narrative": "在东京，她参加与孙中山、黄兴有关的革命活动，并加入同盟会，担任组织职务。",
           "withinYearOrder": 50
+        },
+        {
+          "id": "qiujin-019",
+          "year": 1905,
+          "place": "日本",
+          "title": "在纪念陈天华的集会上主张回国",
+          "narrative": "日本出台限制清国留学生的规则，留学生为去留发生争论。陈天华投海后，秋瑾在纪念集会上发言，主张回国继续行动。",
+          "evidence": [
+            {
+              "source": "QJ-3",
+              "locator": "留学生取缔规则及纪念陈天华集会段",
+              "supports": "日本出台限制清国留学生的规则，留学生为去留发生争论。陈天华投海后，秋瑾在纪念集会上发言，主张回国继续行动。"
+            }
+          ],
+          "checkedAt": "2026-11-05",
+          "mapReady": false,
+          "limits": "",
+          "dateLabel": "1905年12月，陈天华去世后",
+          "withinYearOrder": 90,
+          "coordinates": null,
+          "calendar": "日期依纪念馆或文史资料标注。",
+          "status": "可采用",
+          "recordType": "人生经历"
+        },
+        {
+          "id": "qiujin-020",
+          "year": 1906,
+          "place": "由日本回国",
+          "title": "结束留学，回国筹划浙皖起义",
+          "narrative": "回国以后，秋瑾与徐锡麟商议浙江、安徽两地如何配合行动。此前在日本结识的人和加入的组织，如今成了她在国内联络的力量。",
+          "evidence": [
+            {
+              "source": "QJ-8",
+              "locator": "生平，光绪三十二年初回国段",
+              "supports": "回国以后，秋瑾与徐锡麟商议浙江、安徽两地如何配合行动。此前在日本结识的人和加入的组织，如今成了她在国内联络的力量。"
+            }
+          ],
+          "checkedAt": "2026-11-05",
+          "mapReady": false,
+          "limits": "材料只写年初，没有记下船期和登陆港。",
+          "dateLabel": "1906年初",
+          "withinYearOrder": 1,
+          "coordinates": null,
+          "calendar": "日期依纪念馆或文史资料标注。",
+          "status": "附条件采用",
+          "recordType": "人生经历"
         },
         {
           "id": "qiujin-013",
@@ -3980,6 +4547,12 @@
       "records": 110,
       "episodes": 17,
       "note": "补入求学、家庭、创作、任教、译经、军中处境与未定年旅程；补核关键日期冲突。"
+    },
+    {
+      "date": "2026-11-05",
+      "records": 157,
+      "episodes": 24,
+      "note": "新增21条年度记录及4段未定年经历。"
     }
   ]
 }

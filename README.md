@@ -6,10 +6,10 @@
 
 - [工作记录](research/WORK_LOG.md)：苏轼核验、北归补查、信息源、地图和文案工作的回顾，以及五人准备进度。
 - [人物整理流程](research/PERSON_WORKFLOW.md)：日期、来源、本人行迹、古今地名和发布检查的统一做法。
-- 五人人生底稿（2026-11-04行程细化）：[玄奘](research/people/xuanzang.md)、[徐霞客](research/people/xuxiake.md)、[李清照](research/people/liqingzhao.md)、[秦良玉](research/people/qinliangyu.md)、[秋瑾](research/people/qiujin.md)。共136条年度索引记录、20条未定年阶段、39个来源入口。新增求学、家庭、创作、教学、译经与军中处境，并保留异说和待核线索；数量包含活动事件，并非156个确定地图位置。
+- 五人人生底稿（2026-11-05行程细化）：[玄奘](research/people/xuanzang.md)、[徐霞客](research/people/xuxiake.md)、[李清照](research/people/liqingzhao.md)、[秦良玉](research/people/qinliangyu.md)、[秋瑾](research/people/qiujin.md)。共157条年度索引记录、24条未定年阶段、40个来源入口。新增求学、家庭、创作、教学、译经与军中处境，并保留异说和待核线索；数量包含活动事件，并非181个确定地图位置。
 - [结构化研究底稿](research/people/initial-review.json)是上述五份报告的数据来源；运行 `python3 scripts/render_people.py` 生成报告，`python3 scripts/render_people.py --check` 检查一致性、排序和来源关联。
 
-五人的136条年度经历已替换原先29个样本节点；20段未定年经历在“人生全览”中阅读，每条均可查看出处。地图现有64条带位置的记录，其中48条附独立区域定位与地理依据，16条沿用原型近似标记；其余经历只展示文字。这些标记不连成推定路线。苏轼97条记录保持原样。运行 `python3 scripts/build_lives.py` 更新网站数据，使用 `--check` 检查同步。
+五人的157条年度经历已替换原先29个样本节点；24段未定年经历在“人生全览”中阅读，每条均可查看出处。地图现有64条带位置的记录，其中48条附独立区域定位与地理依据，16条沿用原型近似标记；另有24条只画大致区域，69条只展示文字。这些标记不连成推定路线。苏轼97条记录保持原样。运行 `python3 scripts/build_lives.py` 更新网站数据，使用 `--check` 检查同步。
 
 - [五人地图核验记录](research/people/MAP_REVIEW.md)：48条区域定位、古今地名对应和保留意见；机器数据见 `research/people/map-review.json`。人生底稿与地理审核分开保存。
 
