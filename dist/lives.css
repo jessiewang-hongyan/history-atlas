@@ -15,3 +15,7 @@
 .history-card.is-selected{border:2px solid #925427;box-shadow:inset 4px 0 #925427;background:#fff7df}
 .event-badge{display:inline-block;margin-right:.65em;padding:2px 7px;border-radius:3px;background:#794219;color:#fff;font:600 12px/1.6 system-ui}
 .event-tick.is-selected span{outline:2px solid #85431e;outline-offset:3px}
+
+.map-and-age{display:flex;flex-direction:column;min-width:0}.map-and-age>.map-panel{flex:1}
+.map-age{display:flex;align-items:baseline;justify-content:center;gap:.7em;padding:9px 12px;border-top:1px solid var(--line);background:#f9f8f2;color:#344e40;font-size:14px}.map-age strong{font-size:16px}
+@media(max-width:900px){.map-and-age{grid-row:3}.map-and-age>.map-panel{flex:none}.map-age{border:1px solid var(--line);border-top:0}}
